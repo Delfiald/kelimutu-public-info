@@ -1,0 +1,157 @@
+/* Hero section */
+.hero {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ width: 100vw;
+ height: 100vh;
+ text-align: center;
+ color: var(--light-color);
+ background: url("/background/background.jpg") center center / cover no-repeat;
+}
+
+.hero * {
+ z-index: 1;
+}
+
+.hero::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.25) 0%,
+  var(--dark-color) 85%
+ );
+ opacity: 0.85;
+}
+
+.hero::after {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: var(--dark-color);
+ animation: fadeOut 2s 1s ease-in-out forwards;
+}
+
+.hero-container {
+ position: relative;
+ width: inherit;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ padding: 1rem;
+}
+
+.hero-container .title {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 1rem;
+ cursor: default;
+}
+
+.hero-container .title h1 {
+ font-size: 3rem;
+}
+
+.hero-container .title h3 {
+ opacity: 0;
+ animation: slideIn 1.5s 2s cubic-bezier(0.2, 0.5, 0.2, 0.7) forwards;
+}
+
+.hero-container .title .hero-subtitle h3 span {
+ display: inline-flex;
+ position: relative;
+ overflow: hidden;
+ height: 2ch;
+ align-items: center;
+ justify-content: center;
+}
+
+.hero-container .title .hero-subtitle h3 span > span:first-child {
+ position: absolute;
+ top: 0;
+ left: 0;
+ transition: var(--transition-medium) all cubic-bezier(0.2, 0.5, 0.2, 0.7);
+ transform: translateY(-25px);
+}
+
+.hero-container .title .hero-subtitle h3 span:hover > span:first-child {
+ transform: translateY(0px);
+}
+
+.hero-container .title .hero-subtitle h3 span > span:last-child {
+ transition: var(--transition-medium) all cubic-bezier(0.2, 0.5, 0.2, 0.7);
+ transform: translateY(0px);
+}
+
+.hero-container .title .hero-subtitle h3 span:hover > span:last-child {
+ transform: translateY(25px);
+}
+
+/* Scroll Button */
+.hero-bottom {
+ position: absolute;
+ bottom: 1rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 1rem;
+ width: 100%;
+ opacity: 0;
+ animation: slideIn 1.5s 2s cubic-bezier(0.2, 0.5, 0.2, 0.7) forwards;
+}
+
+.scroll-button {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 1rem;
+}
+
+.button-icon {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border: 1px solid var(--light-color);
+ border-radius: 50%;
+ width: 50px;
+ height: 50px;
+}
+
+@keyframes fadeOut {
+ 0% {
+  opacity: 1;
+ }
+
+ 100% {
+  opacity: 0;
+ }
+}
+
+@keyframes slideIn {
+ 0% {
+  opacity: 0;
+  transform: translateY(3px);
+ }
+
+ 25% {
+  transform: translateY(3px);
+ }
+
+ 100% {
+  opacity: 1;
+  transform: translateY(0);
+ }
+}
