@@ -8,9 +8,12 @@
 
 :root {
  --dark-color: #000000;
+ --dark-200-color: #333333;
  --primary-color: #2f6b3e;
  --light-color: #ffffff;
  --light-200-color: #f4f4f4;
+
+ --error-color: #ff4c4c;
 
  --transition-very-fast: 0.15s;
  --transition-fast: 0.25s;

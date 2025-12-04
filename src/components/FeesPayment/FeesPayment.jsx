@@ -10,6 +10,13 @@ import Photo from "../../assets/fees/Photo.svg?react";
 import Video from "../../assets/fees/Video.svg?react";
 import Camp from "../../assets/fees/Camp.svg?react";
 import Drone from "../../assets/fees/Drone.svg?react";
+import Open from "../../assets/payment/Open.svg?react";
+import Select from "../../assets/payment/Select.svg?react";
+import Scan from "../../assets/payment/Scan.svg?react";
+import Amount from "../../assets/payment/Amount.svg?react";
+import Confirm from "../../assets/payment/Confirm.svg?react";
+import Save from "../../assets/payment/Save.svg?react";
+import Show from "../../assets/payment/Show.svg?react";
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { Document, Page, pdfjs } from "react-pdf";
@@ -222,27 +229,412 @@ function RegulationModal({ url, toggleModal }) {
  );
 }
 
+const SECTION = {
+ FEES: "fees",
+ PAYMENT: "payment",
+ CALCULATOR: "calculator",
+};
+
+// Fees Section
+function FeesSection({ toggleModal, setSectionContent }) {
+ return (
+  <>
+   <div className={styles.header}>
+    <h2>Fees.</h2>
+    <div className={styles.regulation}>
+     <div className={styles["regulation-name"]} onClick={toggleModal}>
+      Based on Government Regulation No. 36 of 2024
+     </div>
+     <div className={styles.icon}>
+      <i className="fas fa-question"></i>
+     </div>
+    </div>
+   </div>
+   <div className={styles["fees-container"]}>
+    <Card />
+   </div>
+   <div className={styles.bottom}>
+    <div
+     onClick={() => setSectionContent(SECTION.PAYMENT)}
+     className={styles["next-button"]}
+    >
+     <span>Payment Info</span>
+     <i className="fas fa-chevron-right"></i>
+    </div>
+   </div>
+  </>
+ );
+}
+
+const verticalStepper = [
+ {
+  pict: <Open />,
+  name: "Open your payment app",
+ },
+ {
+  pict: <Select />,
+  name: "Select Scan QR",
+ },
+ {
+  pict: <Scan />,
+  name: "Scan the QRIS code",
+ },
+ {
+  pict: <Amount />,
+  name: "Enter the amount",
+ },
+ {
+  pict: <Confirm />,
+  name: "Review and Confirm the payment details",
+ },
+ {
+  pict: <Save />,
+  name: "Save your payment receipt",
+ },
+ {
+  pict: <Show />,
+  name: "Show the payment receipt to the counter staff",
+ },
+];
+
+// Payment
+function PaymentSection({ setSectionContent }) {
+ return (
+  <>
+   <div className={styles.header}>
+    <h2>Pay With QRIS.</h2>
+    <div className={styles.subheader}>
+     Digital payment for easier transactions.
+    </div>
+   </div>
+   <div className={styles["payment-container"]}>
+    <ul className={styles["payment-steps"]}>
+     {verticalStepper.map((item, i) => (
+      <li key={i} className={styles.step}>
+       <div className={styles["step-pict"]}>{item.pict}</div>
+       <div className={styles["step-name"]}>{item.name}</div>
+      </li>
+     ))}
+    </ul>
+    <div className={styles["cash-payment"]}>
+     *Cash payment are also available at the counter
+    </div>
+   </div>
+   <div className={styles.bottom}>
+    <div
+     onClick={() => setSectionContent(SECTION.FEES)}
+     className={styles["prev-button"]}
+    >
+     <span>Fees</span>
+     <i className="fas fa-chevron-left"></i>
+    </div>
+    <div
+     onClick={() => setSectionContent(SECTION.CALCULATOR)}
+     className={styles["next-button"]}
+    >
+     <span>Cost Calculator</span>
+     <i className="fas fa-chevron-right"></i>
+    </div>
+   </div>
+  </>
+ );
+}
+
+function CalculatorSection({ setSectionContent }) {
+ const prices = {
+  visitor: [
+   {
+    key: "domestic",
+    label: "Domestic",
+    price: {
+     workday: 10000,
+     holiday: 15000,
+    },
+   },
+   {
+    key: "domesticGroupStudents",
+    label: "Domestic Group Students",
+    price: {
+     workday: 7500,
+     holiday: 10000,
+    },
+   },
+   {
+    key: "international",
+    label: "International",
+    price: {
+     workday: 150000,
+     holiday: 200000,
+    },
+   },
+  ],
+
+  vehicle: [
+   { key: "bike", label: "Bike", price: 5000 },
+   { key: "car", label: "Car", price: 10000 },
+   { key: "busTruck", label: "Bus/Truck", price: 50000 },
+  ],
+
+  photoVideo: [
+   {
+    key: "preWedding",
+    label: "Pre-Wedding",
+    price: {
+     domestic: 1000000,
+     international: 1500000,
+    },
+   },
+   {
+    key: "photography",
+    label: "Photography",
+    price: {
+     domestic: 2000000,
+     international: 3000000,
+    },
+   },
+   {
+    key: "videography",
+    label: "Videography",
+    price: {
+     domestic: 10000000,
+     international: 15000000,
+    },
+   },
+  ],
+
+  camping: { key: "camping", label: "Camping", price: 20000 },
+  drone: { key: "drone", label: "Drone Operation", price: 500000 },
+ };
+
+ const [visitors, setVisitors] = useState([
+  { key: "international", count: 1 },
+  { key: "domestic", count: 1 },
+ ]);
+ const [isHoliday, setIsHoliday] = useState(false);
+
+ const [vehicle, setVehicle] = useState([{ key: "car", count: 1 }]);
+
+ const [photoVideo, setPhotoVideo] = useState([
+  { key: "photo", category: "international" },
+ ]);
+
+ const [camping, setCamping] = useState(5);
+ const [drone, setDrone] = useState(1);
+
+ const [openIndex, setOpenIndex] = useState(null);
+
+ function getAvailableVisitorTypes(currentKey) {
+  const usedKeys = visitors.map((v) => v.key);
+
+  return prices.visitor.filter(
+   (v) => v.key === currentKey || !usedKeys.includes(v.key)
+  );
+ }
+
+ function updateVisitorTypes(opt, idx) {
+  setVisitors((prev) => {
+   const updated = [...prev];
+   const current = updated[idx];
+
+   updated[idx] = {
+    ...current,
+    key: opt.key,
+    ...(opt.key === "domesticGroupStudents" &&
+     current.count < 5 && { count: 5 }),
+   };
+
+   return updated;
+  });
+ }
+
+ const maxVisitors = prices.visitor.length;
+
+ function addVisitorType() {
+  const used = visitors.map((v) => v.key);
+  const available = prices.visitor.find((v) => !used.includes(v.key));
+
+  if (!available) return;
+
+  setVisitors((prev) => [
+   ...prev,
+   {
+    key: available.key,
+    ...(available.key === "domesticGroupStudents"
+     ? { count: 5 }
+     : { count: 1 }),
+   },
+  ]);
+ }
+
+ function removeVisitorType(key) {
+  setVisitors((prev) => prev.filter((v) => v.key !== key));
+ }
+
+ function removeCount(key) {
+  setVisitors((prev) =>
+   prev.map((v) => {
+    if (v.key !== key) return v;
+    let min = 1;
+    if (v.key === "domesticGroupStudents") min = 5;
+    return { ...v, count: Math.max(min, v.count - 1) };
+   })
+  );
+ }
+
+ function addCount(key) {
+  setVisitors((prev) =>
+   prev.map((v) => (v.key === key ? { ...v, count: v.count + 1 } : v))
+  );
+ }
+
+ return (
+  <>
+   <div className={styles.header}>
+    <h2>Cost Calculator.</h2>
+    <div className={styles.subheader}>
+     Calculate an estimated total cost for your visit automatically
+    </div>
+   </div>
+   <div className={styles["calculator-container"]}>
+    <div className={styles["category-wrapper"]}>
+     <div className={styles["category-container"]}>
+      <div className={styles["category"]}>
+       <div className={styles["category-label"]}>Visitor Type</div>
+       <div className={styles["checkbox-wrapper"]}>
+        <input
+         className={styles["checkbox-input"]}
+         type="checkbox"
+         name="visitor-type"
+         id="visitor-type"
+         onChange={(e) => setIsHoliday(e.target.checked)}
+        />
+        <div
+         className={`${styles["checkbox-display"]} ${
+          isHoliday ? styles.checked : ""
+         }`}
+        ></div>
+        <label htmlFor="visitor-type">Holiday</label>
+       </div>
+      </div>
+      <div className={styles["field-wrapper"]}>
+       {visitors.map((v, idx) => {
+        const info = prices.visitor.find((p) => p.key === v.key);
+        const availableTypes = getAvailableVisitorTypes(v.key);
+
+        return (
+         <div
+          key={idx}
+          className={`${styles["type-wrapper"]} ${
+           idx > 0 ? styles.bordered : ""
+          }`}
+         >
+          {/* Dropdown */}
+          <div className={styles.dropdown}>
+           <div className={styles.trigger} onClick={() => setOpenIndex(idx)}>
+            {openIndex !== null ? (
+             <i className="fas fa-chevron-up"></i>
+            ) : (
+             <i className="fas fa-chevron-down"></i>
+            )}
+            <p>{info.label}</p>
+           </div>
+           {/* Dropdown Item */}
+           {openIndex === idx && (
+            <div className={styles.options}>
+             {availableTypes.map((option) => (
+              <div
+               key={option.key}
+               onClick={() => {
+                setOpenIndex(null);
+                updateVisitorTypes(option, idx);
+               }}
+               className={styles.option}
+              >
+               {option.label}
+              </div>
+             ))}
+            </div>
+           )}
+          </div>
+
+          {/* Count */}
+          <div className={styles["count-wrapper"]}>
+           {v.count > 1 && (
+            <div
+             className={styles["decrease-button"]}
+             onClick={() => removeCount(v.key)}
+            >
+             <i className="fas fa-minus"></i>
+            </div>
+           )}
+           <div className={styles["count-value"]}>{v.count}</div>
+           {
+            <div
+             className={styles["increase-button"]}
+             onClick={() => addCount(v.key)}
+            >
+             <i className="fas fa-plus"></i>
+            </div>
+           }
+          </div>
+
+          {/* Remove Type */}
+          {visitors.length > 1 && (
+           <div
+            className={styles["remove-button"]}
+            onClick={() => removeVisitorType(info.key)}
+           >
+            <i className="fas fa-minus"></i>
+           </div>
+          )}
+         </div>
+        );
+       })}
+      </div>
+      {/* Add Type */}
+     </div>
+     {visitors.length < maxVisitors && (
+      <div className={styles["add-type-wrapper"]} onClick={addVisitorType}>
+       <i className="fas fa-plus"></i>
+       <span>Add More Visitor</span>
+      </div>
+     )}
+    </div>
+   </div>
+   <div className={styles.bottom}>
+    <div
+     onClick={() => setSectionContent(SECTION.PAYMENT)}
+     className={styles["prev-button"]}
+    >
+     <span>Payment Info</span>
+     <i className="fas fa-chevron-left"></i>
+    </div>
+   </div>
+  </>
+ );
+}
+
 function FeesPayment() {
  const [isOpen, setIsOpen] = useState(false);
  const toggleModal = () => setIsOpen((prev) => !prev);
 
+ const [sectionContent, setSectionContent] = useState(SECTION.FEES);
+
  return (
   <>
    <section className={styles["fees-payment"]}>
-    <div className={styles.header}>
-     <h2>Fees.</h2>
-     <div className={styles.regulation}>
-      <div className={styles["regulation-name"]} onClick={toggleModal}>
-       Based on Government Regulation No. 36 of 2024
-      </div>
-      <div className={styles.icon}>
-       <i className="fas fa-question"></i>
-      </div>
-     </div>
-    </div>
-    <div className={styles["fees-container"]}>
-     <Card />
-    </div>
+    {sectionContent === SECTION.FEES && (
+     <FeesSection
+      toggleModal={toggleModal}
+      setSectionContent={setSectionContent}
+     />
+    )}
+    {sectionContent === SECTION.PAYMENT && (
+     <PaymentSection setSectionContent={setSectionContent} />
+    )}
+    {sectionContent === SECTION.CALCULATOR && (
+     <CalculatorSection setSectionContent={setSectionContent} />
+    )}
    </section>
    {isOpen && (
     <RegulationModal
@@ -259,4 +651,17 @@ export default FeesPayment;
 RegulationModal.propTypes = {
  url: PropTypes.string,
  toggleModal: PropTypes.func,
+};
+
+FeesSection.propTypes = {
+ toggleModal: PropTypes.func,
+ setSectionContent: PropTypes.func,
+};
+
+PaymentSection.propTypes = {
+ setSectionContent: PropTypes.func,
+};
+
+CalculatorSection.propTypes = {
+ setSectionContent: PropTypes.func,
 };
