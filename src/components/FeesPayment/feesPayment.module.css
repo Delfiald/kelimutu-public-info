@@ -4,9 +4,8 @@
  align-items: center;
  justify-content: start;
  flex-direction: column;
- gap: 2rem;
+ gap: 3rem;
  width: 100%;
- min-height: 1800px;
  height: 100%;
  padding: 0.5rem;
 }
@@ -477,13 +476,14 @@ input {
 
 /* Cost Calculator */
 .calculator-container {
+ position: relative;
  display: flex;
  align-items: center;
  justify-content: center;
  flex-direction: column;
  gap: 1rem;
  border: 1px solid var(--primary-color);
- padding: 1rem;
+ padding: 3rem 1rem;
  border-radius: 15px;
  width: 100%;
 }
@@ -510,15 +510,8 @@ input {
  padding: 0.5rem;
 }
 
-.category-container::before {
- content: "";
- position: absolute;
- top: 0;
- left: calc((0.75 / (0.75 + 1)) * 100%);
- width: 1px;
- height: 100%;
- transform: translateX(-100%);
- background-color: var(--primary-color);
+.category-container > div {
+ min-height: 100px;
 }
 
 .category {
@@ -538,12 +531,18 @@ input {
  cursor: pointer;
  display: flex;
  align-items: center;
- justify-content: space-between;
- gap: 0.5rem;
 }
 
 .category .checkbox-wrapper .checkbox-input {
  display: none;
+}
+
+.category .checkbox-wrapper label {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 0.5rem;
+ cursor: pointer;
 }
 
 .category .checkbox-wrapper .checkbox-display {
@@ -565,11 +564,10 @@ input {
  position: absolute;
  top: 50%;
  left: 50%;
- width: 90%;
- height: 90%;
+ width: 12.5px;
+ height: 12.5px;
  transform: translate(-50%, -50%);
  background: var(--primary-color);
- transform-origin: center;
  border-radius: 15%;
  opacity: 0;
 }
@@ -579,6 +577,7 @@ input {
 }
 
 .field-wrapper {
+ position: relative;
  flex: 1;
  display: flex;
  align-items: center;
@@ -587,14 +586,26 @@ input {
  gap: 1rem;
 }
 
+.field-wrapper::before {
+ content: "";
+ position: absolute;
+ top: 50%;
+ right: calc(100% + 0.5rem);
+ width: 1px;
+ height: calc(100% + 1rem);
+ transform: translate(-100%, -50%);
+ background-color: var(--primary-color);
+}
+
 .type-wrapper {
  position: relative;
  display: flex;
  align-items: center;
- justify-content: center;
+ justify-content: space-evenly;
  flex-direction: column;
  width: 100%;
  gap: 0.5rem;
+ flex: 100%;
 }
 
 .type-wrapper.bordered {
@@ -664,7 +675,58 @@ input {
  filter: brightness(0.5);
 }
 
+.type-wrapper .region-wrapper,
 .type-wrapper .count-wrapper {
+ display: flex;
+ flex-direction: column;
+ align-items: start;
+ justify-content: space-between;
+ width: 100%;
+ gap: 0.5rem;
+ text-align: left;
+}
+
+.type-wrapper .region-wrapper {
+ flex-direction: row;
+ overflow: hidden;
+ font-size: 0.75rem;
+}
+
+.type-wrapper .region-wrapper .input-wrapper {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 1rem;
+}
+
+.type-wrapper .region-wrapper .input-wrapper input[type="radio"] {
+ display: none;
+}
+
+.type-wrapper .region-wrapper .input-wrapper label {
+ padding: 3px 7px;
+ border-radius: 10px;
+ cursor: pointer;
+ transition: all 0.2s;
+ background-color: var(--light-200-color);
+ color: var(--primary-color);
+ border: 1px solid var(--primary-color);
+}
+
+.type-wrapper
+ .region-wrapper
+ .input-wrapper
+ input[type="radio"]:checked
+ + label {
+ background-color: var(--primary-color);
+ color: var(--light-color);
+}
+
+.type-wrapper .count-wrapper .sub-label {
+ font-size: 0.75rem;
+}
+
+.type-wrapper .count-wrapper .counter {
  display: grid;
  grid-template-columns: repeat(3, 1fr);
  align-items: center;
@@ -720,6 +782,29 @@ input {
  width: 100%;
  border-top: 1px solid var(--primary-color);
  padding: 1rem;
+ cursor: pointer;
+}
+
+/* Total */
+.total-container {
+ position: absolute;
+ top: 100%;
+ transform: translateY(-50%);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 1rem;
+ background: var(--primary-color);
+ color: var(--light-color);
+ border-radius: 15px;
+ min-width: 60%;
+}
+
+.total-container .total {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ width: 100%;
 }
 
 .fees-payment .bottom {
