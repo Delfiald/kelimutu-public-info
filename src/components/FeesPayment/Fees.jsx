@@ -226,7 +226,7 @@ export function RegulationModal({ url, toggleModal }) {
 function FeesSection({ toggleModal }) {
  return (
   <>
-   <div className={styles.header}>
+   <div id="ticket-section" className={styles.header}>
     <h2>Fees.</h2>
     <div className={styles.regulation}>
      <div className={styles["regulation-name"]} onClick={toggleModal}>
