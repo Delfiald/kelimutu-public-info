@@ -61,14 +61,14 @@ function Facility() {
 
 function Facilities() {
  return (
-  <>
+  <div className={styles["facilities-section"]}>
    <div className={styles.header}>
     <h2>Facilities.</h2>
    </div>
    <div className={styles["facilities-container"]}>
     <Facility />
    </div>
-  </>
+  </div>
  );
 }
 
