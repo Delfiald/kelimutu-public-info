@@ -550,9 +550,10 @@ input {
  width: 15px;
  height: 15px;
  border: 1px solid var(--primary-color);
- border-radius: 15%;
+ border-radius: 25%;
  opacity: 0.5;
  overflow: hidden;
+ background: var(--light-color);
 }
 
 .category .checkbox-wrapper .checkbox-display.checked {
@@ -568,7 +569,7 @@ input {
  height: 12.5px;
  transform: translate(-50%, -50%);
  background: var(--primary-color);
- border-radius: 15%;
+ border-radius: 25%;
  opacity: 0;
 }
 
