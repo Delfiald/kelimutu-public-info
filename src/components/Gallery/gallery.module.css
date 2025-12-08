@@ -114,17 +114,16 @@
  transform: translate(0, -3rem);
 }
 
-.gallery .gallery-container .gallery-slider .image:hover .img-title {
- transform: translate(0, 0);
-}
-
 .gallery .gallery-container .gallery-slider .img-description {
  bottom: 1rem;
  font-size: 0.75rem;
  font-weight: 100;
+ transform: translate(0, 3rem);
 }
 
 .gallery .gallery-container .gallery-slider .image:hover .img-title,
 .gallery .gallery-container .gallery-slider .image:hover .img-description {
+ transform: translate(0, 0);
+ transition: var(--transition-medium) all var(--transition-medium) ease;
  opacity: 1;
 }

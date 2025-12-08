@@ -68,7 +68,7 @@ function FeesPayment() {
 
  return (
   <>
-   <section className={styles["fees-payment"]}>
+   <section id="fee" className={styles["fees-payment"]}>
     {sectionContent === SECTION.FEES.key && (
      <FeesSection
       toggleModal={toggleModal}

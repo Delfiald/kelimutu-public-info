@@ -5,6 +5,7 @@ import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 import VisitorGuide from "./components/VisitorGuide/VisitorGuide";
 import Gallery from "./components/Gallery/Gallery";
+import Contact from "./components/Contact/Contact";
 
 function App() {
  return (
@@ -15,6 +16,7 @@ function App() {
     <FeesPayment />
     <VisitorGuide />
     <Gallery />
+    <Contact />
    </main>
   </>
  );

@@ -20,7 +20,7 @@ const faq = [
    "Entrance fees vary based on visitor category (domestic, international, working days/holidays). For full details, tap ",
   answer_link: "here",
   answer_after: " to view the ticket price section.",
-  scrollTarget: "ticket-section",
+  scrollTarget: "fee",
  },
  {
   question: "Are guides available?",
@@ -49,6 +49,11 @@ const faq = [
  },
 ];
 
+function scrollHandler(target) {
+ console.log(target);
+ document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
+}
+
 function FaqContainer({ isOpen, toggleOpen }) {
  return (
   <div className={styles["faq-container"]}>
@@ -73,12 +78,8 @@ function FaqContainer({ isOpen, toggleOpen }) {
         <>
          {item.answer_before}
          <span
-          className="faq-link"
-          onClick={() =>
-           document
-            .getElementById(item.scrollTarget)
-            ?.scrollIntoView({ behavior: "smooth" })
-          }
+          className={styles["anchor-link"]}
+          onClick={() => scrollHandler(item.scrollTarget)}
          >
           {item.answer_link}
          </span>
@@ -113,7 +114,14 @@ function Faq() {
    <div className={styles.bottom}>
     <p>Is your question no listed here?</p>
     <p>
-     Feel free to reach out via the <a href="">Get in Touch</a> section.
+     {"Feel free to reach out via the "}
+     <span
+      className={styles["anchor-link"]}
+      onClick={() => scrollHandler("contact")}
+     >
+      Get in Touch
+     </span>
+     {" section."}
     </p>
    </div>
   </section>
