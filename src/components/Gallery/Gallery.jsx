@@ -120,7 +120,7 @@ function Gallery() {
  }, []);
 
  return (
-  <section className={styles.gallery}>
+  <section id="gallery" className={styles.gallery}>
    <div className={styles.header}>
     <h2>Gallery.</h2>
     <div>{`A glimpse of Kelimutu's Beauty`}</div>

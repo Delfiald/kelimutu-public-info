@@ -61,7 +61,7 @@ function Facility() {
 
 function Facilities() {
  return (
-  <div className={styles["facilities-section"]}>
+  <div id="guide" className={styles["facilities-section"]}>
    <div className={styles.header}>
     <h2>Facilities.</h2>
    </div>

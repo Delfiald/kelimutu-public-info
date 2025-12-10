@@ -23,7 +23,7 @@ function HoursCard({ title, time, background, detail }) {
 
 function VisitingHours() {
  return (
-  <section className={styles["visiting-hours"]}>
+  <section id="visit" className={styles["visiting-hours"]}>
    <div className={styles.header}>
     <h2>Visiting Hours</h2>
    </div>

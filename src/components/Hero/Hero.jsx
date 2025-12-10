@@ -24,7 +24,15 @@ function AnimatedText({ text, containerTag }) {
 
 function HeroSection() {
  return (
-  <section className={styles.hero}>
+  <section id="hero" className={styles.hero}>
+   <div className={styles.logo}>
+    <div className={styles["ministry-logo"]}>
+     <img src="/logo/kemenhut.png" alt="Ministry of Forestry" />
+    </div>
+    <div className={styles["unit-logo"]}>
+     <img src="/logo/TNKL.png" alt="Kelimutu National Park" />
+    </div>
+   </div>
    <div className={styles["hero-container"]}>
     <div className={styles.title}>
      <div className={styles["hero-title"]}>

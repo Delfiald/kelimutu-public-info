@@ -7,11 +7,13 @@ import VisitorGuide from "./components/VisitorGuide/VisitorGuide";
 import Gallery from "./components/Gallery/Gallery";
 import Contact from "./components/Contact/Contact";
 import Arboretum from "./components/Arboretum/Arboretum";
+import Navbar from "./components/Layout/Navbar/Navbar";
 
 function App() {
  return (
   <>
    <main>
+    <Navbar />
     <Hero />
     <Arboretum />
     <VisitingHours />

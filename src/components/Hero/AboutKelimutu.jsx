@@ -262,7 +262,7 @@ function AboutKelimutu() {
  }
 
  return (
-  <section className={styles.about}>
+  <section id="about" className={styles.about}>
    <div
     className={styles.header}
     onClick={() => handleClick(informationContent[0].label)}

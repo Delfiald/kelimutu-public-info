@@ -41,6 +41,38 @@
  animation: fadeOut 2s 1s ease-in-out forwards;
 }
 
+/* Logo */
+.hero .logo {
+ position: absolute;
+ top: 1.25rem;
+ left: 1rem;
+ display: flex;
+ align-items: center;
+ justify-self: center;
+ gap: 1rem;
+ padding: 0.5rem 1rem;
+}
+
+.hero .logo .ministry-logo,
+.hero .logo .unit-logo {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
+ width: 100%;
+ height: 100%;
+ width: 45px;
+ height: 45px;
+}
+
+.hero .logo .ministry-logo img,
+.hero .logo .unit-logo img {
+ width: 100%;
+ height: 100%;
+ object-fit: contain;
+ border-radius: 50%;
+}
+
 .hero-container {
  position: relative;
  display: flex;
