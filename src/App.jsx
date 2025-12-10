@@ -6,12 +6,14 @@ import "react-pdf/dist/Page/TextLayer.css";
 import VisitorGuide from "./components/VisitorGuide/VisitorGuide";
 import Gallery from "./components/Gallery/Gallery";
 import Contact from "./components/Contact/Contact";
+import Arboretum from "./components/Arboretum/Arboretum";
 
 function App() {
  return (
   <>
    <main>
     <Hero />
+    <Arboretum />
     <VisitingHours />
     <FeesPayment />
     <VisitorGuide />

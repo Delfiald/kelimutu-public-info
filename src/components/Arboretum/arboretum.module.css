@@ -1,0 +1,56 @@
+.arboretum {
+ width: 100%;
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background: var(--dark-color);
+ color: var(--light-color);
+ flex-direction: column;
+ gap: 3rem;
+ padding: 1rem;
+}
+
+.arboretum .header h2 {
+ font-size: 2rem;
+ text-align: center;
+}
+
+.arboretum .arboretum-container {
+ display: grid;
+ grid-template-columns: 1fr;
+ align-items: center;
+ justify-content: center;
+ gap: 1rem;
+}
+
+.arboretum .arboretum-container .arboretum-text {
+ line-height: 21px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 1rem;
+}
+
+.arboretum-images {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 1rem;
+ width: 100%;
+}
+
+.arboretum-images .image-wrapper {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
+ width: 100%;
+}
+
+.arboretum-images .image-wrapper img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}

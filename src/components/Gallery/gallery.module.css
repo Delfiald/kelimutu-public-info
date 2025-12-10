@@ -115,6 +115,11 @@
 }
 
 .gallery .gallery-container .gallery-slider .img-description {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-direction: column;
+ gap: 0.25rem;
  bottom: 1rem;
  font-size: 0.75rem;
  font-weight: 100;
@@ -126,4 +131,11 @@
  transform: translate(0, 0);
  transition: var(--transition-medium) all var(--transition-medium) ease;
  opacity: 1;
+}
+
+.gallery .gallery-container .gallery-slider .img-description .img-source {
+ font-style: italic;
+ font-weight: lighter;
+ align-self: flex-end;
+ font-size: 0.5rem;
 }
