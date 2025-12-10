@@ -128,16 +128,83 @@ const kelimutuFormationSteps = [
  },
 ];
 
+const folkloreSteps = [
+ {
+  id: 1,
+  title: "Bhuria – The Veiled Forest",
+  description:
+   "Long ago, the mountain was cloaked in misty Bhuria, a sacred forest where ancestral spirits 'Embu Nosi' and unseen entities 'Nitu' roamed.",
+ },
+ {
+  id: 2,
+  title: "The Rule of Konde Ratu",
+  description:
+   "People lived under Konde Ratu’s rule, with Ata Bupu, protector of the innocent, and Ata Polo, a sinister sorcerer preying on the weak.",
+ },
+ {
+  id: 3,
+  title: "The Orphans Seek Refuge",
+  description:
+   "Two orphaned youths, 'Ana Kalo', sought shelter in Ata Bupu’s lands, and he granted them sanctuary from harm.",
+ },
+ {
+  id: 4,
+  title: "The Shadow of Ata Polo",
+  description:
+   "Ata Polo sought the youths, but Ata Bupu stood firm: 'Let these children reach their days,' he said, defending them.",
+ },
+ {
+  id: 5,
+  title: "The Youths Mature",
+  description:
+   "The orphans grew into Ko'o Fai and Nuwa Muri. Ata Polo demanded them, but Ata Bupu refused to yield.",
+ },
+ {
+  id: 6,
+  title: "Vanishing into the Earth",
+  description:
+   "To escape Ata Polo, Ata Bupu and the youths vanished into the earth. Ata Polo pursued, but all were swallowed by the land.",
+ },
+ {
+  id: 7,
+  title: "The Birth of the Tri-Lakes",
+  description:
+   "Where they disappeared, the land ruptured forming the tri-colored lakes: Ata Bupu’s green, the youths’ turquoise, and Ata Polo’s crimson brown.",
+ },
+];
+
 function History() {
+ const [history, setHistory] = useState("geological");
+
  return (
   <div className={styles["kelimutu-history"]}>
    <div className={styles["history-wrapper"]}>
+    <div className={styles["history-button"]}>
+     <div
+      onClick={() => setHistory("geological")}
+      className={`${styles["history-type"]} ${
+       history === "geological" ? styles.active : ""
+      }`}
+     >
+      Geological
+     </div>
+     <div
+      onClick={() => setHistory("folklore")}
+      className={`${styles["history-type"]} ${
+       history === "folklore" ? styles.active : ""
+      }`}
+     >
+      Folklore
+     </div>
+    </div>
     <ul>
-     {kelimutuFormationSteps.map((step, stage) => (
-      <li key={stage} className={styles.stage}>
-       <div className={styles["stage-description"]}>{step.description}</div>
-      </li>
-     ))}
+     {(history === "geological" ? kelimutuFormationSteps : folkloreSteps).map(
+      (step, stage) => (
+       <li key={stage} className={styles.stage}>
+        <div className={styles["stage-description"]}>{step.description}</div>
+       </li>
+      )
+     )}
     </ul>
    </div>
   </div>
