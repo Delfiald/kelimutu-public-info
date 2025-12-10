@@ -44,6 +44,12 @@ const images = [
   description:
    "A sunrise view from Kelimutu, one of the most popular moments for visitors.",
  },
+ {
+  img: "/gallery/garugiwa.png",
+  title: "Garugiwa (Pachycephala nudigula)",
+  description:
+   "An iconic Flores species whose 12-note call fills Kelimutu’s dawn with an almost mystical chorus, greeting visitors as light rises over the crater lakes.",
+ },
 ];
 
 function GallerySlider({ trackRef, duplicated }) {

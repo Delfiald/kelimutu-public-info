@@ -43,8 +43,8 @@ function BottomSection({ sectionContent, setSectionContent }) {
      onClick={() => setSectionContent(current.prev)}
      className={styles["prev-button"]}
     >
-     <span>{current.labelPrev}</span>
      <i className="fas fa-chevron-left"></i>
+     <span>{current.labelPrev}</span>
     </div>
    )}
    {current.next && (

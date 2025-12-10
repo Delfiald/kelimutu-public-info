@@ -1,0 +1,255 @@
+import { useEffect, useRef, useState } from "react";
+import styles from "./aboutKelimutu.module.css";
+import PropTypes from "prop-types";
+import ColorChanges from "./ColorChanges";
+
+const informationContent = [
+ {
+  label: "Overview",
+  description: `Rising to 1,639 meters on Flores Island, Mount Kelimutu is a striking volcano known for its three enigmatic crater lakes that constantly shift colors due to volcanic minerals and gases. Kelimutu National Park surrounds these sacred lakes with lush forests and unique wildlife, revered deeply by the Lio people. Visitors can follow scenic trails and viewpoints to uncover both natural wonders and the legends that envelop these extraordinary lakes.`,
+ },
+ {
+  label: "Tiwu Ata Polo",
+  description:
+   "Tiwu Ata Polo, the largest crater lake of the three lakes, located in the southeast, has an area of 4 hectares and a depth of 64 meters. The lake was named by the Lio people, who believe it is a place where the spirits of evil people dwell. Those who, during their lifetime, act wickedly and practice black magic or sorcery (suanggi) are believed to have their spirits dwell in Tiwu Ata Polo after death.",
+ },
+ {
+  label: `Tiwu Niwa Muri Ko'o Fai`,
+  description:
+   "Tiwu Nuwa Muri Ko’o Fai, located in the middle between Tiwu Ata Polo and Tiwu Ata Bupu and separated by a very thin line from Tiwu Ata Polo, has an area of 5.5 hectares and a depth of 127 meters. Its name literally means “the lake of young men and women” or “the lake of the youth.” Among the three lakes, it has the lowest pH at 0.37. The Lio people believe that Tiwu Nuwa Muri Ko’o Fai is a place where young spirits reside.",
+ },
+ {
+  label: "Tiwu Ata Bupu",
+  description:
+   "Tiwu Ata Bupu, located about 500 meters from the other two lakes, has an area of 4.5 hectares and a depth of 67 meters. Among the three lakes, it has the highest pH at 3.02. The Lio people believe that Tiwu Ata Bupu is a place where the spirits of the elder and wise people reside.",
+ },
+];
+
+function Information({ isInformation, handleClick, visible }) {
+ return (
+  <div className={styles["kelimutu-information"]}>
+   <div className={styles["image-wrapper"]}>
+    <img src="./about/kelimutu.png" alt="Kelimutu Lake" />
+    {informationContent.slice(1).map((information, index) => {
+     const originalIndex = index + 1;
+
+     if (isInformation === "Overview" || isInformation === information.label) {
+      return (
+       <div
+        key={originalIndex}
+        className={`${styles["lake-label-wrapper"]} ${
+         styles[`lake-${originalIndex}`]
+        } ${styles.animate}`}
+       >
+        <div
+         className={styles["lake-label"]}
+         onClick={() => handleClick(information.label)}
+        >
+         <p>{information.label}</p>
+        </div>
+       </div>
+      );
+     }
+     return null;
+    })}
+   </div>
+   <div className={styles["information-text-wrapper"]}>
+    {informationContent.map(
+     (information, index) =>
+      information.label === isInformation && (
+       <div
+        key={index}
+        className={`${styles["information-text"]} ${
+         visible ? styles.show : styles.hide
+        }`}
+       >
+        {information.description}
+       </div>
+      )
+    )}
+    <div className={styles["accordion-wrapper"]}>
+     {informationContent.map((information, index) => (
+      <div
+       key={index}
+       className={`${styles["track"]} ${
+        information.label === isInformation ? styles.active : ""
+       }`}
+       onClick={() => handleClick(information.label)}
+      ></div>
+     ))}
+    </div>
+   </div>
+  </div>
+ );
+}
+
+const kelimutuFormationSteps = [
+ {
+  stage: 1,
+  title: "Ancient Mount Sokoria",
+  description:
+   "The formation begins with an ancient volcanic edifice known as Mount Sokoria. Geological traces and remaining volcanic materials indicate its past activity.",
+ },
+ {
+  stage: 2,
+  title: "A Major Eruption Creates the Sokoria Caldera",
+  description:
+   "A powerful explosive eruption destroyed Mount Sokoria’s summit and produced a wide caldera, marking the first major restructuring of the landscape.",
+ },
+ {
+  stage: 3,
+  title: "Formation of Mount Kelibara (Old Kelimutu)",
+  description:
+   "Within the caldera, new volcanic activity built a younger cone called Mount Kelibara — often regarded as the ‘older Kelimutu’.",
+ },
+ {
+  stage: 4,
+  title: "An Eruption Forms the Child of Kelibara",
+  description:
+   "Subsequent eruptions gave rise to a smaller volcanic cone known as the Child of Kelibara, located where Tiwu Ata Bupu stands today.",
+ },
+ {
+  stage: 5,
+  title: "Repeated Eruptions Over Hundreds of Years",
+  description:
+   "The Child of Kelibara experienced multiple eruptions over several centuries, gradually reshaping the summit region and weakening the older structures.",
+ },
+ {
+  stage: 6,
+  title: "Final Major Eruptions Create Mount Kelimutu",
+  description:
+   "Explosive events — including the last recorded eruption in 1968 — completed the formation of Mount Kelimutu and sculpted the three summit craters.",
+ },
+ {
+  stage: 7,
+  title: "Present-Day Kelimutu Crater Lakes",
+  description:
+   "After volcanic activity subsided, rainwater and hydrothermal fluids filled the craters, forming the three iconic crater lakes whose colors continue to change due to ongoing geochemical processes.",
+ },
+];
+
+function History() {
+ return (
+  <div className={styles["kelimutu-history"]}>
+   <div className={styles["history-wrapper"]}>
+    <ul>
+     {kelimutuFormationSteps.map((step, stage) => (
+      <li key={stage} className={styles.stage}>
+       <div className={styles["stage-description"]}>{step.description}</div>
+      </li>
+     ))}
+    </ul>
+   </div>
+  </div>
+ );
+}
+
+function AboutKelimutu() {
+ const [isInformation, setIsInformation] = useState(
+  informationContent[0].label
+ );
+
+ const [visible, setVisible] = useState(true);
+ const [active, setActive] = useState("O");
+ const refs = useRef([]);
+
+ useEffect(() => {
+  const observer = new IntersectionObserver(
+   (entries) => {
+    entries.forEach((entry) => {
+     if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+      setActive(entry.target.id);
+     }
+    });
+   },
+   {
+    threshold: [0.6],
+   }
+  );
+
+  refs.current.forEach((section) => observer.observe(section));
+
+  return () => observer.disconnect();
+ }, []);
+
+ function handleClick(label) {
+  if (label === isInformation) return;
+  setVisible(false);
+
+  setTimeout(() => {
+   setIsInformation(label);
+   setVisible(true);
+  }, 200);
+ }
+
+ function handlePillTabs(tabs) {
+  setActive(tabs);
+
+  const target = refs.current.find((el) => el?.id === tabs);
+  if (target) {
+   target.scrollIntoView({
+    behavior: "smooth",
+    block: "nearest",
+   });
+  }
+ }
+
+ return (
+  <section className={styles.about}>
+   <div
+    className={styles.header}
+    onClick={() => handleClick(informationContent[0].label)}
+   >
+    <h2
+     onClick={() => handlePillTabs("O")}
+     className={`${active === "O" ? styles.active : ""}`}
+    >
+     {active === "O" ? "Overview" : "O"}
+    </h2>
+    <h2
+     onClick={() => handlePillTabs("H")}
+     className={`${active === "H" ? styles.active : ""}`}
+    >
+     {active === "H" ? "History" : "H"}
+    </h2>
+    <h2
+     onClick={() => handlePillTabs("C")}
+     className={`${active === "C" ? styles.active : ""}`}
+    >
+     {active === "C" ? "Color Changes" : "C"}
+    </h2>
+   </div>
+   <div className={styles["about-container"]}>
+    <div
+     id="O"
+     ref={(el) => (refs.current[0] = el)}
+     className={styles["information"]}
+    >
+     <Information
+      isInformation={isInformation}
+      handleClick={handleClick}
+      visible={visible}
+     />
+    </div>
+    <div id="H" ref={(el) => (refs.current[1] = el)} className={styles.history}>
+     <History />
+    </div>
+    <div
+     id="C"
+     ref={(el) => (refs.current[2] = el)}
+     className={styles["color-changes"]}
+    >
+     <ColorChanges />
+    </div>
+   </div>
+  </section>
+ );
+}
+
+export default AboutKelimutu;
+
+Information.propTypes = {
+ isInformation: PropTypes.string,
+ handleClick: PropTypes.func,
+ visible: PropTypes.bool,
+};

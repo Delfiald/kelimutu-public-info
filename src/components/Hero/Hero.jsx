@@ -1,5 +1,11 @@
 import PropTypes from "prop-types";
 import styles from "./hero.module.css";
+import AboutKelimutu from "./AboutKelimutu";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function AnimatedText({ text, containerTag }) {
  const Tag = containerTag;
@@ -16,7 +22,7 @@ function AnimatedText({ text, containerTag }) {
  );
 }
 
-function Hero() {
+function HeroSection() {
  return (
   <section className={styles.hero}>
    <div className={styles["hero-container"]}>
@@ -38,6 +44,15 @@ function Hero() {
     </div>
    </div>
   </section>
+ );
+}
+
+function Hero() {
+ return (
+  <>
+   <HeroSection />
+   <AboutKelimutu />
+  </>
  );
 }
 
