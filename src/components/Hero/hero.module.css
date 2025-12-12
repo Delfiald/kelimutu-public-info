@@ -28,6 +28,7 @@
   var(--dark-color) 85%
  );
  opacity: 0.85;
+ z-index: 1;
 }
 
 .hero::after {
@@ -37,20 +38,35 @@
  left: 0;
  width: 100%;
  height: 100%;
+ inset: 0;
+ transform: scale(100%, 100%);
+ transform-origin: center;
  background: var(--dark-color);
- animation: fadeOut 2s 1s ease-in-out forwards;
+ animation: fadeOut 1s cubic-bezier(0.2, 0.5, 0.2, 0.7) 1s forwards;
+ z-index: 0;
+}
+
+.hero .hero-opening-layer {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: var(--dark-color);
+ z-index: 0;
 }
 
 /* Logo */
 .hero .logo {
  position: absolute;
- top: 1.25rem;
+ top: 1.75rem;
  left: 1rem;
  display: flex;
  align-items: center;
  justify-self: center;
  gap: 1rem;
- padding: 0.5rem 1rem;
+ opacity: 0;
+ animation: fadeIn 1.5s 2s cubic-bezier(0.2, 0.5, 0.2, 0.7) forwards;
 }
 
 .hero .logo .ministry-logo,
@@ -92,13 +108,13 @@
  cursor: default;
 }
 
-.hero-container .title h1 {
+.hero-container .title .hero-title {
  font-size: 3rem;
 }
 
-.hero-container .title .hero-title {
- transform: translateY(calc(50% - 1.5rem));
+.hero-container .title .hero-title h1 {
  font-size: 3rem;
+ transform: translateY(1rem);
  animation: slideUp 1.5s 1.5s cubic-bezier(0.2, 0.5, 0.2, 0.7) forwards;
 }
 
@@ -155,31 +171,60 @@
  align-items: center;
  justify-content: center;
  gap: 1rem;
+ opacity: 0.25;
 }
 
 .button-icon {
+ position: relative;
  display: flex;
  align-items: center;
  justify-content: center;
- border: 1px solid var(--light-color);
- border-radius: 50%;
- width: 50px;
- height: 50px;
+ border: 2px solid var(--light-color);
+ border-radius: 10px;
+ width: 20px;
+ height: 35px;
+ overflow: hidden;
+}
+
+.button-icon::before {
+ content: "";
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ width: 2px;
+ height: 35%;
+ background-color: var(--light-color);
+ transform: translate(-50%, -80%);
+ transform-origin: top;
+ opacity: 0;
+ animation: scrollInner 2.5s ease 0.5s infinite;
 }
 
 @keyframes fadeOut {
+ to {
+  opacity: 0;
+ }
+}
+
+@keyframes fadeIn {
  0% {
-  opacity: 1;
+  opacity: 0;
+  transform: translateY(-3px) scale(0.95);
+ }
+
+ 75% {
+  transform: translateY(0) scale(1);
  }
 
  100% {
-  opacity: 0;
+  opacity: 1;
+  transform: translateY(0) scale(1);
  }
 }
 
 @keyframes slideUp {
  0% {
-  transform: translateY(calc(50% - 1.5rem));
+  transform: translateY(1rem);
  }
 
  75% {
@@ -204,5 +249,43 @@
  100% {
   opacity: 1;
   transform: translateY(0) scale(1);
+ }
+}
+
+@keyframes scrollInner {
+ 0%,
+ 90%,
+ 100% {
+  opacity: 0;
+  transform: translate(-50%, -80%);
+ }
+
+ 15% {
+  opacity: 1;
+  transform: translate(-50%, -80%);
+ }
+
+ 50% {
+  opacity: 1;
+  transform: translate(-50%, -20%);
+ }
+
+ 55% {
+  opacity: 0;
+  transform: translate(-50%, -20%);
+ }
+}
+
+@media (max-width: 500px) {
+ .hero .logo {
+  top: 1rem;
+  left: 1rem;
+  padding: 0;
+ }
+
+ .hero .logo .ministry-logo,
+ .hero .logo .unit-logo {
+  width: 35px;
+  height: 35px;
  }
 }

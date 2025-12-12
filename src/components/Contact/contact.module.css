@@ -119,11 +119,13 @@ a {
 }
 
 footer {
+ width: 100%;
  display: flex;
  align-items: center;
- justify-content: center;
- color: var(--primary-color);
+ justify-content: start;
+ color: var(--light-color);
  text-align: center;
  font-size: 0.75rem;
  padding: 1rem;
+ background: var(--primary-color);
 }

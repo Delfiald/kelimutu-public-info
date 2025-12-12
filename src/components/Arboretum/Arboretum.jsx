@@ -4,7 +4,7 @@ function Arboretum() {
  return (
   <section className={styles.arboretum}>
    <div className={styles.header}>
-    <h2>Discover Arboretum Park</h2>
+    <h2>Discover Arboretum Park.</h2>
    </div>
    <div className={styles["arboretum-container"]}>
     <div className={styles["arboretum-text"]}>
@@ -23,7 +23,7 @@ function Arboretum() {
     </div>
     <div className={styles["arboretum-images"]}>
      <div className={styles["image-wrapper"]}>
-      <img src="/arboretum/arboretum-2.png" alt="Arboretum" />
+      <img src="/arboretum/arboretum.jpeg" alt="Arboretum" />
      </div>
     </div>
    </div>

@@ -8,12 +8,14 @@ import Gallery from "./components/Gallery/Gallery";
 import Contact from "./components/Contact/Contact";
 import Arboretum from "./components/Arboretum/Arboretum";
 import Navbar from "./components/Layout/Navbar/Navbar";
+import Hamburger from "./components/Layout/Hamburger/Hamburger";
 
 function App() {
  return (
   <>
    <main>
     <Navbar />
+    <Hamburger />
     <Hero />
     <Arboretum />
     <VisitingHours />

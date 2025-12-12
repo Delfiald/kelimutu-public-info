@@ -44,9 +44,7 @@ function HeroSection() {
     </div>
     <div className={styles["hero-bottom"]}>
      <div className={styles["scroll-button"]}>
-      <div className={styles["button-icon"]}>
-       <i className="fas fa-arrow-down"></i>
-      </div>
+      <div className={styles["button-icon"]}></div>
       <div className={styles["button-label"]}>Scroll for Details</div>
      </div>
     </div>

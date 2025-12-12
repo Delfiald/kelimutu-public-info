@@ -25,7 +25,7 @@ function VisitingHours() {
  return (
   <section id="visit" className={styles["visiting-hours"]}>
    <div className={styles.header}>
-    <h2>Visiting Hours</h2>
+    <h2>Visiting Hours.</h2>
    </div>
    <div className={styles["visiting-hours-container"]}>
     <HoursCard

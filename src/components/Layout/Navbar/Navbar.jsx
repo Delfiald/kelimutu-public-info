@@ -62,23 +62,21 @@ function Navbar() {
 
  return (
   <nav className={styles.navbar}>
-   <ul className={[styles["navbar-wrapper"]]}>
-    <li className={styles.menu}>
-     <ul className={styles["menu-wrapper"]}>
-      {sectionList
-       .filter((section) => section.label !== "")
-       .map((section) => (
-        <li
-         key={section.id}
-         className={activeSection === section.id ? styles.active : ""}
-         onClick={() => scrollHandler(section.id)}
-        >
-         {section.label}
-        </li>
-       ))}
-     </ul>
-    </li>
-    <li className={styles.lang} onClick={() => handleLang()}>
+   <div className={[styles["navbar-wrapper"]]}>
+    <ul className={styles["menu-wrapper"]}>
+     {sectionList
+      .filter((section) => section.label !== "")
+      .map((section) => (
+       <li
+        key={section.id}
+        className={activeSection === section.id ? styles.active : ""}
+        onClick={() => scrollHandler(section.id)}
+       >
+        {section.label}
+       </li>
+      ))}
+    </ul>
+    <div className={styles.lang} onClick={() => handleLang()}>
      <div className={styles["lang-wrapper"]}>
       <div
        className={`${styles["lang-en"]} ${lang === "en" ? styles.active : ""} `}
@@ -91,8 +89,8 @@ function Navbar() {
        ID
       </div>
      </div>
-    </li>
-   </ul>
+    </div>
+   </div>
   </nav>
  );
 }

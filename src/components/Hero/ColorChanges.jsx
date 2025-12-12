@@ -66,15 +66,21 @@ function ColorChanges() {
   <>
    <h2>Trace the Changing Shades of Kelimutu’s Crater Lakes</h2>
    <div className={styles["color-changes-container"]}>
-    <div className={styles["track-container"]} ref={trackRef}>
-     <div
-      className={styles.handle}
-      onMouseDown={startDrag}
-      onTouchStart={startDrag}
-      style={{
-       top: `${(index / (images.length - 1)) * 100}%`,
-      }}
-     ></div>
+    <div className={styles["track-wrapper"]}>
+     <div>{images[0].alt}</div>
+     <div className={styles["track-container"]} ref={trackRef}>
+      <div
+       className={styles.handle}
+       onMouseDown={startDrag}
+       onTouchStart={startDrag}
+       style={{
+        top: `${(index / (images.length - 1)) * 100}%`,
+       }}
+      >
+       <div></div>
+      </div>
+     </div>
+     <div>{images[images.length - 1].alt}</div>
     </div>
     <div className={styles["image-container"]}>
      <div className={styles["image-wrapper"]}>

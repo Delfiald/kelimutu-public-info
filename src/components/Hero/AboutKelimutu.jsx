@@ -263,28 +263,41 @@ function AboutKelimutu() {
 
  return (
   <section id="about" className={styles.about}>
-   <div
-    className={styles.header}
-    onClick={() => handleClick(informationContent[0].label)}
-   >
-    <h2
-     onClick={() => handlePillTabs("O")}
-     className={`${active === "O" ? styles.active : ""}`}
+   <div className={styles.header}>
+    <div
+     className={styles["pills-button"]}
+     onClick={() => handleClick(informationContent[0].label)}
     >
-     {active === "O" ? "Overview" : "O"}
-    </h2>
-    <h2
-     onClick={() => handlePillTabs("H")}
-     className={`${active === "H" ? styles.active : ""}`}
-    >
-     {active === "H" ? "History" : "H"}
-    </h2>
-    <h2
-     onClick={() => handlePillTabs("C")}
-     className={`${active === "C" ? styles.active : ""}`}
-    >
-     {active === "C" ? "Color Changes" : "C"}
-    </h2>
+     <h2
+      onClick={() => handlePillTabs("O")}
+      className={`${active === "O" ? styles.active : ""}`}
+     >
+      {active === "O" ? "Overview" : "O"}
+     </h2>
+     <h2
+      onClick={() => handlePillTabs("H")}
+      className={`${active === "H" ? styles.active : ""}`}
+     >
+      {active === "H" ? "History" : "H"}
+     </h2>
+     <h2
+      onClick={() => handlePillTabs("C")}
+      className={`${active === "C" ? styles.active : ""}`}
+     >
+      {active === "C" ? "Color Changes" : "C"}
+     </h2>
+    </div>
+    <div className={styles.location}>
+     <a
+      href={"https://maps.app.goo.gl/EznWz9uGHFcjEKco7"}
+      target="_blank"
+      rel="noopener noreferrer"
+     >
+      <span className={styles["icon-wrapper"]}>
+       <i className="fas fa-location-dot"></i>
+      </span>
+     </a>
+    </div>
    </div>
    <div className={styles["about-container"]}>
     <div

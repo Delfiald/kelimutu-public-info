@@ -3,9 +3,8 @@
  height: 100%;
  display: flex;
  align-items: center;
- justify-content: center;
- background: var(--dark-color);
- color: var(--light-color);
+ justify-content: start;
+ color: var(--primary-color);
  flex-direction: column;
  gap: 3rem;
  padding: 1rem;
@@ -19,9 +18,11 @@
 .arboretum .arboretum-container {
  display: grid;
  grid-template-columns: 1fr;
+ grid-auto-rows: min-content;
  align-items: center;
  justify-content: center;
  gap: 1rem;
+ height: 100%;
 }
 
 .arboretum .arboretum-container .arboretum-text {
@@ -38,18 +39,23 @@
  align-items: center;
  justify-content: center;
  padding: 1rem;
- width: 100%;
+ height: 450px;
+ overflow: hidden;
 }
 
 .arboretum-images .image-wrapper {
  display: flex;
  align-items: center;
  justify-content: center;
- overflow: hidden;
  width: 100%;
+ height: 100%;
+ border-radius: 15px;
+ box-shadow: inset 0 0 5px var(--dark-color), 0 0 5px var(--dark-color);
+ overflow: hidden;
 }
 
 .arboretum-images .image-wrapper img {
+ position: relative;
  width: 100%;
  height: 100%;
  object-fit: cover;

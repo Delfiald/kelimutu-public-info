@@ -1,24 +1,21 @@
 .navbar {
  position: fixed;
- top: 0;
+ top: 1rem;
  display: flex;
  align-items: center;
  justify-content: center;
  flex-direction: column;
- width: 100%;
  min-height: 70px;
  padding: 0.5rem 1rem;
  z-index: 2;
 }
 
 .navbar .navbar-wrapper {
- display: grid;
- grid-template-columns: 75px 1fr 75px;
+ position: relative;
  align-items: center;
  justify-content: center;
  width: 100%;
  height: 100%;
- padding: 1rem;
  position: relative;
  font-weight: bold;
  color: var(--light-color);
@@ -26,9 +23,8 @@
 }
 
 /* Menu */
-.navbar .navbar-wrapper .menu {
+.navbar .navbar-wrapper {
  justify-self: center;
- grid-column: 2 / 3;
  position: relative;
  display: flex;
  align-items: center;
@@ -38,7 +34,18 @@
  width: 100%;
 }
 
-.navbar .navbar-wrapper .menu::before {
+.navbar .navbar-wrapper .menu-wrapper {
+ position: relative;
+ flex: 1;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 0.5rem;
+ opacity: 0;
+ animation: fadeIn 1.5s 2s cubic-bezier(0.2, 0.5, 0.2, 0.7) forwards;
+}
+
+.navbar .navbar-wrapper .menu-wrapper::before {
  content: "";
  position: absolute;
  top: 50%;
@@ -54,15 +61,7 @@
  padding: 0.5rem;
 }
 
-.navbar .navbar-wrapper .menu .menu-wrapper {
- flex: 1;
- display: flex;
- align-items: center;
- justify-content: space-between;
- gap: 0.5rem;
-}
-
-.navbar .navbar-wrapper .menu .menu-wrapper > li {
+.navbar .navbar-wrapper .menu-wrapper > li {
  display: flex;
  align-items: center;
  justify-content: center;
@@ -74,12 +73,12 @@
  padding: 1rem;
 }
 
-.navbar .navbar-wrapper .menu .menu-wrapper > li:hover,
-.navbar .navbar-wrapper .menu .menu-wrapper > li.active {
+.navbar .navbar-wrapper .menu-wrapper > li:hover,
+.navbar .navbar-wrapper .menu-wrapper > li.active {
  color: #aafc06;
 }
 
-.navbar .navbar-wrapper .menu .menu-wrapper > li::before {
+.navbar .navbar-wrapper .menu-wrapper > li::before {
  content: "";
  position: absolute;
  bottom: 0.5rem;
@@ -92,22 +91,28 @@
  transition: transform 0.25s ease;
 }
 
-.navbar .navbar-wrapper .menu .menu-wrapper > li:hover::before,
-.navbar .navbar-wrapper .menu .menu-wrapper > li.active::before {
+.navbar .navbar-wrapper .menu-wrapper > li:hover::before,
+.navbar .navbar-wrapper .menu-wrapper > li.active::before {
  transform-origin: left;
  transform: translate(-50%, -50%) scaleX(1);
 }
 
 /* Language */
-.navbar .navbar-wrapper .lang {
+.lang {
+ position: fixed;
+ right: 1rem;
  flex: 0.15;
  display: flex;
  align-items: center;
  justify-content: center;
  gap: 1rem;
+ color: var(--light-color);
+ z-index: 2;
+ opacity: 0;
+ animation: fadeIn 1.5s 2s cubic-bezier(0.2, 0.5, 0.2, 0.7) forwards;
 }
 
-.navbar .navbar-wrapper .lang .lang-wrapper {
+.lang .lang-wrapper {
  position: relative;
  display: flex;
  align-items: center;
@@ -121,7 +126,7 @@
  transition: var(--transition-fast) all ease-in-out;
 }
 
-.navbar .navbar-wrapper .lang .lang-wrapper::before {
+.lang .lang-wrapper::before {
  content: "";
  position: absolute;
  top: 50%;
@@ -135,8 +140,8 @@
  background-color: #0000004d;
 }
 
-.navbar .navbar-wrapper .lang .lang-wrapper .lang-en,
-.navbar .navbar-wrapper .lang .lang-wrapper .lang-id {
+.lang .lang-wrapper .lang-en,
+.lang .lang-wrapper .lang-id {
  display: flex;
  align-items: center;
  justify-content: center;
@@ -149,20 +154,42 @@
  overflow: hidden;
 }
 
-.navbar .navbar-wrapper .lang .lang-wrapper:hover .lang-en,
-.navbar .navbar-wrapper .lang .lang-wrapper:hover .lang-id {
+.lang .lang-wrapper:hover .lang-en,
+.lang .lang-wrapper:hover .lang-id {
  white-space: nowrap;
  opacity: 1;
  flex: 1 1 auto;
  transition: var(--transition-fast) all ease-in-out;
 }
 
-.navbar .navbar-wrapper .lang .lang-wrapper .active {
+.lang .lang-wrapper .active {
  white-space: nowrap;
  opacity: 1;
  flex: 1 1 auto;
 }
 
-.navbar .navbar-wrapper .lang .lang-wrapper:hover .active {
+.lang .lang-wrapper:hover .active {
  color: #aafc06;
+}
+
+@keyframes fadeIn {
+ 0% {
+  opacity: 0;
+  transform: translateY(-3px) scale(0.95);
+ }
+
+ 75% {
+  transform: translateY(0) scale(1);
+ }
+
+ 100% {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+ }
+}
+
+@media (max-width: 500px) {
+ .navbar {
+  display: none;
+ }
 }
