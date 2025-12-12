@@ -151,6 +151,7 @@
  padding: 1rem;
  width: calc(100% - 2rem);
  height: calc(100% - 2rem);
+ font-size: 1.5rem;
  display: flex;
  align-items: center;
  justify-content: center;
@@ -192,7 +193,7 @@
  transition: var(--transition-medium) 0.5s all ease;
  cursor: pointer;
  display: flex;
- align-items: start;
+ align-items: center;
  justify-content: center;
  flex-direction: column;
  padding: 0 1rem;
