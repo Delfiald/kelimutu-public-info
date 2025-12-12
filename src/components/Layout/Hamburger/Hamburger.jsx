@@ -126,7 +126,6 @@ function Hamburger() {
          }}
         >
          <div className={styles["section-label-wrapper"]}>{section.label}</div>
-         <div className={styles["section-label-wrapper"]}>{section.label}</div>
         </li>
        ))}
      </ul>
