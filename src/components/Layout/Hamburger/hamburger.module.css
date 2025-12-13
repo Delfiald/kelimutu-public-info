@@ -238,7 +238,7 @@
  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
  .hamburger,
  .hamburger-menu {
   display: flex;

@@ -75,31 +75,38 @@ function Contact() {
         </p>
        </div>
       </div>
-      <div className={styles["contact-list"]}>
-       {contacts.map((contact, index) => (
-        <a
-         href={contact.href}
-         key={index}
-         className={styles["contact-wrapper"]}
-        >
-         <div className={styles["contact-icon"]}>{contact.icon}</div>
-         <div className={styles["contact-address"]}>{contact.address}</div>
-        </a>
-       ))}
-      </div>
-      <div className={styles["media-list"]}>
-       {medias.map((media, index) => (
-        <a
-         key={index}
-         href={media.address}
-         target="_blank"
-         rel="noopener noreferrer"
-         className={styles["media-wrapper"]}
-        >
-         <div className={styles["media-icon"]}>{media.icon}</div>
-         <div className={styles["arrow-icon"]}></div>
-        </a>
-       ))}
+      <div className={styles["contact-group"]}>
+       <div className={styles["contact-list"]}>
+        {contacts.map((contact, index) => (
+         <a
+          href={contact.href}
+          key={index}
+          className={styles["contact-wrapper"]}
+         >
+          <div className={styles["contact-icon"]}>{contact.icon}</div>
+          <div className={styles["contact-address"]}>{contact.address}</div>
+         </a>
+        ))}
+       </div>
+       <div className={styles["media-list"]}>
+        {medias.map((media, index) => (
+         <a
+          key={index}
+          href={media.address}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles["media-wrapper"]}
+         >
+          <div className={styles["media-icon-wrapper"]}>
+           <div className={styles["media-icon"]}>{media.icon}</div>
+           <div className={styles["media-label"]}>{media.label}</div>
+          </div>
+          <div className={styles["arrow-icon"]}>
+           <i className="fas fa-arrow-right"></i>
+          </div>
+         </a>
+        ))}
+       </div>
       </div>
      </div>
     </section>

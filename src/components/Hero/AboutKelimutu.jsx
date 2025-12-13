@@ -25,7 +25,7 @@ const informationContent = [
  },
 ];
 
-function Information({ isInformation, handleClick, visible }) {
+function Information({ changeIndex, activeIndex, visible }) {
  return (
   <div className={styles["kelimutu-information"]}>
    <div className={styles["image-wrapper"]}>
@@ -33,7 +33,7 @@ function Information({ isInformation, handleClick, visible }) {
     {informationContent.slice(1).map((information, index) => {
      const originalIndex = index + 1;
 
-     if (isInformation === "Overview" || isInformation === information.label) {
+     if (activeIndex === 0 || activeIndex === originalIndex) {
       return (
        <div
         key={originalIndex}
@@ -43,7 +43,7 @@ function Information({ isInformation, handleClick, visible }) {
        >
         <div
          className={styles["lake-label"]}
-         onClick={() => handleClick(information.label)}
+         onClick={() => changeIndex(originalIndex)}
         >
          <p>{information.label}</p>
         </div>
@@ -56,27 +56,53 @@ function Information({ isInformation, handleClick, visible }) {
    <div className={styles["information-text-wrapper"]}>
     {informationContent.map(
      (information, index) =>
-      information.label === isInformation && (
+      index === activeIndex && (
        <div
         key={index}
         className={`${styles["information-text"]} ${
          visible ? styles.show : styles.hide
         }`}
        >
-        {information.description}
+        <div className={styles["information-label"]}>
+         {index === 0 ? "Mount Kelimutu" : information.label}
+        </div>
+        <div className={styles["information-description"]}>
+         {information.description}
+        </div>
        </div>
       )
     )}
     <div className={styles["accordion-wrapper"]}>
+     <div
+      className={`${styles["prev-button"]} ${
+       activeIndex < 1 ? styles.hide : ""
+      }`}
+      onClick={() => changeIndex(activeIndex - 1)}
+     >
+      <i className="fas fa-chevron-left"></i>
+     </div>
      {informationContent.map((information, index) => (
       <div
        key={index}
        className={`${styles["track"]} ${
-        information.label === isInformation ? styles.active : ""
+        index === activeIndex ? styles.active : ""
        }`}
-       onClick={() => handleClick(information.label)}
-      ></div>
+       onClick={() => changeIndex(index)}
+      >
+       <div className={styles["information-label"]}>
+        {" "}
+        {index === 0 ? "Mount Kelimutu" : information.label}
+       </div>
+      </div>
      ))}
+     <div
+      className={`${styles["next-button"]} ${
+       activeIndex >= informationContent.length - 1 ? styles.hide : ""
+      }`}
+      onClick={() => changeIndex(activeIndex + 1)}
+     >
+      <i className="fas fa-chevron-right"></i>
+     </div>
     </div>
    </div>
   </div>
@@ -212,6 +238,7 @@ function History() {
 }
 
 function AboutKelimutu() {
+ const [activeIndex, setActiveIndex] = useState(0);
  const [isInformation, setIsInformation] = useState(
   informationContent[0].label
  );
@@ -238,6 +265,18 @@ function AboutKelimutu() {
 
   return () => observer.disconnect();
  }, []);
+
+ function changeIndex(nextIndex) {
+  if (nextIndex < 0 || nextIndex >= informationContent.length) return;
+  if (nextIndex === activeIndex) return;
+
+  setVisible(false);
+
+  setTimeout(() => {
+   setActiveIndex(nextIndex);
+   setVisible(true);
+  }, 200);
+ }
 
  function handleClick(label) {
   if (label === isInformation) return;
@@ -308,6 +347,8 @@ function AboutKelimutu() {
      <Information
       isInformation={isInformation}
       handleClick={handleClick}
+      changeIndex={changeIndex}
+      activeIndex={activeIndex}
       visible={visible}
      />
     </div>
@@ -331,5 +372,7 @@ export default AboutKelimutu;
 Information.propTypes = {
  isInformation: PropTypes.string,
  handleClick: PropTypes.func,
+ changeIndex: PropTypes.func,
+ activeIndex: PropTypes.number,
  visible: PropTypes.bool,
 };

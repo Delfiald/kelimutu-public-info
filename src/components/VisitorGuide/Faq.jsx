@@ -2,6 +2,8 @@ import { useState } from "react";
 import styles from "./visitorGuide.module.css";
 import PropTypes from "prop-types";
 
+import FaqIcon from "../../assets/faq/Faq.svg?react";
+
 const faq = [
  {
   question:
@@ -60,15 +62,13 @@ function FaqContainer({ isOpen, toggleOpen }) {
    {faq.map((item, index) => (
     <div key={index} className={styles["faq-wrapper"]}>
      <div
-      className={styles["question-wrapper"]}
+      className={`${styles["question-wrapper"]} ${
+       isOpen === index ? styles.active : ""
+      }`}
       onClick={() => toggleOpen(index)}
      >
       <div className={styles.question}>{item.question}</div>
-      {isOpen === index ? (
-       <i className="fas fa-chevron-up"></i>
-      ) : (
-       <i className="fas fa-chevron-down"></i>
-      )}
+      <i className="fas fa-chevron-down"></i>
      </div>
      {isOpen === index && (
       <div className={styles["answer-wrapper"]}>
@@ -108,6 +108,20 @@ function Faq() {
     <div>
      this section covers helpful answers to the questions visitors often wonder
      about
+    </div>
+    <div className={styles["faq-icon-wrapper"]}>{<FaqIcon />}</div>
+    <div className={styles.bottom}>
+     <p>Is your question no listed here?</p>
+     <p>
+      {"Feel free to reach out via the "}
+      <span
+       className={styles["anchor-link"]}
+       onClick={() => scrollHandler("contact")}
+      >
+       Get in Touch
+      </span>
+      {" section."}
+     </p>
     </div>
    </div>
    <FaqContainer isOpen={isOpen} toggleOpen={toggleOpen} />

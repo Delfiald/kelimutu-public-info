@@ -111,13 +111,13 @@ function CategoryBox({
   };
 
   return (
-   <div className={styles.dropdown}>
+   <div
+    className={`${styles.dropdown} ${
+     openIndex === item.key ? styles.active : ""
+    }`}
+   >
     <div className={styles.trigger} onClick={toggleDropdown}>
-     {openIndex === item.key ? (
-      <i className="fas fa-chevron-up"></i>
-     ) : (
-      <i className="fas fa-chevron-down"></i>
-     )}
+     <i className="fas fa-chevron-down"></i>
      <p>{itemLabel.label}</p>
     </div>
 
@@ -130,7 +130,7 @@ function CategoryBox({
         onClick={() => selectOption(option.key)}
         className={styles.option}
        >
-        {option.label}
+        <div className={styles["option-wrapper"]}>{option.label}</div>
        </div>
       ))}
      </div>
@@ -219,7 +219,10 @@ function CategoryBox({
  };
 
  return fees.map((fee) => (
-  <div className={styles["category-wrapper"]} key={fee.id}>
+  <div
+   className={`${styles["category-wrapper"]} ${styles[fee.id] ?? ""}`}
+   key={fee.id}
+  >
    <div className={styles["category-container"]}>
     <div className={styles.category}>
      <div className={styles["category-label"]}>{fee.label}</div>

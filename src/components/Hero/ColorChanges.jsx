@@ -28,9 +28,27 @@ function ColorChanges() {
  const trackRef = useRef(null);
  const [index, setIndex] = useState(0);
 
- const getClientY = (e) => {
-  if (e.touches) return e.touches[0].clientY;
-  return e.clientY;
+ const getClientPos = (e, horizontal = false) => {
+  if (e.touches)
+   return horizontal ? e.touches[0].clientX : e.touches[0].clientY;
+  return horizontal ? e.clientX : e.clientY;
+ };
+
+ const isResponsiveHorizontal = () => {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  const ratio = height / width;
+
+  if (width >= 1024 && ratio < 1.2) return false;
+
+  if (width <= 375 && height <= 667) return false;
+
+  if (ratio >= 1.8) return true;
+
+  if (width >= 360 && ratio > 1) return true;
+
+  return false;
  };
 
  const handleDrag = (e) => {
@@ -39,8 +57,12 @@ function ColorChanges() {
   if (!track) return;
 
   const rect = track.getBoundingClientRect();
-  const y = getClientY(e) - rect.top;
-  const percentage = Math.min(Math.max(y / rect.height, 0), 1);
+
+  const pos = getClientPos(e, isResponsiveHorizontal());
+
+  const percentage = isResponsiveHorizontal()
+   ? Math.min(Math.max((pos - rect.left) / rect.width, 0), 1)
+   : Math.min(Math.max((pos - rect.top) / rect.height, 0), 1);
 
   const newIndex = Math.floor(percentage * (images.length - 1));
   setIndex(newIndex);
@@ -74,7 +96,9 @@ function ColorChanges() {
        onMouseDown={startDrag}
        onTouchStart={startDrag}
        style={{
-        top: `${(index / (images.length - 1)) * 100}%`,
+        ...(isResponsiveHorizontal()
+         ? { left: `${(index / (images.length - 1)) * 100}%`, top: "50%" }
+         : { top: `${(index / (images.length - 1)) * 100}%`, left: "50%" }),
        }}
       >
        <div></div>

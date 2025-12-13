@@ -114,10 +114,16 @@ const Fees = [
 // Mobile
 function Card() {
  return Fees.map((section) => (
-  <div key={section.id} className={styles["fees-card"]}>
+  <div
+   key={section.id}
+   className={`${styles["fees-card"]} ${styles[section.id]}`}
+  >
    <div className={styles["card-header"]}>
-    <div className={styles.icon}>{section.icon}</div>
-    <div className={styles.title}>{section.title}</div>
+    <div className={styles["icon-title-wrapper"]}>
+     <div className={styles.icon}>{section.icon}</div>
+     <div className={styles.title}>{section.title}</div>
+    </div>
+    <div className={styles.rate}>Rate</div>
    </div>
    <div className={styles["card-content"]}>
     {section.types.map((type, index) => (
@@ -174,7 +180,14 @@ export function RegulationModal({ url, toggleModal }) {
     <div className={styles["modal-container"]}>
      <div className={styles["pdf-wrapper"]}>
       <Document file={url} onLoadSuccess={onDocumentLoadSuccess}>
-       {numPages && <Page pageNumber={pageNumber} width={600} />}
+       {numPages && (
+        <Page
+         pageNumber={pageNumber}
+         renderTextLayer={false}
+         renderAnnotationLayer={false}
+         width={Math.min(600, window.innerWidth - 64)}
+        />
+       )}
       </Document>
      </div>
      <div className={styles["pagination"]}>

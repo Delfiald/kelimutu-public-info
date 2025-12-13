@@ -7,6 +7,8 @@
  overflow: hidden;
  width: 100%;
  min-height: 50vh;
+ background: #f7f9f8;
+ box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.25);
 }
 
 .gallery .header {
@@ -139,4 +141,35 @@
  font-weight: lighter;
  align-self: flex-end;
  font-size: 0.5rem;
+}
+
+@media (min-width: 768px) {
+ .gallery .header {
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 2rem;
+  align-content: center;
+ }
+
+ .gallery .header h2 {
+  flex: 1;
+  font-size: 5rem;
+  text-align: left;
+ }
+
+ .gallery .header > div {
+  flex: 1;
+  font-size: 1.5rem;
+  justify-self: start;
+ }
+
+ .gallery .header > div > div {
+  width: 25%;
+ }
+}
+
+@media (min-width: 1300px) {
+ .gallery .header > div {
+  font-size: 2rem;
+ }
 }

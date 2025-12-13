@@ -7,6 +7,7 @@ import Amount from "../../assets/payment/Amount.svg?react";
 import Confirm from "../../assets/payment/Confirm.svg?react";
 import Save from "../../assets/payment/Save.svg?react";
 import Show from "../../assets/payment/Show.svg?react";
+import { useState } from "react";
 
 const verticalStepper = [
  {
@@ -40,6 +41,7 @@ const verticalStepper = [
 ];
 
 function PaymentSection() {
+ const [activeStep, setActiveStep] = useState(0);
  return (
   <>
    <div className={styles.header}>
@@ -51,9 +53,16 @@ function PaymentSection() {
    <div className={styles["payment-container"]}>
     <ul className={styles["payment-steps"]}>
      {verticalStepper.map((item, i) => (
-      <li key={i} className={styles.step}>
-       <div className={styles["step-pict"]}>{item.pict}</div>
-       <div className={styles["step-name"]}>{item.name}</div>
+      <li
+       key={i}
+       className={`${styles.step} ${i === activeStep ? styles.active : ""}`}
+       onClick={() => setActiveStep(i)}
+      >
+       <div className={styles["step-wrapper"]}>
+        <div className={styles["step-pict"]}>{item.pict}</div>
+        <div className={styles["step-name"]}>{item.name}</div>
+       </div>
+       <div className={styles["step-number"]}>{i + 1}</div>
       </li>
      ))}
     </ul>

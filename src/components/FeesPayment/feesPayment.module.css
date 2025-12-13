@@ -79,17 +79,40 @@
  gap: 1rem;
  width: 100%;
  padding: 1rem;
- border: 1px solid var(--primary-color);
+ border: 1px solid #e1e6e3;
+ background: var(--light-color);
  border-radius: 15px;
+ transition: var(--transition-fast) all ease;
+}
+
+.fees-container .fees-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 2px 2px var(--dark-color);
 }
 
 .fees-container .fees-card .card-header {
  display: flex;
  align-items: center;
- justify-content: start;
+ justify-content: space-between;
  gap: 1rem;
  font-weight: 500;
  width: 100%;
+}
+
+.fees-container .fees-card .card-header .icon-title-wrapper {
+ display: flex;
+ align-items: center;
+ justify-content: start;
+ gap: 1rem;
+ flex: 1;
+}
+
+.fees-container .fees-card .card-header .rate {
+ display: none;
+ align-items: center;
+ justify-content: center;
+ flex: 1;
+ font-size: 1.5rem;
 }
 
 .fees-container .fees-card .card-header .icon {
@@ -229,7 +252,7 @@
  left: 0;
  width: 100%;
  height: 100%;
- z-index: 2;
+ z-index: 5;
 }
 
 .modal-wrapper {
@@ -271,7 +294,7 @@
 .modal-container .pdf-wrapper {
  display: flex;
  align-items: flex-start;
- justify-content: start;
+ justify-content: center;
  width: 100%;
  overflow: auto;
 }
@@ -408,6 +431,15 @@ input {
  transition: var(--transition-medium) all ease;
 }
 
+.payment-steps .step .step-wrapper {
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 1rem;
+}
+
 .payment-steps .step:hover {
  filter: brightness(0.85);
 }
@@ -468,6 +500,10 @@ input {
 
 .payment-steps .step .step-name {
  font-size: 0.95rem;
+}
+
+.payment-steps .step .step-number {
+ display: none;
 }
 
 .cash-payment {
@@ -644,9 +680,24 @@ input {
  border-bottom: 1px solid var(--primary-color);
  padding: 0.25rem 0;
  cursor: pointer;
+ font-weight: 600;
+ transition: var(--transition-fast) all ease;
+}
+
+.type-wrapper .dropdown .trigger:hover {
+ filter: brightness(1.5);
+}
+
+.type-wrapper .dropdown .trigger i {
+ transition: var(--transition-fast) all ease;
+}
+
+.type-wrapper .dropdown.active .trigger i {
+ transform: rotate(180deg);
 }
 
 .type-wrapper .options {
+ width: 100%;
  position: absolute;
  top: 100%;
  display: flex;
@@ -676,6 +727,14 @@ input {
  filter: brightness(0.5);
 }
 
+.type-wrapper .option .option-wrapper {
+ transition: var(--transition-fast) all ease;
+}
+
+.type-wrapper .option .option-wrapper:hover {
+ transform: translateX(-5px);
+}
+
 .type-wrapper .region-wrapper,
 .type-wrapper .count-wrapper {
  display: flex;
@@ -691,6 +750,12 @@ input {
  flex-direction: row;
  overflow: hidden;
  font-size: 0.75rem;
+}
+
+.type-wrapper .region-wrapper .input-wrapper label:hover {
+ background: var(--primary-color);
+ color: var(--light-color);
+ filter: brightness(1.2);
 }
 
 .type-wrapper .region-wrapper .input-wrapper {
@@ -712,6 +777,7 @@ input {
  background-color: var(--light-200-color);
  color: var(--primary-color);
  border: 1px solid var(--primary-color);
+ transition: var(--transition-fast) all ease;
 }
 
 .type-wrapper
@@ -754,6 +820,13 @@ input {
  align-items: center;
  justify-content: center;
  overflow: hidden;
+ transition: var(--transition-fast) all ease;
+}
+
+.type-wrapper .count-wrapper .decrease-button:hover,
+.type-wrapper .count-wrapper .increase-button:hover,
+.type-wrapper .remove-button:hover {
+ filter: brightness(1.2);
 }
 
 .type-wrapper .remove-button {
@@ -773,6 +846,7 @@ input {
  background: var(--error-color);
  color: var(--light-color);
  padding: 5px;
+ transition: var(--transition-fast) all ease;
 }
 
 .add-type-wrapper {
@@ -784,13 +858,22 @@ input {
  border-top: 1px solid var(--primary-color);
  padding: 1rem;
  cursor: pointer;
+ transition: var(--transition-fast) all ease;
+ border-end-end-radius: 13px;
+ border-end-start-radius: 13px;
+}
+
+.add-type-wrapper:hover {
+ background: var(--primary-color);
+ color: var(--light-color);
 }
 
 /* Total */
 .total-container {
  position: absolute;
  top: 100%;
- transform: translateY(-50%);
+ left: 50%;
+ transform: translate(-50%, -50%);
  display: flex;
  align-items: center;
  justify-content: center;
@@ -820,12 +903,14 @@ input {
  display: flex;
  align-items: center;
  justify-content: center;
- padding: 0.75rem;
- border-radius: 15px;
+ gap: 0.5rem;
+ padding: 1rem;
+ border-radius: 25px;
  cursor: pointer;
  color: var(--light-color);
  background: var(--primary-color);
  transition: var(--transition-medium) all ease-in-out;
+ box-shadow: 0 2px 5px var(--dark-color);
 }
 
 .fees-payment .bottom .next-button {
@@ -835,4 +920,209 @@ input {
 .fees-payment .bottom .prev-button:hover,
 .fees-payment .bottom .next-button:hover {
  filter: brightness(0.85);
+}
+
+@media (min-width: 700px) {
+ .fees-payment {
+  max-width: 85%;
+ }
+
+ .fees-payment .header h2 {
+  text-align: left;
+  align-self: start;
+  font-size: 3rem;
+ }
+
+ .fees-payment .header > div:not(.regulation) {
+  align-self: start;
+  font-size: 1rem;
+ }
+
+ .fees-container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+ }
+
+ .fees-container .fees-card .card-header .rate {
+  display: flex;
+ }
+
+ .fees-container .fees-card .card-content .fees-type {
+  flex-direction: row;
+  gap: 2rem;
+ }
+
+ .fees-container .fees-card .card-content .type-header {
+  grid-template-rows: 1fr 1fr;
+ }
+
+ .fees-container .otherServices .card-content .type-header {
+  grid-template-rows: 1fr;
+ }
+
+ .fees-container .fees-card .card-content .type-header::before {
+  top: 50%;
+  transform: translateY(-50%);
+ }
+
+ .fees-container .otherServices .card-content .type-header::before,
+ .fees-container .otherServices .card-content .type-prices::before {
+  top: calc(100% + 0.25rem) !important;
+  transform: translateY(0);
+ }
+
+ .fees-container .otherServices .card-content .fees-type {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr;
+  align-items: stretch;
+  height: min-content;
+  gap: 0.5rem 2rem;
+ }
+
+ .fees-container .fees-card .card-content .type-prices:not(.has-multiple) {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+ }
+
+ .fees-container .otherServices .card-content .type-note {
+  grid-column: 2/3;
+ }
+
+ .fees-container .vehicle .card-content .type-prices {
+  position: relative;
+ }
+
+ .fees-container .otherServices .card-content .type-prices {
+  display: grid;
+  grid-template-rows: 1fr !important;
+ }
+
+ .fees-container
+  .fees-card
+  .card-content
+  .type-prices:not(.has-multiple)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 1px;
+  background: var(--primary-color);
+ }
+
+ .fees-container .otherServices .card-content .type-note::before {
+  display: none;
+ }
+
+ /* Payment Method */
+ .payment-steps {
+  width: 80%;
+  display: flex;
+  gap: 0;
+  transition: var(--transition-medium) all ease;
+  height: 350px;
+ }
+
+ .payment-steps::before {
+  display: none;
+ }
+
+ .payment-steps .step {
+  cursor: pointer;
+  width: 15%;
+  border-radius: 0;
+  box-shadow: none;
+  justify-content: space-evenly;
+  border: 1px solid var(--primary-color);
+  transition: var(--transition-medium) all ease;
+  background: var(--light-color);
+  color: var(--primary-color);
+  overflow: hidden;
+ }
+
+ .payment-steps .step .step-wrapper {
+  flex-direction: row;
+  opacity: 0;
+  transition: var(--transition-very-fast) all ease;
+ }
+
+ .payment-steps .step.active .step-wrapper {
+  opacity: 1;
+  transition: var(--transition-medium) 0.3s all ease;
+ }
+
+ .payment-steps .step .step-wrapper .step-pict {
+  min-width: 100px;
+ }
+
+ .payment-steps .step .step-wrapper .step-name {
+  font-size: 1rem;
+ }
+
+ .payment-steps .step:hover {
+  width: 25%;
+ }
+
+ .payment-steps .step.active {
+  width: 100%;
+  background: var(--primary-color);
+  color: var(--light-color);
+ }
+
+ .payment-steps .step .step-number {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--primary-color);
+  -moz-text-stroke: 2px var(--primary-color);
+  text-stroke: 2px var(--primary-color);
+  transition: var(--transition-medium) all ease;
+ }
+
+ .payment-steps .step.active .step-number {
+  top: 85%;
+  color: var(--light-color);
+  -webkit-text-stroke: 2px var(--light-color);
+  -moz-text-stroke: 2px var(--light-color);
+  text-stroke: 2px var(--light-color);
+ }
+
+ .payment-steps .step::before,
+ .payment-steps .step::after {
+  display: none;
+ }
+
+ .payment-steps .step:nth-child(even) {
+  transform: translateX(0);
+ }
+
+ .cash-payment {
+  align-self: start;
+ }
+
+ /* Calculator */
+ .calculator-container {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(2, 1fr);
+ }
+
+ .calculator-container .category-wrapper.photoVideo {
+  grid-row: 2/4;
+ }
+
+ .calculator-container .category-wrapper.drone {
+  grid-column: 2/3;
+ }
 }
