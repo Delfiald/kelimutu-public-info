@@ -25,7 +25,10 @@ export const visitorRules = {
 export const faq = [
  {
   question: "faq.q1",
-  answer: "faq.a1",
+  answer_before: "faq.a1.before",
+  answer_link: "faq.a1.link",
+  answer_after: "faq.a1.after",
+  scrollTarget: "https://maps.app.goo.gl/EznWz9uGHFcjEKco7",
  },
  {
   question: "faq.q2",

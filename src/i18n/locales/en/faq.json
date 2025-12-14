@@ -10,7 +10,11 @@
     },
   "faq": {
     "q1": "How far is it from the ticket counter to the viewing area (parking/summit)?",
-    "a1": "It’s approximately 3 km from the ticket counter to the parking area, and then around 15–20 minutes on foot from the parking area to the summit.",
+        "a1": {
+      "before": "It’s approximately 3 km from the ticket counter to the parking area, and then around 15–20 minutes on foot from the parking area to the summit. Check the ",
+      "link": "map here",
+      "after": " for guidance."
+    },
     "q2": "What is the weather like at the summit?",
     "a2": "The summit weather is unpredictable and can change rapidly. Fog and sudden visibility changes are common.",
     "q3": "How much is the entrance fee?",
