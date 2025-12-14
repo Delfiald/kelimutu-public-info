@@ -1,0 +1,258 @@
+/* Utilities */
+ul {
+ margin: 0;
+ padding: 0;
+}
+
+ul li {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+}
+
+.about {
+ position: relative;
+ width: 100%;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 3rem;
+ color: var(--primary-color);
+ background: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.95) 0%,
+  var(--light-color) 25%
+ );
+ padding: 1rem 0;
+}
+
+.about::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 80px;
+ background: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.55) 0%,
+  rgba(0, 0, 0, 0.35) 30%,
+  rgba(0, 0, 0, 0.15) 60%,
+  rgba(0, 0, 0, 0) 100%
+ );
+ z-index: -1;
+}
+
+.about-header {
+ align-self: start;
+ position: relative;
+ padding: 0 1rem;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ text-align: center;
+ white-space: nowrap;
+ width: 100%;
+ min-height: 45px;
+}
+
+.about-header .pills-button {
+ align-self: start;
+ position: relative;
+ width: min-content;
+ display: flex;
+ height: 100%;
+ align-items: end;
+ justify-content: space-between;
+ gap: 0.5rem;
+}
+
+.about-header .pills-button::before {
+ content: "";
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ height: 2px;
+ transform: translate(0, 0);
+ background: var(--light-200-color);
+}
+
+.about-header h2 {
+ width: 100%;
+ padding: 0.5rem;
+ font-size: 0.75rem;
+ color: var(--light-color);
+ transition: var(--transition-fast) all ease;
+ cursor: pointer;
+}
+
+.about-header h2.active {
+ color: var(--dark-color);
+ font-size: 1.5rem;
+ background: var(--light-200-color);
+}
+
+.about .location {
+ padding: 0.5rem;
+ cursor: pointer;
+}
+
+.about .location a {
+ color: var(--light-color);
+}
+
+.about .location .icon-wrapper {
+ position: relative;
+ width: 100%;
+ height: 100%;
+}
+
+.about .location .icon-wrapper i {
+ position: relative;
+ z-index: 1;
+ font-size: 1.5rem;
+}
+
+.about .location .icon-wrapper::before,
+.about .location .icon-wrapper::after {
+ content: "";
+ position: absolute;
+ bottom: -5px;
+ left: 50%;
+ width: 15px;
+ height: 5px;
+ border-radius: 50%;
+ transform: translate(-50%, 0);
+ z-index: 0;
+}
+
+.about .location .icon-wrapper::after {
+ border: 1px solid var(--error-color);
+}
+
+.about .location .icon-wrapper::before {
+ bottom: -4px;
+ background: var(--error-color);
+ transform-origin: center;
+ transform: translate(-50%, 0) scale(0);
+}
+
+.about .location:hover .icon-wrapper::before {
+ animation: locationAnim 1s ease infinite;
+}
+
+.about .location:hover .icon-wrapper::after {
+ animation: locationBorderAnim 1s ease infinite;
+}
+
+.about .about-container {
+ display: grid;
+ grid-template-columns: repeat(3, 100%);
+ align-items: center;
+ justify-content: start;
+ height: 100%;
+ width: 100%;
+ overflow-x: scroll;
+ z-index: 1;
+ scroll-snap-type: x mandatory;
+ scrollbar-width: none;
+}
+
+.about .about-container::-webkit-scrollbar {
+ display: none;
+}
+
+.about .about-container > section {
+ padding: 1rem;
+ scroll-snap-align: center;
+}
+
+/* Overview */
+.information {
+ height: 100%;
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+/* History */
+.history {
+ padding: 0 1rem !important;
+ height: 100%;
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+}
+
+/* Color Changes */
+.color-changes {
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+@keyframes locationAnim {
+ 0% {
+  transform: translate(-50%, 0) scale(0);
+ }
+
+ 50% {
+  transform: translate(-50%, 0) scale(1);
+  box-shadow: 0 0 10px var(--error-color);
+ }
+
+ 100% {
+  transform: translate(-50%, 0) scale(1);
+  box-shadow: 0 0 10px var(--error-color);
+ }
+}
+
+@keyframes locationBorderAnim {
+ 0% {
+  transform: translate(-50%, 0) scale(1);
+ }
+
+ 25% {
+  transform: translate(-50%, 0) scale(1);
+ }
+
+ 100% {
+  transform: translate(-50%, 0) scale(1.5);
+ }
+}
+
+@media (min-width: 768px) and (min-height: 1280px) and (orientation: portrait) {
+ .about-header {
+  min-height: 70px;
+ }
+
+ .about-header h2 {
+  font-size: 1.5rem;
+ }
+
+ .about-header h2.active {
+  font-size: 2.25rem;
+ }
+}
+
+@media (min-width: 1200px) {
+ .about-header {
+  padding: 2rem;
+  font-size: 2rem;
+ }
+
+ .about-header h2 {
+  font-size: 1.25rem;
+ }
+
+ .about-header h2.active {
+  font-size: 2rem;
+ }
+}

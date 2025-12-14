@@ -1,22 +1,23 @@
-import FeesPayment from "./components/FeesPayment/FeesPayment";
-import Hero from "./components/Hero/Hero";
-import VisitingHours from "./components/VisitingHours/VisitingHours";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
-import VisitorGuide from "./components/VisitorGuide/VisitorGuide";
-import Gallery from "./components/Gallery/Gallery";
-import Contact from "./components/Contact/Contact";
-import Arboretum from "./components/Arboretum/Arboretum";
-import Navbar from "./components/Layout/Navbar/Navbar";
-import Hamburger from "./components/Layout/Hamburger/Hamburger";
+import FeesPayment from "./sections/FeesPayment/FeesPayment";
+import Hero from "./sections/Hero";
+import VisitingHours from "./sections/VisitingHours";
+import VisitorGuide from "./sections/VisitorGuide";
+import Gallery from "./sections/Gallery/Gallery";
+import Contact from "./sections/Contact/Contact";
+import Arboretum from "./sections/Arboretum";
+import About from "./sections/About";
+import Footer from "./components/layout/Footer";
+import Header from "./components/layout/Header";
 
 function App() {
  return (
   <>
+   <Header />
    <main>
-    <Navbar />
-    <Hamburger />
     <Hero />
+    <About />
     <Arboretum />
     <VisitingHours />
     <FeesPayment />
@@ -24,6 +25,7 @@ function App() {
     <Gallery />
     <Contact />
    </main>
+   <Footer />
   </>
  );
 }

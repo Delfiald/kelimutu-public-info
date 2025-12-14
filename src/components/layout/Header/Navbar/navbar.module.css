@@ -1,0 +1,89 @@
+/* Menu */
+.navbar {
+ position: fixed;
+ top: 1rem;
+ left: 50%;
+ transform: translateX(-50%);
+ justify-self: center;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ max-width: 500px;
+ min-height: 70px;
+ color: var(--light-color);
+ font-weight: bold;
+ z-index: 2;
+}
+
+.navbar .menu-wrapper {
+ position: relative;
+ flex: 1;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 0.5rem;
+ opacity: 0;
+ animation: fadeIn 1.5s 2s cubic-bezier(0.2, 0.5, 0.2, 0.7) forwards;
+ padding: 0.5rem;
+ backdrop-filter: blur(5px);
+ background: #0000004d;
+ border-radius: 10px;
+}
+
+.navbar .menu-wrapper > li {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 100%;
+ width: 100%;
+ position: relative;
+ cursor: pointer;
+ transition: var(--transition-fast) all ease;
+ padding: 1rem;
+}
+
+.navbar .menu-wrapper > li:hover,
+.navbar .menu-wrapper > li.active {
+ color: #aafc06;
+}
+
+.navbar .menu-wrapper > li::before {
+ content: "";
+ position: absolute;
+ bottom: 0.5rem;
+ left: 50%;
+ width: calc(100% - 2rem);
+ height: 2px;
+ background: #aafc06;
+ transform: translate(-50%, -50%) scaleX(0);
+ transform-origin: right;
+ transition: transform 0.25s ease;
+}
+
+.navbar .menu-wrapper > li:hover::before,
+.navbar .menu-wrapper > li.active::before {
+ transform-origin: left;
+ transform: translate(-50%, -50%) scaleX(1);
+}
+
+@keyframes fadeIn {
+ 0% {
+  opacity: 0;
+  transform: translateY(-3px) scale(0.95);
+ }
+
+ 75% {
+  transform: translateY(0) scale(1);
+ }
+
+ 100% {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+ }
+}
+
+@media (max-width: 600px) {
+ .navbar {
+  display: none;
+ }
+}
