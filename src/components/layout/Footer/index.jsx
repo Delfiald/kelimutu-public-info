@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import styles from "./footer.module.css";
 
 function Footer() {
+ const { t } = useTranslation("footer");
  return (
   <footer className={styles.footer}>
-   &copy;2025 KELIMUTU NATIONAL PARK. ALL RIGHT RESERVED
+   <p>{t("copyright", { year: new Date().getFullYear() })}</p>
   </footer>
  );
 }

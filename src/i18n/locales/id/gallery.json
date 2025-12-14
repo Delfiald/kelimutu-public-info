@@ -1,0 +1,44 @@
+{
+  "title": "Galeri",
+  "subtitle": "Sekilas Keindahan Kelimutu",
+  "gallery": {
+    "kelimutu": {
+      "title": "Danau Kawah Kelimutu",
+      "description": "Pemandangan jelas dari tiga danau kawah berwarna yang terkenal di Gunung Kelimutu."
+    },
+    "hawkEagle": {
+      "title": "Elang Flores (Nisaetus floris)",
+      "description": "Burung pemangsa langka yang hanya hidup di hutan Flores ini terbang gagah, mengawasi puncak-puncak pulau dengan tatapan tajamnya."
+    },
+    "betweenLakes": {
+      "title": "Di Antara Danau Kawah",
+      "description": "Pemandangan medan berbatu yang terletak di antara tepi kawah Kelimutu."
+    },
+    "independenceDay": {
+      "title": "Upacara Kemerdekaan",
+      "description": "Upacara khusus setiap 17 Agustus untuk merayakan Hari Kemerdekaan Indonesia di Gunung Kelimutu."
+    },
+    "kelimutuFar": {
+      "title": "Pemandangan Kelimutu dari Jauh",
+      "description": "Lanskap kawah Kelimutu dari kejauhan, menampilkan medan yang dramatis dan memesona."
+    },
+    "nightSky": {
+      "title": "Keindahan Langit Malam di Kelimutu",
+      "description": "Foto Milky Way yang menakjubkan diambil dari Kelimutu, terkenal dengan langitnya yang jernih dan minim polusi."
+    },
+    "patika": {
+      "title": "Pati Ka",
+      "description": "Pati Ka Du'a Bapu Ata Mata, upacara budaya tahunan yang diadakan setiap 14 Agustus di Gunung Kelimutu."
+    },
+    "sunrise": {
+      "title": "Matahari Terbit Kelimutu",
+      "description": "Pemandangan matahari terbit dari Kelimutu, salah satu momen paling populer bagi pengunjung."
+    },
+    "garugiwa": {
+      "title": "Garugiwa (Pachycephala nudigula)",
+      "description": "Burung khas Flores ini bersuara dengan 12 nada berbeda, terdengar saat fajar di danau kawah Kelimutu."
+
+
+    }
+  }
+}

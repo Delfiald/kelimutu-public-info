@@ -15,6 +15,7 @@ import Video from "../../../assets/fees/Video.svg?react";
 import Camp from "../../../assets/fees/Camp.svg?react";
 import Drone from "../../../assets/fees/Drone.svg?react";
 import { fees } from "../data";
+import { useTranslation } from "react-i18next";
 
 const ICON_MAP = {
  person: Person,
@@ -30,7 +31,7 @@ const ICON_MAP = {
  drone: Drone,
 };
 
-function Card() {
+function Card({ t }) {
  return fees.map((section) => {
   const GroupIcon = ICON_MAP[section.icon];
   return (
@@ -41,9 +42,9 @@ function Card() {
     <div className={styles["card-header"]}>
      <div className={styles["icon-title-wrapper"]}>
       <div className={styles.icon}>{GroupIcon && <GroupIcon />}</div>
-      <div className={styles.title}>{section.title}</div>
+      <div className={styles.title}>{t(section.title)}</div>
      </div>
-     <div className={styles.rate}>Rate</div>
+     <div className={styles.rate}>{t("rate")}</div>
     </div>
     <div className={styles["card-content"]}>
      {section.types.map((type, index) => {
@@ -54,7 +55,7 @@ function Card() {
          <div className={styles["type-icon"]}>{TypeIcon && <TypeIcon />}</div>
          {type.name.map((n, i) => (
           <div key={i} className={styles["type-name"]}>
-           <p>{n}</p>
+           <p>{t(n)}</p>
           </div>
          ))}
         </div>
@@ -65,7 +66,7 @@ function Card() {
         >
          {type.prices.map((p, i) => (
           <div key={i} className={styles.price}>
-           {p}
+           {t(p)}
           </div>
          ))}
         </div>
@@ -73,7 +74,7 @@ function Card() {
          <div className={styles["type-note"]}>
           {type.note.map((n, i) => (
            <div key={i} className={styles.note}>
-            {n}
+            {t(n)}
            </div>
           ))}
          </div>
@@ -161,13 +162,14 @@ export function RegulationModal({ url, toggleModal }) {
 }
 
 function FeesSection({ toggleModal }) {
+ const { t } = useTranslation("fees");
  return (
   <>
    <div className={styles.header}>
-    <h2>Fees.</h2>
+    <h2>{t("title")}.</h2>
     <div className={styles.regulation}>
      <div className={styles["regulation-name"]} onClick={toggleModal}>
-      Based on Government Regulation No. 36 of 2024
+      {t("regulation")}
      </div>
      <div className={styles.icon}>
       <i className="fas fa-question"></i>
@@ -175,7 +177,7 @@ function FeesSection({ toggleModal }) {
     </div>
    </div>
    <div className={styles["fees-container"]}>
-    <Card />
+    <Card t={t} />
    </div>
   </>
  );
@@ -184,6 +186,10 @@ function FeesSection({ toggleModal }) {
 RegulationModal.propTypes = {
  url: PropTypes.string,
  toggleModal: PropTypes.func,
+};
+
+Card.propTypes = {
+ t: PropTypes.func,
 };
 
 FeesSection.propTypes = {

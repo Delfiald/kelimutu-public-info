@@ -1,26 +1,26 @@
 export const sectionList = [
  {
   id: "hero",
-  label: "",
+  labelKey: "",
  },
  {
   id: "about",
-  label: "About",
+  labelKey: "about",
  },
  {
   id: "visit",
-  label: "Visit",
+  labelKey: "visit",
  },
  {
   id: "guide",
-  label: "Guide",
+  labelKey: "guide",
  },
  {
   id: "gallery",
-  label: "Gallery",
+  labelKey: "gallery",
  },
  {
   id: "contact",
-  label: "Contact",
+  labelKey: "contact",
  },
 ];

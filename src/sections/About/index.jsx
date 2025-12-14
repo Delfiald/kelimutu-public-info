@@ -5,8 +5,10 @@ import Overview from "./Overview";
 import History from "./History";
 import { informationContent, sectionName } from "./data";
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
 function AboutHeader({ active, handlePillTabs }) {
+ const { t } = useTranslation("about");
  const [isInformation, setIsInformation] = useState(
   informationContent[0].label
  );
@@ -30,7 +32,7 @@ function AboutHeader({ active, handlePillTabs }) {
       onClick={() => handlePillTabs(section.char)}
       className={`${active === section.char ? styles.active : ""}`}
      >
-      {active === section.char ? section.name : section.char}
+      {active === section.char ? t(section.name) : section.char}
      </h2>
     ))}
    </div>

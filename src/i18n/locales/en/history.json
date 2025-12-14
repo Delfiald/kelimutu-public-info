@@ -1,0 +1,70 @@
+{
+ "formation": {
+  "steps": {
+   "1": {
+    "title": "Ancient Mount Sokoria",
+    "description": "The formation begins with an ancient volcanic edifice known as Mount Sokoria. Geological traces and remaining volcanic materials indicate its past activity."
+   },
+   "2": {
+    "title": "A Major Eruption Creates the Sokoria Caldera",
+    "description": "A powerful explosive eruption destroyed Mount Sokoria’s summit and produced a wide caldera, marking the first major restructuring of the landscape."
+   },
+   "3": {
+    "title": "Formation of Mount Kelibara (Old Kelimutu)",
+    "description": "Within the caldera, new volcanic activity built a younger cone called Mount Kelibara — often regarded as the ‘older Kelimutu’."
+   },
+   "4": {
+    "title": "An Eruption Forms the Child of Kelibara",
+    "description": "Subsequent eruptions gave rise to a smaller volcanic cone known as the Child of Kelibara, located where Tiwu Ata Bupu stands today."
+   },
+   "5": {
+    "title": "Repeated Eruptions Over Hundreds of Years",
+    "description": "The Child of Kelibara experienced multiple eruptions over several centuries, gradually reshaping the summit region and weakening the older structures."
+   },
+   "6": {
+    "title": "Final Major Eruptions Create Mount Kelimutu",
+    "description": "Explosive events — including the last recorded eruption in 1968 — completed the formation of Mount Kelimutu and sculpted the three summit craters."
+   },
+   "7": {
+    "title": "Present-Day Kelimutu Crater Lakes",
+    "description": "After volcanic activity subsided, rainwater and hydrothermal fluids filled the craters, forming the three iconic crater lakes whose colors continue to change due to ongoing geochemical processes."
+   }
+  }
+ },
+ "folklore": {
+  "steps": {
+   "1": {
+    "title": "Bhuria – The Veiled Forest",
+    "description": "Long ago, the mountain was cloaked in misty Bhuria, a sacred forest where ancestral spirits 'Embu Nosi' and unseen entities 'Nitu' roamed."
+   },
+   "2": {
+    "title": "The Rule of Konde Ratu",
+    "description": "People lived under Konde Ratu’s rule, with Ata Bupu, protector of the innocent, and Ata Polo, a sinister sorcerer preying on the weak."
+   },
+   "3": {
+    "title": "The Orphans Seek Refuge",
+    "description": "Two orphaned youths, 'Ana Kalo', sought shelter in Ata Bupu’s lands, and he granted them sanctuary from harm."
+   },
+   "4": {
+    "title": "The Shadow of Ata Polo",
+    "description": "Ata Polo sought the youths, but Ata Bupu stood firm: 'Let these children reach their days,' he said, defending them."
+   },
+   "5": {
+    "title": "The Youths Mature",
+    "description": "The orphans grew into Ko'o Fai and Nuwa Muri. Ata Polo demanded them, but Ata Bupu refused to yield."
+   },
+   "6": {
+    "title": "Vanishing into the Earth",
+    "description": "To escape Ata Polo, Ata Bupu and the youths vanished into the earth. Ata Polo pursued, but all were swallowed by the land."
+   },
+   "7": {
+    "title": "The Birth of the Tri-Lakes",
+    "description": "Where they disappeared, the land ruptured forming the tri-colored lakes: Ata Bupu’s green, the youths’ turquoise, and Ata Polo’s crimson brown."
+   }
+  }
+ },
+ "types": {
+  "geological": "Geological",
+  "folklore": "Folklore"
+ }
+}

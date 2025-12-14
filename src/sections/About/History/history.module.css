@@ -29,6 +29,7 @@
  transition: var(--transition-fast) all ease;
  transform: scale(0.75);
  transform-origin: bottom;
+ white-space: nowrap;
 }
 
 .history-wrapper .history-button .active {

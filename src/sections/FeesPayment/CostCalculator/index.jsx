@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import styles from "./costCalculator.module.css";
 import { useState } from "react";
 import { prices } from "../data";
+import { useTranslation } from "react-i18next";
 
 function CategoryBox({
  fees,
@@ -16,6 +17,7 @@ function CategoryBox({
  maxType,
  removeType,
  addType,
+ t,
 }) {
  const renderDropdown = (fee, item) => {
   const allOptions = prices[fee.id] || [];
@@ -43,7 +45,7 @@ function CategoryBox({
    >
     <div className={styles.trigger} onClick={toggleDropdown}>
      <i className="fas fa-chevron-down"></i>
-     <p>{itemLabel.label}</p>
+     <p>{t(itemLabel.label)}</p>
     </div>
 
     {/* Dropdown Item */}
@@ -55,7 +57,7 @@ function CategoryBox({
         onClick={() => selectOption(option.key)}
         className={styles.option}
        >
-        <div className={styles["option-wrapper"]}>{option.label}</div>
+        <div className={styles["option-wrapper"]}>{t(option.label)}</div>
        </div>
       ))}
      </div>
@@ -77,7 +79,7 @@ function CategoryBox({
        checked={item.category === "domestic"}
        onChange={(e) => updateCategory(fee.id, item.key, e.target.value)}
       />
-      <label htmlFor={`domestic-${item.key}`}>Domestic</label>
+      <label htmlFor={`domestic-${item.key}`}>{t("domestic")}</label>
      </div>
      <div className={styles["input-wrapper"]}>
       <input
@@ -88,7 +90,7 @@ function CategoryBox({
        checked={item.category === "international"}
        onChange={(e) => updateCategory(fee.id, item.key, e.target.value)}
       />
-      <label htmlFor={`international-${item.key}`}>International</label>
+      <label htmlFor={`international-${item.key}`}>{t("international")}</label>
      </div>
     </div>
    );
@@ -96,7 +98,7 @@ function CategoryBox({
 
   return (
    <div className={styles["count-wrapper"]}>
-    <div className={styles["sub-label"]}>{fee.subLabel}</div>
+    <div className={styles["sub-label"]}>{t(fee.subLabel)}</div>
     <div className={styles.counter}>
      {item.count > 1 &&
       !(item.key === "domesticGroupStudents" && item.count <= 5) && (
@@ -150,7 +152,7 @@ function CategoryBox({
   >
    <div className={styles["category-container"]}>
     <div className={styles.category}>
-     <div className={styles["category-label"]}>{fee.label}</div>
+     <div className={styles["category-label"]}>{t(fee.label)}</div>
      {fee.id === "visitors" && fee.items?.length > 0 && (
       <div className={styles["checkbox-wrapper"]}>
        <input
@@ -166,7 +168,7 @@ function CategoryBox({
           isHoliday ? styles.checked : ""
          }`}
         ></div>
-        <span>Holiday</span>
+        <span>{t("holiday")}</span>
        </label>
       </div>
      )}
@@ -182,7 +184,7 @@ function CategoryBox({
    {fee.items.length < maxType(fee.id) && (
     <div className={styles["add-type-wrapper"]} onClick={() => addType(fee.id)}>
      <i className="fas fa-plus"></i>
-     <span>{fee.items?.length > 0 ? fee.addLabel : "Add"}</span>
+     <span>{fee.items?.length > 0 ? t(fee.addLabel) : t("add")}</span>
     </div>
    )}
   </div>
@@ -190,12 +192,13 @@ function CategoryBox({
 }
 
 function CalculatorSection() {
+ const { t } = useTranslation("costCalculator");
  const [fees, setFees] = useState([
   {
    id: "visitors",
-   label: "Visitor Type",
-   subLabel: "Visitor Count",
-   addLabel: "Add More Visitor",
+   label: "feesForm.visitors.label",
+   subLabel: "feesForm.visitors.subLabel",
+   addLabel: "feesForm.visitors.addLabel",
    items: [
     {
      key: "international",
@@ -209,27 +212,27 @@ function CalculatorSection() {
   },
   {
    id: "vehicles",
-   label: "Vehicle Type",
-   subLabel: "Vehicle Count",
-   addLabel: "Add Vehicle",
+   label: "feesForm.vehicles.label",
+   subLabel: "feesForm.vehicles.subLabel",
+   addLabel: "feesForm.vehicles.addLabel",
    items: [{ key: "car", count: 1 }],
   },
   {
    id: "photoVideo",
-   label: "Photo or Video Type",
-   addLabel: "More Photo or Video",
+   label: "feesForm.photoVideo.label",
+   addLabel: "feesForm.photoVideo.addLabel",
    items: [{ key: "photography", category: "international" }],
   },
   {
    id: "camping",
-   label: "Camping",
-   subLabel: "Number of Campers",
+   label: "feesForm.camping.label",
+   subLabel: "feesForm.camping.subLabel",
    items: [{ key: "camping", count: 2 }],
   },
   {
    id: "drone",
-   label: "Drone",
-   subLabel: "Unit",
+   label: "feesForm.drone.label",
+   subLabel: "feesForm.drone.subLabel",
    items: [{ key: "drone", count: 1 }],
   },
  ]);
@@ -398,10 +401,8 @@ function CalculatorSection() {
  return (
   <>
    <div className={styles.header}>
-    <h2>Cost Calculator.</h2>
-    <div className={styles.subheader}>
-     Calculate an estimated total cost for your visit automatically
-    </div>
+    <h2>{t("title")}.</h2>
+    <div className={styles.subheader}>{t("subheader")}</div>
    </div>
    <div className={styles["calculator-container"]}>
     <CategoryBox
@@ -417,6 +418,7 @@ function CalculatorSection() {
      maxType={maxType}
      removeType={removeType}
      addType={addType}
+     t={t}
     />
     <div className={styles["total-container"]}>
      <div className={styles.total}>
@@ -442,6 +444,7 @@ CategoryBox.propTypes = {
  maxType: PropTypes.func,
  removeType: PropTypes.func,
  addType: PropTypes.func,
+ t: PropTypes.func,
 };
 
 export default CalculatorSection;

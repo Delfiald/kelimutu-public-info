@@ -9,6 +9,7 @@ import X from "../../assets/contact/X.svg?react";
 import Youtube from "../../assets/contact/Youtube.svg?react";
 import Web from "../../assets/contact/Web.svg?react";
 import { contacts, medias } from "./data";
+import { useTranslation } from "react-i18next";
 
 export const ICON_MAP = {
  mail: Mail,
@@ -22,10 +23,11 @@ export const ICON_MAP = {
 };
 
 function Contact() {
+ const { t } = useTranslation("contact");
  return (
   <section id="contact" className={styles.contact}>
    <div className={styles.header}>
-    <h2>Get in Touch.</h2>
+    <h2>{t("title")}.</h2>
    </div>
    <div className={styles["contact-section"]}>
     <div className={styles["unit-information"]}>
@@ -33,10 +35,7 @@ function Contact() {
       <img src="./logo/brand.png" alt="KeNaPa" />
      </div>
      <div className={styles["unit-name"]}>
-      <p>
-       Ministry of Forestry Directorate General of Natural Resources and
-       Ecosystem Conservation Kelimutu National Park Office
-      </p>
+      <p>{t("unitName")}</p>
      </div>
     </div>
     <div className={styles["contact-group"]}>

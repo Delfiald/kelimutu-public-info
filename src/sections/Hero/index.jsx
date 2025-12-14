@@ -1,7 +1,9 @@
 import styles from "./hero.module.css";
 import AnimatedText from "../../components/ui/AnimatedText/AnimatedText";
+import { useTranslation } from "react-i18next";
 
 function Hero() {
+ const { t } = useTranslation("hero");
  return (
   <section id="hero" className={styles.hero}>
    <div className={styles.logo}>
@@ -15,7 +17,7 @@ function Hero() {
    <div className={styles["hero-container"]}>
     <div className={styles.title}>
      <div className={styles["hero-title"]}>
-      <h1>Kelimutu National Park</h1>
+      <h1>{t("title")}</h1>
      </div>
      <div className={styles["hero-subtitle"]}>
       <AnimatedText text="The Land of Mystical Beauty" as={"h3"} />
@@ -24,7 +26,7 @@ function Hero() {
     <div className={styles["hero-bottom"]}>
      <div className={styles["scroll-button"]}>
       <div className={styles["button-icon"]}></div>
-      <div className={styles["button-label"]}>Scroll for Details</div>
+      <div className={styles["button-label"]}>{t("scroll")}</div>
      </div>
     </div>
    </div>

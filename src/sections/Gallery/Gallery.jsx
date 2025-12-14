@@ -2,20 +2,21 @@ import PropTypes from "prop-types";
 import styles from "./gallery.module.css";
 import { useEffect, useRef } from "react";
 import { images } from "./data";
+import { useTranslation } from "react-i18next";
 
-function GallerySlider({ trackRef, duplicated }) {
+function GallerySlider({ trackRef, duplicated, t }) {
  return (
   <div className={styles["gallery-mask"]}>
    <div ref={trackRef} className={styles["gallery-slider"]}>
     {duplicated.map((image, index) => (
      <div key={index} className={styles.image}>
       <div className={styles["img-wrapper"]}>
-       <img src={image.img} alt={image.title} />
+       <img src={image.img} alt={t(image.title)} />
       </div>
-      <div className={styles["img-title"]}>{image.title}</div>
+      <div className={styles["img-title"]}>{t(image.title)}</div>
       <div className={styles["img-description"]}>
-       <p>{image.description}</p>
-       <p className={styles["img-source"]}>{image.source}</p>
+       <p>{t(image.description)}</p>
+       <p className={styles["img-source"]}>{t(image.source)}</p>
       </div>
      </div>
     ))}
@@ -25,6 +26,7 @@ function GallerySlider({ trackRef, duplicated }) {
 }
 
 function Gallery() {
+ const { t } = useTranslation("gallery");
  const trackRef = useRef(null);
  const pos = useRef(0);
 
@@ -57,13 +59,13 @@ function Gallery() {
  return (
   <section id="gallery" className={styles.gallery}>
    <header className={styles["gallery-header"]}>
-    <h2>Gallery.</h2>
+    <h2>{t("title")}.</h2>
     <div>
-     <div>{`A glimpse of Kelimutu's Beauty`}</div>
+     <div>{t("subtitle")}</div>
     </div>
    </header>
    <div className={styles["gallery-container"]}>
-    <GallerySlider trackRef={trackRef} duplicated={duplicated} />
+    <GallerySlider trackRef={trackRef} duplicated={duplicated} t={t} />
    </div>
   </section>
  );
@@ -74,4 +76,5 @@ export default Gallery;
 GallerySlider.propTypes = {
  trackRef: PropTypes.object,
  duplicated: PropTypes.array,
+ t: PropTypes.func,
 };

@@ -9,6 +9,8 @@ import Litter from "../../../assets/dosDonts/Litter.svg?react";
 import Monkey from "../../../assets/dosDonts/Monkey.svg?react";
 import Plant from "../../../assets/dosDonts/Plant.svg?react";
 import { visitorRules } from "../data";
+import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 
 const RULE_ICON_MAP = {
  trail: Trail,
@@ -21,11 +23,11 @@ const RULE_ICON_MAP = {
  plant: Plant,
 };
 
-function Dos() {
+function Dos({ t }) {
  return (
   <div className={styles["dos-section"]}>
    <header className={styles["dos-header"]}>
-    <h2>{`Do's`}</h2>
+    <h2>{t("titleDos")}</h2>
    </header>
    <div className={styles["dos-container"]}>
     {visitorRules.dos.map((item, index) => {
@@ -38,7 +40,7 @@ function Dos() {
          <Icon />
         </div>
        </div>
-       <div className={styles.label}>{item.label}</div>
+       <div className={styles.label}>{t(item.label)}</div>
       </div>
      );
     })}
@@ -47,11 +49,11 @@ function Dos() {
  );
 }
 
-function Donts() {
+function Donts({ t }) {
  return (
   <div className={styles["donts-section"]}>
    <header className={styles["donts-header"]}>
-    <h2>{`Don'ts`}</h2>
+    <h2>{t("titleDonts")}</h2>
    </header>
    <div className={styles["donts-container"]}>
     {visitorRules.donts.map((item, index) => {
@@ -63,7 +65,7 @@ function Donts() {
          <Icon />
         </div>
        </div>
-       <div className={styles.label}>{item.label}</div>
+       <div className={styles.label}>{t(item.label)}</div>
       </div>
      );
     })}
@@ -73,12 +75,20 @@ function Donts() {
 }
 
 function Rules() {
+ const { t } = useTranslation("rules");
  return (
   <section className={styles.rules}>
-   <Dos />
-   <Donts />
+   <Dos t={t} />
+   <Donts t={t} />
   </section>
  );
 }
+
+Dos.propTypes = {
+ t: PropTypes.func,
+};
+Donts.propTypes = {
+ t: PropTypes.func,
+};
 
 export default Rules;

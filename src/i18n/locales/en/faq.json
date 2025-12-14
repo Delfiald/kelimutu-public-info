@@ -1,0 +1,33 @@
+{
+  "title": "Frequently Asked Questions",
+  "subtitle1": "Before you ask, your answer might be here",
+    "subtitle2": "This section covers helpful answers to the questions visitors often wonder about",
+    "bottomQuestion": "Is your question not listed here?",
+    "bottomText": {
+      "before": "Feel free to reach out via the ",
+      "link": "Get in Touch",
+      "after": " section."
+    },
+  "faq": {
+    "q1": "How far is it from the ticket counter to the viewing area (parking/summit)?",
+    "a1": "It’s approximately 3 km from the ticket counter to the parking area, and then around 15–20 minutes on foot from the parking area to the summit.",
+    "q2": "What is the weather like at the summit?",
+    "a2": "The summit weather is unpredictable and can change rapidly. Fog and sudden visibility changes are common.",
+    "q3": "How much is the entrance fee?",
+    "a3": {
+      "before": "Entrance fees vary based on visitor category (domestic, international, working days/holidays). For full details, tap ",
+      "link": "here",
+      "after": " to view the ticket price section."
+    },
+    "q4": "Are guides available?",
+    "a4": "No official guides are available, but the route is simple and easy to follow.",
+    "q5": "Are there food vendors available?",
+    "a5": "Yes. Food vendors are available near the upper parking area, offering snacks, meals, and drinks.",
+    "q6": "Are there stalls or shops at the top area?",
+    "a6": "There are small stalls near the parking area selling snacks, drinks, and souvenirs.",
+    "q7": "What are the opening hours?",
+    "a7": "Opening hours generally start in the early morning until late afternoon from 5:00 AM to 4:00 PM",
+    "q8": "Is parking available?",
+    "a8": "Yes, parking is available and located before the summit area. Visitors must continue on foot from the parking area to reach the top."
+  }
+}

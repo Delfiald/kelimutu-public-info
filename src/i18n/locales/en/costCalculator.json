@@ -1,0 +1,51 @@
+{
+    "title": "Cost Calculator",
+  "subheader": "Calculate an estimated total cost for your visit automatically",
+  "holiday": "Holiday",
+  "domestic": "Domestic",
+  "international": "International",
+  "add": "Add",
+  "prices": {
+    "visitors": {
+      "domestic": { "label": "Domestic Visitor" },
+      "groupStudents": { "label": "Domestic Group Students" },
+      "international": { "label": "International Visitor" }
+    },
+    "vehicles": {
+      "bike": { "label": "Motorcycle (2 Wheels)" },
+      "car": { "label": "Car (4 Wheels)" },
+      "busTruck": { "label": "Bus / Truck (6 Wheels)" }
+    },
+    "photoVideo": {
+      "preWedding": { "label": "Pre-Wedding Photography & Videography" },
+      "photography": { "label": "Photography" },
+      "videography": { "label": "Videography" }
+    },
+    "camping": { "label": "Camping" },
+    "drone": { "label": "Drone Operation" }
+  },
+  "feesForm": {
+    "visitors": {
+      "label": "Visitor Type",
+      "subLabel": "Visitor Count",
+      "addLabel": "Add More Visitor"
+    },
+    "vehicles": {
+      "label": "Vehicle Type",
+      "subLabel": "Vehicle Count",
+      "addLabel": "Add Vehicle"
+    },
+    "photoVideo": {
+      "label": "Photo or Video Type",
+      "addLabel": "More Photo or Video"
+    },
+    "camping": {
+      "label": "Camping",
+      "subLabel": "Number of Campers"
+    },
+    "drone": {
+      "label": "Drone",
+      "subLabel": "Unit"
+    }
+  }
+}

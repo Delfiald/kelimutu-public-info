@@ -1,0 +1,61 @@
+{
+  "title": "Fees",
+  "regulation": "Based on Government Regulation No. 36 of 2024",
+  "rate": "Rate",
+  "fees": {
+    "individual": {
+      "title": "Individual Visitors",
+      "domesticIndividual": {
+        "name": "Domestic Individual",
+        "prices": {
+          "workingDays": "Working Days - Rp.10,000",
+          "holiday": "Holiday - Rp.15,000"
+        }
+      },
+      "groupStudents": {
+        "name1": "Domestic Group Students",
+        "name2": "(min 5 persons)",
+        "prices": {
+          "workingDays": "Working Days - Rp.5,000",
+          "holiday": "Holiday - Rp.7,500"
+        }
+      },
+      "international": {
+        "name": "International Individual",
+        "prices": "Rp.150,000"
+      }
+    },
+    "vehicle": {
+      "title": "Vehicles",
+      "motorcycle": { "name": "Motorcycle (2 Wheels)", "price": "Rp.5,000" },
+      "car": { "name": "Car (4 Wheels)", "price": "Rp.10,000" },
+      "bus": { "name": "Bus / Truck (6 Wheels)", "price": "Rp.50,000" }
+    },
+    "photoVideo": {
+      "title": "Photography & Videography",
+      "preWedding": {
+        "name1": "Pre-wedding",
+        "name2": "Photography and Videography",
+        "domestic": "Domestic - Rp.1,000,000",
+        "international": "International - Rp.3,000,000"
+      },
+      "photography": {
+        "name1": "Photography",
+        "name2": "Tours, Magazines, Product Ads, etc",
+        "domestic": "Domestic - Rp.2,000,000",
+        "international": "International - Rp.5,000,000"
+      },
+      "videography": {
+        "name1": "Videography",
+        "name2": "Films, Ads, Music Videos, etc",
+        "domestic": "Domestic - Rp.10,000,000",
+        "international": "International - Rp.20,000,000"
+      }
+    },
+    "otherServices": {
+      "title": "Other Services",
+      "camping": { "name": "Camping", "price": "Rp.5,000", "note": "Per Person, Per Day" },
+      "drone": { "name": "Drone Operation", "price": "Rp.2,000,000", "note": "Per Unit, Per Day" }
+    }
+  }
+}

@@ -6,14 +6,9 @@ import { useEffect, useState } from "react";
 import { sectionList } from "./data";
 
 function Header() {
- const [lang, setLang] = useState("en");
  const [activeSection, setActiveSection] = useState(null);
  const [hamburgerOpen, setHamburgerOpen] = useState(false);
  const [isAnimating, setIsAnimating] = useState(false);
-
- const handleLang = () => {
-  setLang((prev) => (prev === "en" ? "id" : "en"));
- };
 
  function scrollHandler(target) {
   document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
@@ -34,27 +29,33 @@ function Header() {
  };
 
  useEffect(() => {
-  const observer = new IntersectionObserver(
-   (entries) => {
-    entries.forEach((entry) => {
-     if (entry.isIntersecting) {
-      setActiveSection(entry.target.id);
-     }
-    });
-   },
-   { threshold: 0.85 }
-  );
-  sectionList.forEach((section) => {
-   const el = document.getElementById(section.id);
-   if (el) observer.observe(el);
-  });
-  return () => observer.disconnect();
- }, []);
+  const handleScroll = () => {
+   const viewportMiddle = window.innerHeight / 2;
+
+   let currentSection = sectionList[0].id;
+
+   sectionList.forEach((section) => {
+    const el = document.getElementById(section.id);
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    if (rect.top <= viewportMiddle) {
+     currentSection = section.id;
+    }
+   });
+
+   setActiveSection(currentSection);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll(); // initial check
+
+  return () => window.removeEventListener("scroll", handleScroll);
+ }, [sectionList]);
 
  return (
   <header>
    <Navbar activeSection={activeSection} scrollHandler={scrollHandler} />
-   <LanguageButton lang={lang} handleLang={handleLang} />
+   <LanguageButton />
    <Hamburger
     hamburgerOpen={hamburgerOpen}
     handleHamburgerButton={handleHamburgerButton}

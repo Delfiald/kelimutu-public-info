@@ -160,9 +160,11 @@
 
 @media (min-width: 768px) {
  .rules {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   padding: 1rem;
   position: relative;
-  flex-direction: row;
+  align-items: stretch;
  }
 
  .dos-header h2,
@@ -182,6 +184,11 @@
   background: var(--primary-color);
   opacity: 0.25;
   z-index: -1;
+ }
+
+ .dos-section,
+ .donts-section {
+  justify-content: space-between;
  }
 
  .dos-section .dos-container,
@@ -207,5 +214,13 @@
  .donts-section .donts-container .item-wrapper .label,
  .donts-section .donts-container .item-wrapper:last-child .label {
   font-size: 1rem;
+ }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+ .dos-header h2,
+ .donts-header h2 {
+  padding-bottom: 2rem;
+  font-size: 2rem;
  }
 }

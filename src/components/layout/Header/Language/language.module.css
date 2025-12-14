@@ -1,6 +1,6 @@
 /* Language */
 .lang {
- position: absolute;
+ position: fixed;
  top: calc(0.5rem + 17.5px);
  right: 1rem;
  flex: 0.15;

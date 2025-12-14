@@ -1,118 +1,61 @@
 export const facilities = [
- {
-  id: "information",
-  icon: "information",
-  label: "Information Center",
- },
- {
-  id: "parking",
-  icon: "parking",
-  label: "Parking Area",
- },
- {
-  id: "prayer",
-  icon: "prayer",
-  label: "Prayer Room",
- },
- {
-  id: "restroom",
-  icon: "restroom",
-  label: "Restroom",
- },
- {
-  id: "shelter",
-  icon: "shelter",
-  label: "Shelters",
- },
- {
-  id: "stalls",
-  icon: "stalls",
-  label: "Food & Souvenir Stalls",
- },
+ { id: "information", icon: "information", label: "facilities.information" },
+ { id: "parking", icon: "parking", label: "facilities.parking" },
+ { id: "prayer", icon: "prayer", label: "facilities.prayer" },
+ { id: "restroom", icon: "restroom", label: "facilities.restroom" },
+ { id: "shelter", icon: "shelter", label: "facilities.shelter" },
+ { id: "stalls", icon: "stalls", label: "facilities.stalls" },
 ];
 
 export const visitorRules = {
  dos: [
-  {
-   icon: "trail",
-   label: "Stay on designated trails",
-  },
-  {
-   icon: "sign",
-   label: "Follow all posted signs & instructions",
-  },
-  {
-   icon: "trash",
-   label: "Dispose of trash properly",
-  },
-  {
-   icon: "belonging",
-   label: "Look after your personal belongings",
-  },
+  { icon: "trail", label: "visitorRules.dos.trail" },
+  { icon: "sign", label: "visitorRules.dos.sign" },
+  { icon: "trash", label: "visitorRules.dos.trash" },
+  { icon: "belonging", label: "visitorRules.dos.belonging" },
  ],
  donts: [
-  {
-   icon: "walk",
-   label: "Do not cross safety barriers or fences",
-  },
-  {
-   icon: "litter",
-   label: "Do not litter",
-  },
-  {
-   icon: "monkey",
-   label: "Do not feed wildlife",
-  },
-  {
-   icon: "plant",
-   label: "Do not pick plants or disturb natural features",
-  },
+  { icon: "walk", label: "visitorRules.donts.walk" },
+  { icon: "litter", label: "visitorRules.donts.litter" },
+  { icon: "monkey", label: "visitorRules.donts.monkey" },
+  { icon: "plant", label: "visitorRules.donts.plant" },
  ],
 };
 
 export const faq = [
  {
-  question:
-   "How far is it from the ticket counter to the viewing area (parking/summit)?",
-  answer:
-   "It’s approximately 3 km from the ticket counter to the parking area, and then around 15–20 minutes on foot from the parking area to the summit.",
+  question: "faq.q1",
+  answer: "faq.a1",
  },
  {
-  question: "What is the weather like at the summit?",
-  answer:
-   "The summit weather is unpredictable and can change rapidly. Fog and sudden visibility changes are common.",
+  question: "faq.q2",
+  answer: "faq.a2",
  },
  {
-  question: "How much is the entrance fee?",
-  answer_before:
-   "Entrance fees vary based on visitor category (domestic, international, working days/holidays). For full details, tap ",
-  answer_link: "here",
-  answer_after: " to view the ticket price section.",
+  question: "faq.q3",
+  answer_before: "faq.a3.before",
+  answer_link: "faq.a3.link",
+  answer_after: "faq.a3.after",
   scrollTarget: "fee",
  },
  {
-  question: "Are guides available?",
-  answer:
-   "No official guides are available, but the route is simple and easy to follow.",
+  question: "faq.q4",
+  answer: "faq.a4",
  },
  {
-  question: "Are there food vendors available?",
-  answer:
-   "Yes. Food vendors are available near the upper parking area, offering snacks, meals, and drinks.",
+  question: "faq.q5",
+  answer: "faq.a5",
  },
  {
-  question: "Are there stalls or shops at the top area?",
-  answer:
-   "There are small stalls near the parking area selling snacks, drinks, and souvenirs.",
+  question: "faq.q6",
+  answer: "faq.a6",
  },
  {
-  question: "What are the opening hours?",
-  answer:
-   "Opening hours generally start in the early morning until late afternoon from 5:00 AM to 4:00 PM",
+  question: "faq.q7",
+  answer: "faq.a7",
  },
  {
-  question: "Is parking available?",
-  answer:
-   "Yes, parking is available and located before the summit area. Visitors must continue on foot from the parking area to reach the top.",
+  question: "faq.q8",
+  answer: "faq.a8",
  },
 ];

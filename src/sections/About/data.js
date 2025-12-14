@@ -1,127 +1,89 @@
 export const sectionName = [
- {
-  char: "O",
-  name: "Overview",
- },
- {
-  char: "H",
-  name: "History",
- },
- {
-  char: "C",
-  name: "Color Changes",
- },
+ { char: "O", name: "overview" },
+ { char: "H", name: "history" },
+ { char: "C", name: "colorChanges" },
 ];
 
 export const informationContent = [
- {
-  label: "Overview",
-  description: `Rising to 1,639 meters on Flores Island, Mount Kelimutu is a striking volcano known for its three enigmatic crater lakes that constantly shift colors due to volcanic minerals and gases. Kelimutu National Park surrounds these sacred lakes with lush forests and unique wildlife, revered deeply by the Lio people. Visitors can follow scenic trails and viewpoints to uncover both natural wonders and the legends that envelop these extraordinary lakes.`,
- },
- {
-  label: "Tiwu Ata Polo",
-  description:
-   "Tiwu Ata Polo, the largest crater lake of the three lakes, located in the southeast, has an area of 4 hectares and a depth of 64 meters. The lake was named by the Lio people, who believe it is a place where the spirits of evil people dwell. Those who, during their lifetime, act wickedly and practice black magic or sorcery (suanggi) are believed to have their spirits dwell in Tiwu Ata Polo after death.",
- },
- {
-  label: `Tiwu Niwa Muri Ko'o Fai`,
-  description:
-   "Tiwu Nuwa Muri Ko’o Fai, located in the middle between Tiwu Ata Polo and Tiwu Ata Bupu and separated by a very thin line from Tiwu Ata Polo, has an area of 5.5 hectares and a depth of 127 meters. Its name literally means “the lake of young men and women” or “the lake of the youth.” Among the three lakes, it has the lowest pH at 0.37. The Lio people believe that Tiwu Nuwa Muri Ko’o Fai is a place where young spirits reside.",
- },
- {
-  label: "Tiwu Ata Bupu",
-  description:
-   "Tiwu Ata Bupu, located about 500 meters from the other two lakes, has an area of 4.5 hectares and a depth of 67 meters. Among the three lakes, it has the highest pH at 3.02. The Lio people believe that Tiwu Ata Bupu is a place where the spirits of the elder and wise people reside.",
- },
+ { key: "overview" },
+ { key: "tiwuAtaPolo" },
+ { key: "tiwuNiwaMuriKooFai" },
+ { key: "tiwuAtaBupu" },
 ];
 
 export const kelimutuFormationSteps = [
  {
   stage: 1,
-  title: "Ancient Mount Sokoria",
-  description:
-   "The formation begins with an ancient volcanic edifice known as Mount Sokoria. Geological traces and remaining volcanic materials indicate its past activity.",
+  title: "formation.steps.1.title",
+  description: "formation.steps.1.description",
  },
  {
   stage: 2,
-  title: "A Major Eruption Creates the Sokoria Caldera",
-  description:
-   "A powerful explosive eruption destroyed Mount Sokoria’s summit and produced a wide caldera, marking the first major restructuring of the landscape.",
+  title: "formation.steps.2.title",
+  description: "formation.steps.2.description",
  },
  {
   stage: 3,
-  title: "Formation of Mount Kelibara (Old Kelimutu)",
-  description:
-   "Within the caldera, new volcanic activity built a younger cone called Mount Kelibara — often regarded as the ‘older Kelimutu’.",
+  title: "formation.steps.3.title",
+  description: "formation.steps.3.description",
  },
  {
   stage: 4,
-  title: "An Eruption Forms the Child of Kelibara",
-  description:
-   "Subsequent eruptions gave rise to a smaller volcanic cone known as the Child of Kelibara, located where Tiwu Ata Bupu stands today.",
+  title: "formation.steps.4.title",
+  description: "formation.steps.4.description",
  },
  {
   stage: 5,
-  title: "Repeated Eruptions Over Hundreds of Years",
-  description:
-   "The Child of Kelibara experienced multiple eruptions over several centuries, gradually reshaping the summit region and weakening the older structures.",
+  title: "formation.steps.5.title",
+  description: "formation.steps.5.description",
  },
  {
   stage: 6,
-  title: "Final Major Eruptions Create Mount Kelimutu",
-  description:
-   "Explosive events — including the last recorded eruption in 1968 — completed the formation of Mount Kelimutu and sculpted the three summit craters.",
+  title: "formation.steps.6.title",
+  description: "formation.steps.6.description",
  },
  {
   stage: 7,
-  title: "Present-Day Kelimutu Crater Lakes",
-  description:
-   "After volcanic activity subsided, rainwater and hydrothermal fluids filled the craters, forming the three iconic crater lakes whose colors continue to change due to ongoing geochemical processes.",
+  title: "formation.steps.7.title",
+  description: "formation.steps.7.description",
  },
 ];
 
 export const folkloreSteps = [
  {
   id: 1,
-  title: "Bhuria – The Veiled Forest",
-  description:
-   "Long ago, the mountain was cloaked in misty Bhuria, a sacred forest where ancestral spirits 'Embu Nosi' and unseen entities 'Nitu' roamed.",
+  title: "folklore.steps.1.title",
+  description: "folklore.steps.1.description",
  },
  {
   id: 2,
-  title: "The Rule of Konde Ratu",
-  description:
-   "People lived under Konde Ratu’s rule, with Ata Bupu, protector of the innocent, and Ata Polo, a sinister sorcerer preying on the weak.",
+  title: "folklore.steps.2.title",
+  description: "folklore.steps.2.description",
  },
  {
   id: 3,
-  title: "The Orphans Seek Refuge",
-  description:
-   "Two orphaned youths, 'Ana Kalo', sought shelter in Ata Bupu’s lands, and he granted them sanctuary from harm.",
+  title: "folklore.steps.3.title",
+  description: "folklore.steps.3.description",
  },
  {
   id: 4,
-  title: "The Shadow of Ata Polo",
-  description:
-   "Ata Polo sought the youths, but Ata Bupu stood firm: 'Let these children reach their days,' he said, defending them.",
+  title: "folklore.steps.4.title",
+  description: "folklore.steps.4.description",
  },
  {
   id: 5,
-  title: "The Youths Mature",
-  description:
-   "The orphans grew into Ko'o Fai and Nuwa Muri. Ata Polo demanded them, but Ata Bupu refused to yield.",
+  title: "folklore.steps.5.title",
+  description: "folklore.steps.5.description",
  },
  {
   id: 6,
-  title: "Vanishing into the Earth",
-  description:
-   "To escape Ata Polo, Ata Bupu and the youths vanished into the earth. Ata Polo pursued, but all were swallowed by the land.",
+  title: "folklore.steps.6.title",
+  description: "folklore.steps.6.description",
  },
  {
   id: 7,
-  title: "The Birth of the Tri-Lakes",
-  description:
-   "Where they disappeared, the land ruptured forming the tri-colored lakes: Ata Bupu’s green, the youths’ turquoise, and Ata Polo’s crimson brown.",
+  title: "folklore.steps.7.title",
+  description: "folklore.steps.7.description",
  },
 ];
 

@@ -1,20 +1,20 @@
 export const visitHours = [
  {
-  title: "Daily",
-  time: "5 am - 4 pm",
+  title: "visitHours.daily.title",
+  time: "visitHours.daily.time",
   icon: "daily",
-  detail: "Open every day throughout the year.",
+  detail: "visitHours.daily.detail",
  },
  {
-  title: "Best Time to Visit",
-  time: "5 am - 6 am",
+  title: "visitHours.bestTime.title",
+  time: "visitHours.bestTime.time",
   icon: "sunrise",
-  detail: "For catching the sunrise and enjoying early-morning scenery.",
+  detail: "visitHours.bestTime.detail",
  },
  {
-  title: "Peak Hours",
-  time: "5 am - 7 am",
+  title: "visitHours.peak.title",
+  time: "visitHours.peak.time",
   icon: "peak",
-  detail: "The busiest period as visitors gather for the sunrise.",
+  detail: "visitHours.peak.detail",
  },
 ];

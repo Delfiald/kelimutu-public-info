@@ -1,8 +1,10 @@
 import styles from "./colorChanges.module.css";
 import { images } from "../data";
 import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function ColorChanges() {
+ const { t } = useTranslation("colorChanges");
  const trackRef = useRef(null);
  const [index, setIndex] = useState(0);
 
@@ -64,7 +66,7 @@ function ColorChanges() {
 
  return (
   <div className={styles["color-changes-wrapper"]}>
-   <h2>Trace the Changing Shades of Kelimutu’s Crater Lakes</h2>
+   <h2>{t("title")}</h2>
    <div className={styles["color-changes-container"]}>
     <div className={styles["track-wrapper"]}>
      <div>{images[0].alt}</div>

@@ -1,0 +1,20 @@
+{
+  "title": "Jadwal Kunjungan",
+  "visitHours": {
+    "daily": {
+      "title": "Setiap Hari",
+      "time": "05.00 - 16.00",
+      "detail": "Buka setiap hari sepanjang tahun."
+    },
+    "bestTime": {
+      "title": "Waktu Terbaik Berkunjung",
+      "time": "05.00 - 06.00",
+      "detail": "Untuk menyaksikan matahari terbit dan menikmati pemandangan pagi."
+    },
+    "peak": {
+      "title": "Jam Ramai",
+      "time": "05.00 - 07.00",
+      "detail": "Periode tersibuk ketika pengunjung berkumpul untuk sunrise."
+    }
+  }
+}

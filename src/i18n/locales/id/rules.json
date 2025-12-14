@@ -1,0 +1,18 @@
+{
+      "titleDos": "Yang Harus Dilakukan",
+    "titleDonts": "Yang Tidak Boleh Dilakukan",
+  "visitorRules": {
+    "dos": {
+      "trail": "Tetap di jalur yang telah ditentukan",
+      "sign": "Ikuti semua tanda dan petunjuk yang ada",
+      "trash": "Buang sampah pada tempatnya",
+      "belonging": "Jaga barang pribadi Anda"
+    },
+    "donts": {
+      "walk": "Jangan menyeberang melewati pagar atau pembatas keamanan",
+      "litter": "Jangan membuang sampah sembarangan",
+      "monkey": "Jangan memberi makan satwa liar",
+      "plant": "Jangan memetik tanaman atau mengganggu fitur alam"
+    }
+  }
+}

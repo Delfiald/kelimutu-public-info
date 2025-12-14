@@ -1,0 +1,14 @@
+{
+  "title": "Pay With QRIS",
+  "subheader": "Digital payment for easier transactions",
+  "verticalStepper": {
+    "open": "Open your payment app",
+    "select": "Select Scan QR",
+    "scan": "Scan the QRIS code",
+    "amount": "Enter the amount",
+    "confirm": "Review and confirm the payment details",
+    "save": "Save your payment receipt",
+    "show": "Show the payment receipt to the counter staff"
+  },
+  "note": "*Cash payment are also available at the counter"
+}

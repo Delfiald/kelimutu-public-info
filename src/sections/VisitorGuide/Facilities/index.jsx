@@ -7,6 +7,8 @@ import Restroom from "../../../assets/facilities/Restroom.svg?react";
 import Shelter from "../../../assets/facilities/Shelter.svg?react";
 import Stalls from "../../../assets/facilities/Stalls.svg?react";
 import { facilities } from "../data";
+import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 
 const FACILITY_ICON_MAP = {
  information: Information,
@@ -17,7 +19,7 @@ const FACILITY_ICON_MAP = {
  stalls: Stalls,
 };
 
-function Facility() {
+function Facility({ t }) {
  return (
   <div className={styles["facility-container"]}>
    {facilities.map((item, index) => {
@@ -28,7 +30,7 @@ function Facility() {
        <div className={styles.icon}>
         <Icon />
        </div>
-       <div className={styles.label}>{item.label}</div>
+       <div className={styles.label}>{t(item.label)}</div>
       </div>
       <div className={`${styles.corner} ${styles["left-top"]}`}></div>
       <div className={`${styles.corner} ${styles["right-top"]}`}></div>
@@ -42,16 +44,21 @@ function Facility() {
 }
 
 function Facilities() {
+ const { t } = useTranslation("facilities");
  return (
-  <section id="guide" className={styles["facilities-section"]}>
+  <section className={styles["facilities-section"]}>
    <header className={styles["facilities-header"]}>
-    <h2>Facilities.</h2>
+    <h2>{t("title")}.</h2>
    </header>
    <div className={styles["facilities-container"]}>
-    <Facility />
+    <Facility t={t} />
    </div>
   </section>
  );
 }
+
+Facility.propTypes = {
+ t: PropTypes.func,
+};
 
 export default Facilities;

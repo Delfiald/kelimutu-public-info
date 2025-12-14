@@ -2,8 +2,10 @@ import styles from "./overview.module.css";
 
 import { informationContent } from "../data";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function Overview() {
+ const { t } = useTranslation("overview");
  const [activeIndex, setActiveIndex] = useState(0);
 
  const [visible, setVisible] = useState(true);
@@ -38,7 +40,7 @@ function Overview() {
          className={styles["lake-label"]}
          onClick={() => changeIndex(originalIndex)}
         >
-         <p>{information.label}</p>
+         <p>{t(`${information.key}.label`)}</p>
         </div>
        </div>
       );
@@ -57,10 +59,10 @@ function Overview() {
         }`}
        >
         <div className={styles["information-label"]}>
-         {index === 0 ? "Mount Kelimutu" : information.label}
+         {t(`${information.key}.label`)}
         </div>
         <div className={styles["information-description"]}>
-         {information.description}
+         {t(`${information.key}.description`)}
         </div>
        </div>
       )
@@ -83,8 +85,7 @@ function Overview() {
        onClick={() => changeIndex(index)}
       >
        <div className={styles["information-label"]}>
-        {" "}
-        {index === 0 ? "Mount Kelimutu" : information.label}
+        {t(`${information.key}.label`)}
        </div>
       </div>
      ))}

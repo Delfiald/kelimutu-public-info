@@ -26,24 +26,33 @@ export const fees = [
  {
   id: "individual",
   icon: "person",
-  title: "Person",
+  title: "fees.individual.title",
   types: [
    {
     icon: "person",
-    name: ["Domestic Individual"],
-    prices: ["Working Days - Rp.10.000,00", "Holiday - Rp.15.000,00"],
+    name: ["fees.individual.domesticIndividual.name"],
+    prices: [
+     "fees.individual.domesticIndividual.prices.workingDays",
+     "fees.individual.domesticIndividual.prices.holiday",
+    ],
     note: [],
    },
    {
     icon: "student",
-    name: ["Domestic Group Students", "(min 5 person)"],
-    prices: ["Working Days - Rp.5.000,00", "Holiday - Rp.7.500,00"],
+    name: [
+     "fees.individual.groupStudents.name1",
+     "fees.individual.groupStudents.name2",
+    ],
+    prices: [
+     "fees.individual.groupStudents.prices.workingDays",
+     "fees.individual.groupStudents.prices.holiday",
+    ],
     note: [],
    },
    {
     icon: "person",
-    name: ["International Individual"],
-    prices: ["Rp.150.000,00"],
+    name: ["fees.individual.international.name"],
+    prices: ["fees.individual.international.prices"],
     note: [],
    },
   ],
@@ -51,24 +60,24 @@ export const fees = [
  {
   id: "vehicle",
   icon: "car",
-  title: "Vehicle",
+  title: "fees.vehicle.title",
   types: [
    {
     icon: "bike",
-    name: ["Motorcycle - (2 Wheels)"],
-    prices: ["Rp.5.000,00"],
+    name: ["fees.vehicle.motorcycle.name"],
+    prices: ["fees.vehicle.motorcycle.price"],
     note: [],
    },
    {
     icon: "car",
-    name: ["Car - (4 Wheels)"],
-    prices: ["Rp.10.000,00"],
+    name: ["fees.vehicle.car.name"],
+    prices: ["fees.vehicle.car.price"],
     note: [],
    },
    {
     icon: "bus",
-    name: ["Bus/Truck - (6 Wheels)"],
-    prices: ["Rp.50.000,00"],
+    name: ["fees.vehicle.bus.name"],
+    prices: ["fees.vehicle.bus.price"],
     note: [],
    },
   ],
@@ -76,151 +85,116 @@ export const fees = [
  {
   id: "photoVideo",
   icon: "camera",
-  title: "Photography & Videography",
+  title: "fees.photoVideo.title",
   types: [
    {
     icon: "married",
-    name: ["Pre-wedding", "Photography and Videography"],
-    prices: ["Domestic - Rp.1.000.000,00", "International - Rp.3.000.000,00"],
+    name: [
+     "fees.photoVideo.preWedding.name1",
+     "fees.photoVideo.preWedding.name2",
+    ],
+    prices: [
+     "fees.photoVideo.preWedding.domestic",
+     "fees.photoVideo.preWedding.international",
+    ],
     note: [],
    },
    {
     icon: "photo",
-    name: ["Photography", "Tour, Magazine, Product Ads, etc"],
-    prices: ["Domestic - Rp.2.000.000,00", "International - Rp.5.000.000,00"],
+    name: [
+     "fees.photoVideo.photography.name1",
+     "fees.photoVideo.photography.name2",
+    ],
+    prices: [
+     "fees.photoVideo.photography.domestic",
+     "fees.photoVideo.photography.international",
+    ],
     note: [],
    },
    {
     icon: "video",
-    name: ["Videography", "Film, Ads, Music Video, etc"],
-    prices: ["Domestic - Rp.10.000.000,00", "International - Rp.20.000.000,00"],
+    name: [
+     "fees.photoVideo.videography.name1",
+     "fees.photoVideo.videography.name2",
+    ],
+    prices: [
+     "fees.photoVideo.videography.domestic",
+     "fees.photoVideo.videography.international",
+    ],
     note: [],
    },
   ],
  },
  {
   id: "otherServices",
-  title: "Other Services",
+  title: "fees.otherServices.title",
   types: [
    {
     icon: "camp",
-    name: ["Camping"],
-    prices: ["Rp.5.000,00"],
-    note: ["Per Person, Per Day"],
+    name: ["fees.otherServices.camping.name"],
+    prices: ["fees.otherServices.camping.price"],
+    note: ["fees.otherServices.camping.note"],
    },
    {
     icon: "drone",
-    name: ["Drone Operation"],
-    prices: ["Rp.2.000.000,00"],
-    note: ["Per Unit, Per Day"],
+    name: ["fees.otherServices.drone.name"],
+    prices: ["fees.otherServices.drone.price"],
+    note: ["fees.otherServices.drone.note"],
    },
   ],
  },
 ];
 
 export const verticalStepper = [
- {
-  icon: "open",
-  name: "Open your payment app",
- },
- {
-  icon: "select",
-  name: "Select Scan QR",
- },
- {
-  icon: "scan",
-  name: "Scan the QRIS code",
- },
- {
-  icon: "amount",
-  name: "Enter the amount",
- },
- {
-  icon: "confirm",
-  name: "Review and Confirm the payment details",
- },
- {
-  icon: "save",
-  name: "Save your payment receipt",
- },
- {
-  icon: "show",
-  name: "Show the payment receipt to the counter staff",
- },
+ { icon: "open", name: "verticalStepper.open" },
+ { icon: "select", name: "verticalStepper.select" },
+ { icon: "scan", name: "verticalStepper.scan" },
+ { icon: "amount", name: "verticalStepper.amount" },
+ { icon: "confirm", name: "verticalStepper.confirm" },
+ { icon: "save", name: "verticalStepper.save" },
+ { icon: "show", name: "verticalStepper.show" },
 ];
 
 export const prices = {
  visitors: [
   {
    key: "domestic",
-   label: "Domestic",
-   price: {
-    workday: 10000,
-    holiday: 15000,
-   },
+   label: "prices.visitors.domestic.label",
+   price: { workday: 10000, holiday: 15000 },
   },
   {
    key: "domesticGroupStudents",
-   label: "Domestic Group Students",
-   price: {
-    workday: 5000,
-    holiday: 7500,
-   },
+   label: "prices.visitors.groupStudents.label",
+   price: { workday: 5000, holiday: 7500 },
   },
   {
    key: "international",
-   label: "International",
-   price: {
-    workday: 150000,
-    holiday: 150000,
-   },
+   label: "prices.visitors.international.label",
+   price: { workday: 150000, holiday: 150000 },
   },
  ],
-
  vehicles: [
-  { key: "bike", label: "Bike", price: 5000 },
-  { key: "car", label: "Car", price: 10000 },
-  { key: "busTruck", label: "Bus/Truck", price: 50000 },
+  { key: "bike", label: "prices.vehicles.bike.label", price: 5000 },
+  { key: "car", label: "prices.vehicles.car.label", price: 10000 },
+  { key: "busTruck", label: "prices.vehicles.busTruck.label", price: 50000 },
  ],
-
  photoVideo: [
   {
    key: "preWedding",
-   label: "Pre-Wedding",
-   price: {
-    domestic: 1000000,
-    international: 3000000,
-   },
+   label: "prices.photoVideo.preWedding.label",
+   price: { domestic: 1000000, international: 3000000 },
   },
   {
    key: "photography",
-   label: "Photography",
-   price: {
-    domestic: 2000000,
-    international: 5000000,
-   },
+   label: "prices.photoVideo.photography.label",
+   price: { domestic: 2000000, international: 5000000 },
   },
   {
    key: "videography",
-   label: "Videography",
-   price: {
-    domestic: 10000000,
-    international: 20000000,
-   },
+   label: "prices.photoVideo.videography.label",
+   price: { domestic: 10000000, international: 20000000 },
   },
  ],
- camping: [
-  {
-   key: "camping",
-   label: "Camping",
-   price: 5000,
-  },
- ],
- drone: [
-  {
-   key: "drone",
-   label: "Drone Operation",
-   price: 2000000,
-  },
- ],
+ camping: [{ key: "camping", label: "prices.camping.label", price: 5000 }],
+ drone: [{ key: "drone", label: "prices.drone.label", price: 2000000 }],
 };

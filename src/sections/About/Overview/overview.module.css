@@ -95,6 +95,10 @@
  padding: 1rem;
 }
 
+.information-text {
+ font-size: 0.9rem;
+}
+
 .information-text .information-label {
  display: none;
 }
@@ -262,20 +266,20 @@
 
 @media (min-width: 300px) and (min-height: 700px) and (orientation: portrait) {
  .information-text {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
  }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
  .information-text-wrapper {
-  flex: 0 0 25%;
+  flex: 0 0 30%;
   justify-self: flex-end;
   gap: 3rem;
  }
 }
 @media (min-width: 768px) and (min-height: 1280px) and (orientation: portrait) {
  .information-text {
-  font-size: 1.75rem;
+  font-size: 1.65rem;
  }
 }
 
@@ -305,7 +309,7 @@
 
 @media (min-width: 1200px) {
  .information-text {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
  }
 }
 

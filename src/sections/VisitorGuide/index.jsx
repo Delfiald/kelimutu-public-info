@@ -6,7 +6,7 @@ import Faq from "./Faq";
 
 function VisitorGuide() {
  return (
-  <section className={styles["visitor-guide"]}>
+  <section id="guide" className={styles["visitor-guide"]}>
    <Facilities />
    <DosDonts />
    <Faq />

@@ -1,8 +1,10 @@
 import styles from "./history.module.css";
 import { useState } from "react";
 import { kelimutuFormationSteps, folkloreSteps } from "../data";
+import { useTranslation } from "react-i18next";
 
 function History() {
+ const { t } = useTranslation("history");
  const [history, setHistory] = useState("geological");
 
  return (
@@ -15,7 +17,7 @@ function History() {
        history === "geological" ? styles.active : ""
       }`}
      >
-      Geological
+      {t("types.geological")}
      </div>
      <div
       onClick={() => setHistory("folklore")}
@@ -23,14 +25,14 @@ function History() {
        history === "folklore" ? styles.active : ""
       }`}
      >
-      Folklore
+      {t("types.folklore")}
      </div>
     </div>
     <ul>
      {(history === "geological" ? kelimutuFormationSteps : folkloreSteps).map(
       (step, stage) => (
        <li key={stage} className={styles.stage}>
-        <div className={styles["stage-description"]}>{step.description}</div>
+        <div className={styles["stage-description"]}>{t(step.description)}</div>
        </li>
       )
      )}
