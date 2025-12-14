@@ -1,0 +1,20 @@
+{
+  "title": "Visiting Hours",
+  "visitHours": {
+    "daily": {
+      "title": "Daily",
+      "time": "5 am - 4 pm",
+      "detail": "Open every day throughout the year."
+    },
+    "bestTime": {
+      "title": "Best Time to Visit",
+      "time": "5 am - 6 am",
+      "detail": "For catching the sunrise and enjoying early-morning scenery."
+    },
+    "peak": {
+      "title": "Peak Hours",
+      "time": "5 am - 7 am",
+      "detail": "The busiest period as visitors gather for the sunrise."
+    }
+  }
+}

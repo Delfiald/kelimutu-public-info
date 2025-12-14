@@ -1,0 +1,197 @@
+/* Color Changes */
+.color-changes-wrapper {
+ height: calc(100% - 1rem);
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: start;
+ flex-direction: column;
+ gap: 3rem;
+}
+
+h2 {
+ font-size: 1rem;
+}
+
+.color-changes-container {
+ position: relative;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ gap: 1rem;
+}
+
+.color-changes-container .track-wrapper {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 1rem;
+}
+
+.color-changes-container .track-container {
+ position: relative;
+ width: 3px;
+ height: 300px;
+ background: rgba(10, 53, 19, 0.5);
+ border-radius: 5px;
+}
+
+.color-changes-container .track-container .handle {
+ position: absolute;
+ top: 0;
+ left: 50%;
+ width: 10px;
+ height: 10px;
+ background: var(--primary-color);
+ border-radius: 50%;
+ transform: translate(-50%, -50%);
+ cursor: grab;
+ z-index: 2;
+}
+
+.color-changes-container .track-container .handle > div {
+ width: 100%;
+ height: 100%;
+ transition: var(--transition-very-fast) all ease;
+ background: inherit;
+ border-radius: 50%;
+}
+
+.color-changes-container .track-container .handle:hover > div {
+ transform: scale(1.2);
+ box-shadow: 0 0 5px var(--primary-color);
+}
+
+.color-changes-container .image-container {
+ pointer-events: none;
+ position: relative;
+ flex: 1;
+ max-width: 900px;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.color-changes-container .image-container .image-wrapper {
+ position: absolute;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 1rem;
+}
+
+.color-changes-container .image-container .image-wrapper img {
+ width: 100%;
+ height: 100%;
+ object-fit: contain;
+ filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.75));
+}
+
+.color-changes-container .image-container .image-label {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-weight: bold;
+}
+
+@media (min-width: 300px) and (min-height: 700px) and (orientation: portrait) {
+ h2 {
+  font-size: 1.5rem;
+ }
+
+ .color-changes-container {
+  flex-direction: column-reverse;
+  height: 100%;
+ }
+
+ .color-changes-container .track-wrapper {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  max-width: 768px;
+  width: 100%;
+ }
+
+ .color-changes-container .track-wrapper div:first-child {
+  grid-row: 2/3;
+ }
+
+ .color-changes-container .track-container {
+  height: 3px;
+  width: 100%;
+  grid-column: 1/-1;
+ }
+
+ .color-changes-container .track-wrapper div:last-child {
+  grid-column: 3/4;
+ }
+
+ .color-changes-container .track-container .handle {
+  top: 50%;
+  left: 0;
+ }
+
+ .image-container .image-wrapper {
+  height: min-content;
+  justify-content: center;
+  gap: 2rem;
+ }
+
+ .image-container .image-wrapper img {
+  height: auto;
+ }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+ h2 {
+  font-size: 2rem;
+ }
+
+ .color-changes-container .track-wrapper > div {
+  font-size: 1.25rem;
+ }
+
+ .color-changes-container .track-container {
+  width: 100%;
+ }
+
+ .color-changes-container .track-container .handle {
+  width: 15px;
+  height: 15px;
+ }
+
+ .color-changes-container .image-container .image-label {
+  font-size: 2rem;
+ }
+}
+
+@media (min-width: 1200px) {
+ h2 {
+  font-size: 1.5rem;
+ }
+
+ .color-changes-container {
+  flex: 1;
+ }
+ .color-changes-container .track-wrapper > div {
+  font-size: 1.25rem;
+ }
+
+ .color-changes-container .track-container {
+  width: 5px;
+ }
+
+ .color-changes-container .track-container .handle {
+  width: 15px;
+  height: 15px;
+ }
+
+ .color-changes-container .image-container .image-label {
+  font-size: 2rem;
+ }
+}

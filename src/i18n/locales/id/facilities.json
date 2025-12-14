@@ -1,0 +1,11 @@
+{
+  "title": "Fasilitas",
+  "facilities": {
+    "information": "Pusat Informasi",
+    "parking": "Area Parkir",
+    "prayer": "Mushola",
+    "restroom": "Toilet",
+    "shelter": "Tempat Berteduh",
+    "stalls": "Kios Makanan & Souvenir"
+  }
+}

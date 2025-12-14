@@ -1,0 +1,13 @@
+{
+  "title": "Discover Arboretum Park.",
+  "arboretum": {
+    "label": "Arboretum",
+    "utaOnga": { "label": "Uta Onga", "latin": "Begonia Kelimutuensis" },
+    "turuwara": { "label": "Turuwara", "latin": "Rhododendron Renschianum" },
+    "arngoni": { "label": "Arngoni", "latin": "Vaccinium Varingiaefolium" }
+  },
+  "description": {
+      "intro": "Just south of the vehicle stop lies the lush Arboretum Park, a living gallery of nature. Wander among 140 species of trees and shrubs, 36 types of medicinal plants, and rare endemic flora like Uta Onga (Begonia kelimutuensis), Turuwara (Rhododendron Renschianum), and Arngoni (Vaccinium Varingiaefolium). Spot the Garugiwa and Flores hawk-eagle soaring above, and immerse yourself in the vibrant symphony of life unique to Kelimutu.",
+      "note": "A must-visit for nature lovers, photographers, and anyone seeking a magical forest experience."
+    }
+}

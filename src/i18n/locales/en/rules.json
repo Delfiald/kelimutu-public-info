@@ -1,0 +1,18 @@
+{
+  "titleDos": "Do's",
+  "titleDonts": "Don'ts",
+  "visitorRules": {
+    "dos": {
+      "trail": "Stay on designated trails",
+      "sign": "Follow all posted signs & instructions",
+      "trash": "Dispose of trash properly",
+      "belonging": "Look after your personal belongings"
+    },
+    "donts": {
+      "walk": "Do not cross safety barriers or fences",
+      "litter": "Do not litter",
+      "monkey": "Do not feed wildlife",
+      "plant": "Do not pick plants or disturb natural features"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Kalkulator Biaya",
+  "subheader": "Hitung perkiraan total biaya kunjungan secara otomatis",
+  "holiday": "Hari libur",
+  "domestic": "Domestik",
+  "international": "Internasional",
+  "add": "Tambah",
+ "prices": {
+  "visitors": {
+   "domestic": { "label": "Pengunjung Domestik" },
+   "groupStudents": { "label": "Kelompok Pelajar Domestik" },
+   "international": { "label": "Pengunjung Internasional" }
+  },
+  "vehicles": {
+   "bike": { "label": "Motor (2 Roda)" },
+   "car": { "label": "Mobil (4 Roda)" },
+   "busTruck": { "label": "Bus / Truk (6 Roda)" }
+  },
+  "photoVideo": {
+   "preWedding": { "label": "Fotografi & Videografi Pra-Nikah" },
+   "photography": { "label": "Fotografi" },
+   "videography": { "label": "Videografi" }
+  },
+  "camping": { "label": "Camping" },
+  "drone": { "label": "Operasi Drone" }
+ },
+ "feesForm": {
+    "visitors": {
+      "label": "Tipe Pengunjung",
+      "subLabel": "Jumlah Pengunjung",
+      "addLabel": "Tambah Pengunjung"
+    },
+    "vehicles": {
+      "label": "Tipe Kendaraan",
+      "subLabel": "Jumlah Kendaraan",
+      "addLabel": "Tambah Kendaraan"
+    },
+    "photoVideo": {
+      "label": "Tipe Foto atau Video",
+      "addLabel": "Tambah Foto atau Video"
+    },
+    "camping": {
+      "label": "Camping",
+      "subLabel": "Jumlah Peserta"
+    },
+    "drone": {
+      "label": "Drone",
+      "subLabel": "Unit"
+    }
+  }
+}
