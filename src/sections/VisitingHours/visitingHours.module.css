@@ -162,6 +162,10 @@
   max-width: 80%;
  }
 
+ .visiting-hours-header h2 {
+  font-size: 3rem;
+ }
+
  .visiting-hours-container {
   grid-auto-rows: 200px;
   font-size: 1.25rem;

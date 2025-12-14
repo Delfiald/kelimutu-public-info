@@ -40,7 +40,7 @@ function VisitingHours() {
  return (
   <section id="visit" className={styles["visiting-hours"]}>
    <header className={styles["visiting-hours-header"]}>
-    <h2>{t("title")}</h2>
+    <h2>{t("title")}.</h2>
    </header>
    <div className={styles["visiting-hours-container"]}>
     <HoursCard t={t} />
