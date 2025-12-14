@@ -7,7 +7,6 @@ import { faq } from "../data";
 import { useTranslation } from "react-i18next";
 
 function scrollHandler(target) {
- console.log(target);
  document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
 }
 
@@ -34,7 +33,13 @@ function FaqContainer({ isOpen, toggleOpen, t }) {
          {t(item.answer_before)}
          <span
           className={styles["anchor-link"]}
-          onClick={() => scrollHandler(item.scrollTarget)}
+          onClick={() => {
+           if (item.scrollTarget.startsWith("http")) {
+            window.open(item.scrollTarget, "_blank", "noopener,noreferrer");
+           } else {
+            scrollHandler(item.scrollTarget);
+           }
+          }}
          >
           {t(item.answer_link)}
          </span>
