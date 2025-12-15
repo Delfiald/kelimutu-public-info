@@ -21,6 +21,7 @@ An interactive and informative website for Kelimutu National Park, providing vis
 - React
 - Vite
 - i18next (for internationalization)
+- react-pdf (for pdf file reader)
 
 ## Installation
 
