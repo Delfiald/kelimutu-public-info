@@ -145,6 +145,11 @@ h2 {
  .image-container .image-wrapper img {
   height: auto;
  }
+
+ .color-changes-container .track-container .handle {
+  width: 20px;
+  height: 20px;
+ }
 }
 
 @media (min-width: 768px) and (orientation: portrait) {
@@ -187,8 +192,8 @@ h2 {
  }
 
  .color-changes-container .track-container .handle {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
  }
 
  .color-changes-container .image-container .image-label {

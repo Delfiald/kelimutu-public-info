@@ -24,7 +24,7 @@ function Overview() {
  return (
   <div className={styles["information-wrapper"]}>
    <div className={styles["image-wrapper"]}>
-    <img src="./about/kelimutu.png" alt="Kelimutu Lake" />
+    <img src="./about/kelimutu.png" loading="lazy" alt="Kelimutu Lake" />
     {informationContent.slice(1).map((information, index) => {
      const originalIndex = index + 1;
 
