@@ -11,7 +11,7 @@ function GallerySlider({ trackRef, duplicated, t }) {
     {duplicated.map((image, index) => (
      <div key={index} className={styles.image}>
       <div className={styles["img-wrapper"]}>
-       <img src={image.img} alt={t(image.title)} />
+       <img src={image.img} loading="lazy" alt={t(image.title)} />
       </div>
       <div className={styles["img-title"]}>{t(image.title)}</div>
       <div className={styles["img-description"]}>

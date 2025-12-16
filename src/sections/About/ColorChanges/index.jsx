@@ -88,7 +88,7 @@ function ColorChanges() {
     </div>
     <div className={styles["image-container"]}>
      <div className={styles["image-wrapper"]}>
-      <img src={images[index].src} alt={images[index].alt} />
+      <img src={images[index].src} loading="lazy" alt={images[index].alt} />
       <div className={styles["image-label"]}>{images[index].alt}</div>
      </div>
     </div>
