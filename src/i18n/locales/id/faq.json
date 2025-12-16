@@ -1,0 +1,37 @@
+{
+  "title": "Pertanyaan yang Sering Diajukan",
+  "subtitle1": "Sebelum bertanya, jawaban Anda mungkin sudah ada di sini",
+    "subtitle2": "Bagian ini mencakup jawaban berguna untuk pertanyaan yang sering diajukan pengunjung",
+    "bottomQuestion": "Apakah pertanyaan Anda tidak tercantum di sini?",
+    "bottomText": {
+      "before": "Jangan ragu untuk menghubungi melalui ",
+      "link": "Hubungi Kami",
+      "after": " section."
+    },
+  "faq": {
+    "q1": "Seberapa jauh dari loket tiket ke area pemandangan (parkir/puncak)?",
+"a1": {
+  "before": "Jarak dari loket tiket ke area parkir sekitar 3 km, kemudian dilanjutkan dengan berjalan kaki selama kurang lebih 15–20 menit dari area parkir menuju puncak. Silakan lihat ",
+  "link": "peta di sini",
+  "after": " sebagai panduan."
+},
+    "q2": "Bagaimana cuaca di puncak?",
+    "a2": "Cuaca di puncak tidak dapat diprediksi dan dapat berubah dengan cepat. Kabut dan perubahan visibilitas mendadak umum terjadi.",
+    "q3": "Berapa harga tiket masuk?",
+    "a3": {
+      "before": "Tiket masuk berbeda sesuai kategori pengunjung (domestik, internasional, hari kerja/hari libur). Untuk detail lengkap, ketuk ",
+      "link": "di sini",
+      "after": " untuk melihat bagian harga tiket."
+    },
+    "q4": "Apakah tersedia pemandu?",
+    "a4": "Tidak ada pemandu resmi, tetapi rutenya sederhana dan mudah diikuti.",
+    "q5": "Apakah tersedia penjual makanan?",
+    "a5": "Ya, penjual makanan tersedia di dekat area parkir atas, menyediakan camilan, makanan, dan minuman.",
+    "q6": "Apakah ada kios atau toko di area puncak?",
+    "a6": "Terdapat beberapa kios makanan dan souvenir di dekat area parkir.",
+    "q7": "Jam buka berapa?",
+    "a7": "Jam buka umumnya dari pagi hingga sore, yaitu pukul 05.00 – 16.00.",
+    "q8": "Apakah tersedia area parkir?",
+    "a8": "Ya, area parkir tersedia sebelum area puncak. Pengunjung harus melanjutkan perjalanan dengan berjalan kaki dari area parkir untuk mencapai puncak."
+  }
+}

@@ -1,0 +1,29 @@
+.animated-text span {
+ display: inline-flex;
+ position: relative;
+ overflow: hidden;
+ height: 2ch;
+ align-items: center;
+ justify-content: center;
+}
+
+.animated-text .char-wrapper:hover .char-default {
+ transform: translateY(0px);
+}
+
+.animated-text .char-wrapper .char-animated {
+ transition: var(--transition-medium) all cubic-bezier(0.2, 0.5, 0.2, 0.7);
+ transform: translateY(0px);
+}
+
+.animated-text .char-wrapper:hover .char-animated {
+ transform: translateY(25px);
+}
+
+.animated-text .char-wrapper .char-default {
+ position: absolute;
+ top: 0;
+ left: 0;
+ transition: var(--transition-medium) all cubic-bezier(0.2, 0.5, 0.2, 0.7);
+ transform: translateY(-25px);
+}

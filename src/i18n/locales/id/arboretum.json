@@ -1,0 +1,13 @@
+{
+  "title": "Menjelajahi Taman Arboretum.",
+  "arboretum": {
+    "label": "Arboretum",
+    "utaOnga": { "label": "Uta Onga", "latin": "Begonia Kelimutuensis" },
+    "turuwara": { "label": "Turuwara", "latin": "Rhododendron Renschianum" },
+    "arngoni": { "label": "Arngoni", "latin": "Vaccinium Varingiaefolium" }
+  },
+  "description": {
+      "intro": "Di selatan area parkir kendaraan, Taman Arboretum seluas ±4,5 hektare menghadirkan suasana alam yang rimbun dan memukau. Jelajahi lebih dari 140 spesies pohon dan semak, 36 jenis tanaman obat, serta flora endemik langka seperti Uta Onga (Begonia kelimutuensis), Turuwara (Rhododendron renschianum), dan Arngoni (Vaccinium varingiaefolium). Amati burung Garugiwa dan elang Flores yang melayang di atas, dan nikmati harmonisasi kehidupan yang unik hanya di Kelimutu.",
+      "note": "Tempat yang wajib dikunjungi bagi pencinta alam, fotografer, atau siapa saja yang ingin merasakan pengalaman hutan yang magis."
+    }
+}

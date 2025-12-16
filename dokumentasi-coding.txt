@@ -1,0 +1,30 @@
+2025-12-15 | Editing README.md
+2025-12-15 | Merge main-development from remote
+2025-12-15 | Add README for Kelimutu National Park website
+2025-12-15 | Merge pull request #2 from Delfiald/style-ui-tweaks
+2025-12-15 | Fix FAQ section links
+2025-12-15 | Merge pull request #1 from Delfiald/feature-language-toggle
+2025-12-15 | Improve VisitingHours header responsiveness
+2025-12-15 | Add Indonesian language support for i18n
+2025-12-14 | Refactor codebase structure and sections
+2025-12-14 | Improve responsiveness across all sections
+2025-12-13 | Tweak UI styling for facilities and hamburger menu
+2025-12-13 | Update hamburger menu styling
+2025-12-12 | Add hamburger menu feature and update UI styling
+2025-12-11 | Create Navbar component
+2025-12-11 | Create Arboretum section
+2025-12-10 | Adding Folklore Story to History Section
+2025-12-10 | Create About Section
+2025-12-08 | Create Contact section and update FAQ button behavior
+2025-12-08 | Create Gallery section with infinite slider
+2025-12-07 | Add FAQ section
+2025-12-07 | Add Do's and Don'ts sections
+2025-12-07 | Add VisitorGuide section
+2025-12-07 | Refactor FeesPayment and visitor cost calculator
+2025-12-05 | Create Visitor Cost Calculator Section
+2025-12-02 | Add Fees Section
+2025-11-29 | Enhance Visiting Hours cards with detail and transitions
+2025-11-28 | Add Visiting Hours section
+2025-11-27 | Add hero section
+2025-11-26 | Initial Commit
+2025-11-26 | Initial commit

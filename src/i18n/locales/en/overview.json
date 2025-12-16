@@ -1,0 +1,18 @@
+{
+ "overview": {
+  "label": "Mount Kelimutu",
+  "description": "Rising to 1,639 meters on Flores Island, Mount Kelimutu is a volcano renowned for its three crater lakes, whose waters continually change color due to mineral composition, gas emissions, and ongoing volcanic activity. Surrounded by dense forests and rich biodiversity, the area is deeply revered by the Lio people. Visitors can explore scenic trails and viewpoints to experience the natural beauty and stories that surround Kelimutu’s remarkable crater lakes."
+ },
+ "tiwuAtaPolo": {
+  "label": "Tiwu Ata Polo",
+  "description": "Tiwu Ata Polo, the largest crater lake of the three, is located in the southeast with an area of 4 hectares and a depth of 64 meters. The lake is named by the Lio people, who believe it is a place where the spirits of evil people dwell. Those who committed wicked acts or practiced black magic (suanggi) during their lifetime are believed to reside here after death."
+ },
+ "tiwuNiwaMuriKooFai": {
+  "label": "Tiwu Niwa Muri Ko'o Fai",
+  "description": "Tiwu Nuwa Muri Ko’o Fai is located between Tiwu Ata Polo and Tiwu Ata Bupu, separated by a very thin ridge. It covers an area of 5.5 hectares with a depth of 127 meters and has the lowest pH among the three lakes at 0.37. The Lio people believe this lake is the dwelling place of young spirits."
+ },
+ "tiwuAtaBupu": {
+  "label": "Tiwu Ata Bupu",
+  "description": "Tiwu Ata Bupu is located about 500 meters from the other two lakes, covering an area of 4.5 hectares with a depth of 67 meters. It has the highest pH level at 3.02. According to the Lio people, this lake is where the spirits of the elders and wise individuals reside."
+ }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Biaya",
+  "regulation": "Berdasarkan Peraturan Pemerintah No. 36 Tahun 2024",
+  "rate": "Harga",
+  "fees": {
+    "individual": {
+      "title": "Tiket Individu",
+      "domesticIndividual": {
+        "name": "Warga Lokal Individu",
+        "prices": {
+          "workingDays": "Hari Kerja - Rp.10.000,00",
+          "holiday": "Hari Libur - Rp.15.000,00"
+        }
+      },
+      "groupStudents": {
+        "name1": "Kelompok Pelajar Lokal",
+        "name2": "(min 5 orang)",
+        "prices": {
+          "workingDays": "Hari Kerja - Rp.5.000,00",
+          "holiday": "Hari Libur - Rp.7.500,00"
+        }
+      },
+      "international": {
+        "name": "Individu Internasional",
+        "prices": "Rp.150.000,00"
+      }
+    },
+    "vehicle": {
+      "title": "Kendaraan",
+      "motorcycle": { "name": "Motor (2 Roda)", "price": "Rp.5.000,00" },
+      "car": { "name": "Mobil (4 Roda)", "price": "Rp.10.000,00" },
+      "bus": { "name": "Bus/Truk (6 Roda)", "price": "Rp.50.000,00" }
+    },
+    "photoVideo": {
+      "title": "Fotografi & Videografi",
+      "preWedding": {
+        "name1": "Pra-Nikah",
+        "name2": "Fotografi dan Videografi",
+        "domestic": "Domestik - Rp.1.000.000,00",
+        "international": "Internasional - Rp.3.000.000,00"
+      },
+      "photography": {
+        "name1": "Fotografi",
+        "name2": "Tur, Majalah, Iklan Produk, dll",
+        "domestic": "Domestik - Rp.2.000.000,00",
+        "international": "Internasional - Rp.5.000.000,00"
+      },
+      "videography": {
+        "name1": "Videografi",
+        "name2": "Film, Iklan, Musik Video, dll",
+        "domestic": "Domestik - Rp.10.000.000,00",
+        "international": "Internasional - Rp.20.000.000,00"
+      }
+    },
+    "otherServices": {
+      "title": "Layanan Lain",
+      "camping": { "name": "Camping", "price": "Rp.5.000,00", "note": "Per Orang, Per Hari" },
+      "drone": { "name": "Operasi Drone", "price": "Rp.2.000.000,00", "note": "Per Unit, Per Hari" }
+    }
+  }
+}

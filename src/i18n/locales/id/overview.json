@@ -1,0 +1,18 @@
+{
+  "overview": {
+    "label": "Gunung Kelimutu",
+    "description": "Menjulang setinggi 1.639 meter di Pulau Flores, Gunung Kelimutu merupakan gunung berapi dengan tiga danau kawah yang terkenal karena warna airnya yang terus berubah. Perubahan ini dipengaruhi oleh komposisi mineral, emisi gas, serta aktivitas vulkanik yang masih berlangsung. Dikelilingi hutan lebat dan keanekaragaman hayati yang unik, kawasan ini sangat dihormati oleh masyarakat Lio, dan pengunjung dapat menikmati pemandangan alam serta cerita yang menyelimuti danau-danau kawah Kelimutu melalui jalur dan titik pandang yang tersedia."
+  },
+  "tiwuAtaPolo": {
+    "label": "Tiwu Ata Polo",
+    "description": "Tiwu Ata Polo merupakan danau kawah terbesar dari ketiga danau, terletak di bagian tenggara dengan luas sekitar 4 hektare dan kedalaman 64 meter. Danau ini dinamai oleh masyarakat Lio yang meyakini bahwa tempat ini merupakan kediaman roh orang-orang jahat. Mereka yang semasa hidupnya berbuat kejahatan atau melakukan ilmu hitam (suanggi) dipercaya rohnya akan bersemayam di Tiwu Ata Polo setelah meninggal."
+  },
+  "tiwuNiwaMuriKooFai": {
+    "label": "Tiwu Niwa Muri Ko'o Fai",
+    "description": "Tiwu Nuwa Muri Ko’o Fai terletak di antara Tiwu Ata Polo dan Tiwu Ata Bupu, dipisahkan oleh batas yang sangat tipis. Danau ini memiliki luas sekitar 5,5 hektare dengan kedalaman 127 meter dan merupakan danau dengan tingkat keasaman (pH) terendah, yaitu 0,37. Masyarakat Lio meyakini bahwa danau ini merupakan tempat bersemayamnya arwah para pemuda dan pemudi."
+  },
+  "tiwuAtaBupu": {
+    "label": "Tiwu Ata Bupu",
+    "description": "Tiwu Ata Bupu terletak sekitar 500 meter dari dua danau lainnya, dengan luas sekitar 4,5 hektare dan kedalaman 67 meter. Danau ini memiliki tingkat keasaman (pH) tertinggi, yaitu 3,02. Menurut kepercayaan masyarakat Lio, Tiwu Ata Bupu merupakan tempat bersemayamnya arwah para orang tua dan orang-orang bijaksana."
+  }
+}

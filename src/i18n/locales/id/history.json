@@ -1,0 +1,70 @@
+{
+ "formation": {
+  "steps": {
+   "1": {
+    "title": "Gunung Sokoria Purba",
+    "description": "Pembentukan dimulai dari gunung api purba yang dikenal sebagai Gunung Sokoria. Jejak geologi dan sisa material vulkanik menunjukkan aktivitasnya di masa lalu."
+   },
+   "2": {
+    "title": "Letusan Besar Membentuk Kaldera Sokoria",
+    "description": "Letusan eksplosif yang sangat kuat menghancurkan puncak Gunung Sokoria dan membentuk kaldera luas, menandai perubahan besar pertama pada bentang alam."
+   },
+   "3": {
+    "title": "Terbentuknya Gunung Kelibara (Kelimutu Tua)",
+    "description": "Di dalam kaldera, aktivitas vulkanik baru membentuk kerucut gunung muda bernama Gunung Kelibara — sering disebut sebagai Kelimutu lama."
+   },
+   "4": {
+    "title": "Letusan Membentuk Anak Kelibara",
+    "description": "Letusan selanjutnya melahirkan kerucut gunung yang lebih kecil, dikenal sebagai Anak Kelibara, yang berada di lokasi Tiwu Ata Bupu saat ini."
+   },
+   "5": {
+    "title": "Letusan Berulang Selama Ratusan Tahun",
+    "description": "Anak Kelibara mengalami banyak letusan selama beberapa abad, perlahan membentuk ulang kawasan puncak dan melemahkan struktur yang lebih tua."
+   },
+   "6": {
+    "title": "Letusan Terakhir Membentuk Gunung Kelimutu",
+    "description": "Rangkaian letusan eksplosif — termasuk letusan terakhir yang tercatat pada tahun 1968 — menyempurnakan pembentukan Gunung Kelimutu dan membentuk tiga kawah puncaknya."
+   },
+   "7": {
+    "title": "Danau Kawah Kelimutu Saat Ini",
+    "description": "Setelah aktivitas vulkanik mereda, air hujan dan fluida hidrotermal mengisi kawah-kawah tersebut, membentuk tiga danau kawah ikonik yang warnanya terus berubah akibat proses geokimia yang masih berlangsung."
+   }
+  }
+ },
+ "folklore": {
+  "steps": {
+   "1": {
+    "title": "Bhuria – Hutan Terselubung",
+    "description": "Pada masa lampau, gunung ini diselimuti Bhuria, hutan sakral berkabut tempat roh leluhur 'Embu Nosi' dan makhluk tak kasat mata 'Nitu' bersemayam."
+   },
+   "2": {
+    "title": "Kekuasaan Konde Ratu",
+    "description": "Masyarakat hidup di bawah pemerintahan Konde Ratu, dengan Ata Bupu sebagai pelindung kaum lemah dan Ata Polo sebagai dukun jahat yang memangsa yang tak berdaya."
+   },
+   "3": {
+    "title": "Para Yatim Mencari Perlindungan",
+    "description": "Dua anak yatim, 'Ana Kalo', mencari perlindungan di wilayah Ata Bupu, dan ia memberikan tempat aman bagi mereka."
+   },
+   "4": {
+    "title": "Bayangan Ata Polo",
+    "description": "Ata Polo menuntut anak-anak itu, namun Ata Bupu menolak: 'Biarkan mereka mencapai usia mereka,' katanya dengan tegas."
+   },
+   "5": {
+    "title": "Para Pemuda Beranjak Dewasa",
+    "description": "Anak-anak yatim itu tumbuh menjadi Ko'o Fai dan Nuwa Muri. Ata Polo kembali menuntut mereka, namun Ata Bupu tetap menolak."
+   },
+   "6": {
+    "title": "Lenyap ke Dalam Bumi",
+    "description": "Untuk menghindari Ata Polo, Ata Bupu dan kedua pemuda itu menghilang ke dalam bumi. Ata Polo mengejar, namun semuanya tertelan oleh tanah."
+   },
+   "7": {
+    "title": "Lahirnya Tiga Danau",
+    "description": "Di tempat mereka menghilang, tanah terbelah membentuk tiga danau berwarna: hijau milik Ata Bupu, biru kehijauan milik para pemuda, dan cokelat kemerahan milik Ata Polo."
+   }
+  }
+ },
+ "types": {
+  "geological": "Geologi",
+  "folklore": "Cerita Rakyat"
+ }
+}

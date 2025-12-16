@@ -1,0 +1,11 @@
+{
+  "title": "Facilities",
+  "facilities": {
+    "information": "Information Center",
+    "parking": "Parking Area",
+    "prayer": "Prayer Room",
+    "restroom": "Restroom",
+    "shelter": "Shelters",
+    "stalls": "Food & Souvenir Stalls"
+  }
+}
