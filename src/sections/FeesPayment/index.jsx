@@ -10,8 +10,10 @@ import PaymentSection from "./Payment";
 
 import CalculatorSection from "./CostCalculator";
 import { SECTION } from "./data";
+import { useTranslation } from "react-i18next";
 
 function BottomSection({ sectionContent, setSectionContent }) {
+ const { t } = useTranslation("feesPayment");
  const current = SECTION[sectionContent];
  return (
   <div className={styles.bottom}>
@@ -21,7 +23,7 @@ function BottomSection({ sectionContent, setSectionContent }) {
      className={styles["prev-button"]}
     >
      <i className="fas fa-chevron-left"></i>
-     <span>{current.labelPrev}</span>
+     <span>{t(current.labelPrev)}</span>
     </div>
    )}
    {current.next && (
@@ -29,7 +31,7 @@ function BottomSection({ sectionContent, setSectionContent }) {
      onClick={() => setSectionContent(current.next)}
      className={styles["next-button"]}
     >
-     <span>{current.labelNext}</span>
+     <span>{t(current.labelNext)}</span>
      <i className="fas fa-chevron-right"></i>
     </div>
    )}

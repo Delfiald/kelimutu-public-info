@@ -10,7 +10,11 @@
     },
   "faq": {
     "q1": "Seberapa jauh dari loket tiket ke area pemandangan (parkir/puncak)?",
-    "a1": "Jarak dari loket tiket ke area parkir sekitar 3 km, kemudian sekitar 15–20 menit berjalan kaki dari area parkir ke puncak.",
+"a1": {
+  "before": "Jarak dari loket tiket ke area parkir sekitar 3 km, kemudian dilanjutkan dengan berjalan kaki selama kurang lebih 15–20 menit dari area parkir menuju puncak. Silakan lihat ",
+  "link": "peta di sini",
+  "after": " sebagai panduan."
+},
     "q2": "Bagaimana cuaca di puncak?",
     "a2": "Cuaca di puncak tidak dapat diprediksi dan dapat berubah dengan cepat. Kabut dan perubahan visibilitas mendadak umum terjadi.",
     "q3": "Berapa harga tiket masuk?",

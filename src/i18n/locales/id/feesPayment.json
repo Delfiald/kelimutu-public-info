@@ -1,0 +1,12 @@
+{
+  "fees": {
+    "next": "Metode Pembayaran"
+  },
+  "payment": {
+    "prev": "Biaya",
+    "next": "Kalkulator Biaya"
+  },
+  "calculator": {
+    "prev": "Metode Pembayaran"
+  }
+}

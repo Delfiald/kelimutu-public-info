@@ -17,6 +17,8 @@ import arboretumEN from "./locales/en/arboretum.json";
 import arboretumID from "./locales/id/arboretum.json";
 import visitingHoursEN from "./locales/en/visitingHours.json";
 import visitingHoursID from "./locales/id/visitingHours.json";
+import feesPaymentEN from "./locales/en/feesPayment.json";
+import feesPaymentID from "./locales/id/feesPayment.json";
 import feesEN from "./locales/en/fees.json";
 import feesID from "./locales/id/fees.json";
 import paymentEN from "./locales/en/payment.json";
@@ -47,6 +49,7 @@ i18n.use(initReactI18next).init({
    colorChanges: colorChangesEN,
    arboretum: arboretumEN,
    visitingHours: visitingHoursEN,
+   feesPayment: feesPaymentEN,
    fees: feesEN,
    payment: paymentEN,
    costCalculator: costCalculatorEN,
@@ -66,6 +69,7 @@ i18n.use(initReactI18next).init({
    colorChanges: colorChangesID,
    arboretum: arboretumID,
    visitingHours: visitingHoursID,
+   feesPayment: feesPaymentID,
    fees: feesID,
    payment: paymentID,
    costCalculator: costCalculatorID,
