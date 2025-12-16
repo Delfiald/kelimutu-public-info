@@ -26,7 +26,7 @@ function Arboretum() {
       .filter((_, index) => index !== 0)
       .map((img, index) => (
        <div key={index} className={styles["image-wrapper"]}>
-        <img src={img.image} alt={img.label} />
+        <img src={img.image} loading="lazy" alt={img.label} />
         <div className={styles.label}>{t(img.label)}</div>
         <div className={styles.latin}>{`(${t(img.latin)})`}</div>
        </div>
