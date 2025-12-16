@@ -1,6 +1,6 @@
 export const images = [
  {
-  img: "/gallery/kelimutu.JPG",
+  img: "/gallery/kelimutu.jpg",
   title: "gallery.kelimutu.title",
   description: "gallery.kelimutu.description",
   source: "",
@@ -12,7 +12,7 @@ export const images = [
   source: "",
  },
  {
-  img: "/gallery/between-lake.png",
+  img: "/gallery/between-lake.jpg",
   title: "gallery.betweenLakes.title",
   description: "gallery.betweenLakes.description",
   source: "",
@@ -24,7 +24,7 @@ export const images = [
   source: "",
  },
  {
-  img: "/gallery/kelimutu-far.JPG",
+  img: "/gallery/kelimutu-far.jpg",
   title: "gallery.kelimutuFar.title",
   description: "gallery.kelimutuFar.description",
   source: "",
@@ -36,19 +36,19 @@ export const images = [
   source: "Muhamad Ilham Fadhila",
  },
  {
-  img: "/gallery/patika.png",
+  img: "/gallery/patika.jpg",
   title: "gallery.patika.title",
   description: "gallery.patika.description",
   source: "",
  },
  {
-  img: "/gallery/sunrise.png",
+  img: "/gallery/sunrise.jpg",
   title: "gallery.sunrise.title",
   description: "gallery.sunrise.description",
   source: "",
  },
  {
-  img: "/gallery/garugiwa.png",
+  img: "/gallery/garugiwa.jpg",
   title: "gallery.garugiwa.title",
   description: "gallery.garugiwa.description",
   source: "",
