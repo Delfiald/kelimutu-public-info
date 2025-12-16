@@ -33,19 +33,7 @@ function ColorChanges() {
 
  const handleDrag = (e) => {
   if (e.cancelable && e.touches) e.preventDefault();
-  const track = trackRef.current;
-  if (!track) return;
-
-  const rect = track.getBoundingClientRect();
-
-  const pos = getClientPos(e, isResponsiveHorizontal());
-
-  const percentage = isResponsiveHorizontal()
-   ? Math.min(Math.max((pos - rect.left) / rect.width, 0), 1)
-   : Math.min(Math.max((pos - rect.top) / rect.height, 0), 1);
-
-  const newIndex = Math.floor(percentage * (images.length - 1));
-  setIndex(newIndex);
+  updateIndexFromEvent(e);
  };
 
  const startDrag = () => {
@@ -64,17 +52,38 @@ function ColorChanges() {
   document.removeEventListener("touchend", stopDrag);
  };
 
+ const updateIndexFromEvent = (e) => {
+  const track = trackRef.current;
+  if (!track) return;
+
+  const rect = track.getBoundingClientRect();
+  const horizontal = isResponsiveHorizontal();
+  const pos = getClientPos(e, horizontal);
+
+  const percentage = horizontal
+   ? Math.min(Math.max((pos - rect.left) / rect.width, 0), 1)
+   : Math.min(Math.max((pos - rect.top) / rect.height, 0), 1);
+
+  const newIndex = Math.round(percentage * (images.length - 1));
+  setIndex(newIndex);
+ };
+
  return (
   <div className={styles["color-changes-wrapper"]}>
    <h2>{t("title")}</h2>
    <div className={styles["color-changes-container"]}>
     <div className={styles["track-wrapper"]}>
      <div>{images[0].alt}</div>
-     <div className={styles["track-container"]} ref={trackRef}>
+     <div
+      className={styles["track-container"]}
+      ref={trackRef}
+      onClick={updateIndexFromEvent}
+     >
       <div
        className={styles.handle}
        onMouseDown={startDrag}
        onTouchStart={startDrag}
+       onClick={(e) => e.stopPropagation()}
        style={{
         ...(isResponsiveHorizontal()
          ? { left: `${(index / (images.length - 1)) * 100}%`, top: "50%" }
