@@ -1,0 +1,12 @@
+{
+  "fees": {
+    "next": "Payment Info"
+  },
+  "payment": {
+    "prev": "Fees",
+    "next": "Cost Calculator"
+  },
+  "calculator": {
+    "prev": "Payment Info"
+  }
+}

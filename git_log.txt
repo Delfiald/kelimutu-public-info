@@ -1,0 +1,325 @@
+commit 60833ceb1d9ff1e1697482e131cd76739e72a607
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Mon Dec 15 10:24:46 2025 +0800
+
+    Editing README.md
+    
+    - editing README.md by adding react-pdf as technologies used
+
+commit 919e764a4b7f3c685cddc26b18ada1772fed3486
+Merge: 9f52983 0fb11dc
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Mon Dec 15 01:01:01 2025 +0800
+
+    Merge main-development from remote
+    
+    - Integrated latest changes from the remote repository into local main-development
+    - Ensured all recent updates and fixes are up to date
+
+commit 9f529836620126993174a7de3fdd17fe471f3b6b
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Mon Dec 15 00:59:37 2025 +0800
+
+    Add README for Kelimutu National Park website
+    
+    - Added project description, features, technologies used, installation steps
+    - Clarified that the project is proprietary and not open-source
+    - Included dual-language and QRIS simulation features in description
+
+commit 0fb11dc5c215dfb6b09f962c86c31612addf45d1
+Merge: fdb1b64 f32df68
+Author: M. Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Mon Dec 15 00:52:03 2025 +0800
+
+    Merge pull request #2 from Delfiald/style-ui-tweaks
+    
+    Fix FAQ section links
+
+commit f32df68ca1b8b0c6e783994f18cbe5ca212f34de
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Mon Dec 15 00:48:51 2025 +0800
+
+    Fix FAQ section links
+    
+    - Adjust hyperlink styling in FAQ sections
+    - Add map link to distance question with conditional rendering
+
+commit fdb1b64f76fb042f3a7f93b862635d6f35cde393
+Merge: 52e7f94 9ee1e5c
+Author: M. Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Mon Dec 15 00:30:24 2025 +0800
+
+    Merge pull request #1 from Delfiald/feature-language-toggle
+    
+    Feature language toggle
+
+commit 9ee1e5cd8368622f71dde97008d787c1d1b80bb6
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Mon Dec 15 00:25:17 2025 +0800
+
+    Improve VisitingHours header responsiveness
+    
+    - Make header layout responsive for larger screens
+
+commit 3a710e00c7f0283326d80bd87c36994aaf18176e
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Mon Dec 15 00:19:37 2025 +0800
+
+    Add Indonesian language support for i18n
+    
+    - Install i18n library
+    - Add translation files for Indonesian
+    - Configure i18n for multi-language support
+
+commit 7b05f3c1d9259a5ad78b9f1abde8e5ca017ff558
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Sun Dec 14 19:23:41 2025 +0800
+
+    Refactor codebase structure and sections
+    
+    - Reorganize file and folder structure for better maintainability
+    - Refactor section names and section structure
+    - Separate concerns between layout, sections, and components
+    - Improve overall code readability and consistency
+
+commit b81c58c98df5dec93316947ba0616820a82d182a
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Sun Dec 14 00:27:13 2025 +0800
+
+    Improve responsiveness across all sections
+    
+    - Add responsive styles for mobile, tablet, and laptop screens
+    - Adjust styling for responsiveness (e.g., payment information layout)
+    - Add next and previous buttons with hover text to the About overview subsection
+    - Add three additional images and update layout in the Arboretum section
+    - Add image to the FAQ section
+
+commit 6e8088537de1caa18ac8832af24ff89f8778935e
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Sat Dec 13 00:43:14 2025 +0800
+
+    Tweak UI styling for facilities and hamburger menu
+    
+    - Remove plus sign from facilities section that overflowed parent
+    - Update hamburger menu styling for better visual consistency
+    - Add hover transition effect for facilities section
+
+commit 8b1b682b1aa940097587fbab92cea65ae4d2469d
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Sat Dec 13 00:17:10 2025 +0800
+
+    Update hamburger menu styling
+    
+    - Adjust background, font, and transition for hamburger menu
+    - Improve visual consistency with global color scheme
+    - Refine hover and active states for smoother interaction# Please enter the commit message for your changes. Lines starting
+
+commit 74f88e86d773991b8c96f37cf88e24b9906a7034
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Fri Dec 12 23:52:31 2025 +0800
+
+    Add hamburger menu feature and update UI styling
+    
+    - Implement hamburger button and responsive navigation menu
+    - Refactor and update styling across multiple sections (colors, borders, spacing)
+    - Add location anchor tag to the About section
+
+commit 1305464cfe551cda505623889fc8e9a7625e01ff
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Thu Dec 11 04:22:17 2025 +0800
+
+    Create Navbar component
+    
+    - Add Navbar component with menu items: About, Visit, Guide, Gallery, Contact
+    - Implement smooth scroll to corresponding section on click
+    - Add language toggle outside of Navbar
+    - Place ministry and unit logos in public/logo folder
+    - Add logo to Hero section
+    - Assign IDs to each section for scroll targeting
+
+commit 02a1a39cef014821a47b49f45223d8ea70495515
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Thu Dec 11 00:52:22 2025 +0800
+
+    Create Arboretum section
+    
+    - Add new Arboretum section with descriptive text and supporting image
+    - Implement section styling and layout adjustments
+    - Improve styling consistency across multiple sections
+    - Add additional content and items to the Gallery component
+
+commit caf493e671745fc00bed8e02fa966b04ddf1c968
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Wed Dec 10 14:21:45 2025 +0800
+
+    Adding Folklore Story to History Section
+    
+    - add local folklore narrative to History section, including Ata Bupu, Ata Polo, and the youths, explaining the formation of the tri-colored lakes according to legend
+
+commit fee2a572e9a04022322600e6a2300befc5447804
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Wed Dec 10 12:20:48 2025 +0800
+
+    Create About Section
+    
+    - Added About section with three sub-sections: Overview, History, and Color Changes.
+    - Overview includes Kelimutu image with clickable labels for each lake (Tiwu Ata Polo, Tiwu Nuwa Muri Ko’o Fai, Tiwu Ata Bupu).
+    - Overview displays main overview text plus descriptions for each lake including area, depth, and Lio spiritual beliefs.
+    - History section presents the 7-step formation of Kelimutu based on geological events and references to Gunung Sokoria.
+    - Color Changes section includes a draggable vertical handle to scroll through 20 images showing historical color changes of the lakes, with years as labels.
+    - Implemented responsive behavior for both desktop and mobile screens.
+
+commit 9899205187cc3964c4d862cc28a25d05d168a04e
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Mon Dec 8 11:23:20 2025 +0800
+
+    Create Contact section and update FAQ button behavior
+    
+    - Add Contact section with logo, unit name, email, phone, and social media links
+      (Instagram, Facebook, TikTok, YouTube, X, website)
+    - Add footer styling to Contact section
+    - Modify FAQ section button to a clickable span with separate scroll logic
+    - Apply styling to Contact section
+
+commit 318accc7621e87b0e4988dc40dd6ace93ace5eee
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Mon Dec 8 00:13:17 2025 +0800
+
+    Create Gallery section with infinite slider
+    
+    - Add Gallery component with header and content section
+    - Implement infinite slider for gallery images
+    - Add 7 images with icon, title, and description inside public/gallery
+    - Apply styling for gallery layout and slider animation
+
+commit 559a981742879b918fae09d22abeb922bbe5caa6
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Sun Dec 7 17:06:34 2025 +0800
+
+    Add FAQ section
+    
+    - Create FAQ section with 7 question-and-answer items
+    - Add basic structure and styling
+    - Integrate toggle functionality for expanding answers
+
+commit 4c4d190d60c357abcc2e792ea6cf3bea260c1ffa
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Sun Dec 7 15:39:05 2025 +0800
+
+    Add Do's and Don'ts sections
+    
+    - Create Do's section and Don'ts section, each with four items
+    - Each item contains an icon and a label
+    - Add icons to `src/assets/dosdonts`
+    - Add styling for the sections
+
+commit da4f73c668ff27ea7614650d3665d3720a76b4ac
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Sun Dec 7 13:29:19 2025 +0800
+
+    Add VisitorGuide section
+    
+    - Add VisitorGuide section with three subsections: Facilities, Do's and Don'ts, FAQ
+    - Create separate components for Facilities, Do's and Don'ts, and FAQ
+    - Implement Facilities component to render header and six icons with labels
+    - Add `facilities` folder inside `src/assets` and include six SVG icon files
+    - Add styling for Facilities section
+
+commit 54fcd90cdc217f5cd268da7ab4d6547b97923e2a
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Sun Dec 7 04:05:37 2025 +0800
+
+    Refactor FeesPayment and visitor cost calculator
+    
+    - Split FeesPayment into modular sections: Fees, Payment, Calculator
+    - Export/import each section into main component for cleaner structure
+    - Refactor bottom navigation into single reusable component with next/prev logic
+    - Refactor visitor cost calculator UI and behavior:
+      - Separate dropdown and count/category rendering into reusable functions
+      - Conditional rendering to hide fields and checkboxes when items are empty
+      - Prevent removing visitors below one while allowing other categories
+      - Implement dropdown toggle and outside click to close
+      - Handle visitor type add, remove, and update logic cleanly
+      - Ensure accurate cost calculation with workday/holiday prices
+    - Clean up modular CSS usage and classNames for readability
+
+commit 290b11f98f1501a9ee4a6c12c9abd757b0b480c4
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Fri Dec 5 03:25:48 2025 +0800
+
+    Create Visitor Cost Calculator Section
+    
+    - Implement cost calculator section with header, subheader, and container
+      for visitor type categories, fields, and add-type button
+    - Focused on visitor type only for now; other categories will be added later
+    - Implemented functional logic including:
+      - `prices` object containing visitor, vehicle, photoVideo, camping, and drone with labels and prices
+      - `updateVisitorType`, `addVisitorType`, `removeVisitorType`, `addCount`, `removeCount`
+      - Dropdown for selecting visitor type
+    - Applied initial styling for all implemented elements
+    - Functionality for visitor cost calculation is operational, further tweaks and cleaning pending
+
+commit d28b68ab6959d13156b38cc932e59c674532fd62
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Tue Dec 2 10:31:18 2025 +0800
+
+    Add Fees Section
+    
+    - Create fees section with header, regulation link, and four fee category cards
+    - Add person card (domestic individual, domestic group/students, international individual) with fees
+    - Add vehicle card (motorcycle, car) with fees
+    - Add photography/videography card (pre-wedding, photography, videography) with fees
+    - Add other services card (camping, drone operation) with fees
+    - Implement modal for regulation preview using React-PDF
+    - Install React-PDF and integrate PDF viewer for regulation documents
+    - Apply styling for all elements in the fees section
+
+commit a54d86d43f9f8c21d91f9b39bcf023e2928ecb79
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Sat Nov 29 23:18:28 2025 +0800
+
+    Enhance Visiting Hours cards with detail and transitions
+    
+    - Add detail text to each card
+    - Add hover transitions for smoother interaction
+
+commit 4e5974324f7bae3effd36fd29df1026385601a23
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Fri Nov 28 16:41:42 2025 +0800
+
+    Add Visiting Hours section
+    
+    - Add section header
+    - Add three cards: Daily, Best Time to Visit, and Peak Hours
+    - Include title, background, and time for each card
+    - Update hero CSS module for consistent width and height
+
+commit 4f44af628df0869257cd435c30e776213ba14166
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Thu Nov 27 10:03:35 2025 +0800
+
+    Add hero section
+    
+    - Create Hero component and CSS module
+    - Add background image with gradient overlay
+    - Add scroll button
+    - Implement AnimatedText for subtitle
+    - Add AnimatedText PropTypes
+    - Add Font Awesome to index.html
+
+commit 52e7f945c37a9513a003733d1851e3b1f964344b
+Author: M.Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Wed Nov 26 10:27:55 2025 +0800
+
+    Initial Commit
+    
+    - create new branch called 'main-development'
+    - Install NPM on the environment
+    - Update package manager to latest stable version
+    - Ensure dependencies work with updated NPM
+
+commit f69020cd273cee0f7b53aae34b0ae57c2aa6ce1b
+Author: M. Aldi Gunawan <aldigunawan1808@gmail.com>
+Date:   Wed Nov 26 09:19:16 2025 +0800
+
+    Initial commit

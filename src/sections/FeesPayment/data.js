@@ -3,22 +3,22 @@ export const SECTION = {
   key: "FEES",
   prev: null,
   next: "PAYMENT",
-  labelNext: "Payment Info",
+  labelNext: "fees.next",
   labelPrev: null,
  },
  PAYMENT: {
   key: "PAYMENT",
   prev: "FEES",
   next: "CALCULATOR",
-  labelNext: "Cost Calculator",
-  labelPrev: "Fees",
+  labelNext: "payment.next",
+  labelPrev: "payment.prev",
  },
  CALCULATOR: {
   key: "CALCULATOR",
   prev: "PAYMENT",
   next: null,
   labelNext: null,
-  labelPrev: "Payment Info",
+  labelPrev: "calculator.prev",
  },
 };
 

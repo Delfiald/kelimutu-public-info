@@ -1,6 +1,6 @@
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
-import FeesPayment from "./sections/FeesPayment/FeesPayment";
+import FeesPayment from "./sections/FeesPayment";
 import Hero from "./sections/Hero";
 import VisitingHours from "./sections/VisitingHours";
 import VisitorGuide from "./sections/VisitorGuide";
