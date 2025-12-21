@@ -393,6 +393,10 @@
  width: 100%;
 }
 
+.note {
+ align-self: start;
+}
+
 @media (min-width: 700px) {
  .header h2 {
   text-align: left;
