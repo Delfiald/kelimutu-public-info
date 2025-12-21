@@ -427,6 +427,7 @@ function CalculatorSection() {
      </div>
     </div>
    </div>
+   <div className={styles.note}>{t("note")}</div>
   </>
  );
 }
